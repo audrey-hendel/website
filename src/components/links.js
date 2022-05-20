@@ -4,14 +4,21 @@ import Navigation from "../data/navigation.yml"
 import styled from 'styled-components'
 
 const Nav = styled.nav`
-  display: flex;
   gap: 20px;
+  .menuItem a {
+    font-family: 'Damion', cursive;
+    color: #F04191;
+    text-decoration: none;
+    font-size: 20px;
+  }
+    @media (min-width: 920px) {
+  display: flex;}
 `
 
-const Navs = () => {
+const Links = () => {
   const Items = Navigation.map((item, i) => {
     return (
-      <div className="menuItem" key={"link-"+i}>
+      <div className="menuItem" key={"linki-"+i}>
         <Link to={item.link} >
           {item.label}
         </Link>
@@ -21,4 +28,4 @@ const Navs = () => {
   return <Nav className="top_nav hidden_small">{Items}</Nav>
 }
 
-export default Navs
+export default Links

@@ -41,6 +41,10 @@ function Seo({ description, lang, meta, title }) {
           content: metaDescription,
         },
         {
+          name: `icon`,
+          content: 'src/images/om-rose-.png',
+        },
+        {
           property: `og:title`,
           content: title,
         },

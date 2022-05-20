@@ -1,18 +1,26 @@
-import * as React from "react"
-import PropTypes from "prop-types"
+import React, { useState } from "react"
 import { Link } from "gatsby"
-import Navigation from "./navigation"
+import Links from "./links"
 import GetImageByName from "./getImageByName"
 import { GatsbyImage } from "gatsby-plugin-image"
 import styled from 'styled-components'
 
 const NavOuter = styled.header`
-display: flex;
+  display: flex;
+  height: 100px;
+  .Logo {
+    width: 60px;
+    height: auto;
+    }
 `
 const Nav = styled.nav`
   display: flex;
 `
-const Header = ({ siteTitle }) => (
+const Toggle = styled.div``
+const Navbox = styled.div``
+const Hamburger = styled.div``
+
+const Header = () => (
   <NavOuter
     style={{
       margin: `0 auto`,
@@ -22,26 +30,15 @@ const Header = ({ siteTitle }) => (
       justifyContent: `space-between`,
     }}
   >
-    <Link
-      to="/"
-      style={{
-        fontSize: `var(--font-sm)`,
-        textDecoration: `none`,
-      }}
-    >
-      <GatsbyImage image={GetImageByName("om-rose-.png")} alt="logo" />
+    <Link to="/">
+      <GatsbyImage image={GetImageByName("om-rose-.png")} alt="logo" className="Logo"/>
     </Link>
-      <Navigation />
-    <span>International</span>
+
+    <Links />
+
+    <span style={{color: "#F04191"}}>International</span>
+    
   </NavOuter>
 )
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
 
 export default Header

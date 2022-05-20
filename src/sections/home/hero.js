@@ -7,11 +7,11 @@ const HeroSection = styled.div`
   background-repeat: no-repeat;
   background-size: 100%;
   width: 100%;
-  height: 900px;
+  height: 54vw;
 `
 const Hero = () => {
   return (
-    <HeroSection ></HeroSection>
+    <HeroSection />
   )
 }
 export default Hero

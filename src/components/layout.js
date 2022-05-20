@@ -30,20 +30,10 @@ const Layout = ({ children }) => {
         style={{
           margin: `0 auto`,
           maxWidth: `var(--size-content)`,
-          padding: `var(--size-gutter)`,
+          padding: `0`,
         }}
       >
-        <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `var(--space-5)`,
-            fontSize: `var(--font-sm)`,
-          }}
-        >
-          © {new Date().getFullYear()} &middot; Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
+        <main style={{marginTop: "-110px"}} >{children}</main>
       </div>
     </>
   )

@@ -6,27 +6,60 @@ import { Link } from 'gatsby'
 const SlideshowContainer = styled.div`
   text-align: center;
 `
-const Slide = styled.div`
+const DistanceBox = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  h2 {
+    font-family: 'Damion';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: 0.08em;
+    color: rgba(51, 51, 51, 0.5);
+  }
+  a {
+    font-family: 'Damion';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 34px;
+    letter-spacing: 0.08em;
+    color: rgba(51, 51, 51, 0.8);
+    text-decoration: none;
+  }
+`
+const CardsGrid = styled.div`
+  display: grid;
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+`
+const Card = styled.div`
+  display: grid;
+  justify-content: center;
 `
 
 const Distance = (props) => {
   return (
-    <section>
+    <DistanceBox>
       <h2>{props.distance.title}</h2>
       <>{props.distance.text}</>
-      <div>
+      <CardsGrid>
         {props.distance.three_t.map((sld, i) => {
           return (
-            <div key={"thr" + i} >
+            <Card key={"thr" + i} >
               <GatsbyImage image={GetImageByName(sld.image)} alt="gallery image" />
               <Link to={sld.image}>{sld.label}</Link>
-            </div>)
+            </Card>)
         })}
-      </div>
-      <Link to={props.distance.cta_link}>{props.distance.cta_label}</Link>
-    </section>
+      </CardsGrid>
+      <Link to={props.distance.cta_link} className="buttonCta">{props.distance.cta_label}</Link>
+    </DistanceBox>
   )
 }
 
