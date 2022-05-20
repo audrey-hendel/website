@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const HeroSection = styled.div`
+  margin-top: -110px;
   color: #000;
   background: url(/images/Lets-Be-Happy-English-1.gif);
   background-repeat: no-repeat;

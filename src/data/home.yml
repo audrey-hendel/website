@@ -35,7 +35,7 @@ about_section:
     - title: Psycho-Shamanic Therapy
       image: horse.png
     cta_label: Read more
-    cta_link: "#"
+    cta_link: /therapies/
 
 gallery:
 - slide:
@@ -43,16 +43,16 @@ gallery:
   - image: sea.png
   - image: mountain.png
   - image: cows.png
-- slide:
-  - image: cows.png
-  - image: sea.png
-  - image: mountain.png
-  - image: birds.png
-- slide:
-  - image: birds.png
-  - image: mountain.png
-  - image: sea.png
-  - image: cows.png
+#- slide:
+#  - image: cows.png
+#  - image: sea.png
+#  - image: mountain.png
+#  - image: birds.png
+#- slide:
+#  - image: birds.png
+#  - image: mountain.png
+#  - image: sea.png
+#  - image: cows.png
 distance:
   title: Shamanic distance healing
   text: |

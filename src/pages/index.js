@@ -1,16 +1,12 @@
 import * as React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import Footer from "../components/footer"
 import Hero from "../sections/home/hero"
 import About from "../sections/home/about"
 import Gallery from "../sections/home/gallery"
 import Distance from "../sections/home/distance"
 import Contact from "../sections/home/contact"
 import homeData from "../data/home.yml"
-
-const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
-const about = homeData.about_section
 
 const IndexPage = () => (
   <Layout>
@@ -20,7 +16,6 @@ const IndexPage = () => (
     <Gallery gallery={homeData.gallery} />
     <Distance distance={homeData.distance} />
     <Contact contact={homeData.contact} />
-    <Footer />
   </Layout>
 )
 
