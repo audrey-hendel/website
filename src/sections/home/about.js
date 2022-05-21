@@ -2,7 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
-import GetImageByName from '../../components/getImageByName'
+import GetImageByName from '~components/getImageByName'
+import { useStaticQuery, graphql } from "gatsby"
 
 const AboutSection = styled.section`
     display: grid;
@@ -36,31 +37,48 @@ const AboutBox = styled.div`
   max-width: 1440px;
   margin: 70px auto 0;
   display: grid;
-  img {
-    border-radius: 24px;
-  }
+  gap: 20px;
   @media (min-width: 1024px){
-  grid-template-columns: 5fr 7fr;
-  gap: 40px;
-  padding: 56px;}
-`
-const AboutText = styled.div`
-  padding: 10px;
-  background: rgba(221, 161, 192, 0.1);
-  box-shadow: 1px 4px 5px rgba(51, 51, 51, 0.05);
-  border-radius: 30px;
+    grid-template-columns: 5fr 7fr;
+    gap: 40px;
+    padding: 56px;
+   }
+  .gatsby-image-wrapper {
+    border-radius: 24px;
+    @media (min-width: 768px) {
+    grid-row: 1/3;}
+  }
   h2 {
     font-size: 50px;
     font-family: 'Damion', cursive;
     color: #F04191;
     font-weight: 400;
+    grid-row: 1/2;
+    @media (min-width: 1024px) {
+      display: none;
+    }
   }
-  h3 {
-    color: rgba(240, 65, 145, 0.6);
-  }
-  @media (min-width: 1024px) {
-    padding: 60px 60px 60px 120px;
-  }
+ `
+ const AboutText = styled.div`
+ padding: 10px;
+ background: rgba(221, 161, 192, 0.1);
+ box-shadow: 1px 4px 5px rgba(51, 51, 51, 0.05);
+ border-radius: 30px;
+ h2 {
+   font-size: 50px;
+   font-family: 'Damion', cursive;
+   color: #F04191;
+   font-weight: 400;
+   display: none;
+ }
+ h3 {
+   color: rgba(240, 65, 145, 0.6);
+ }
+ @media (min-width: 1024px) {
+   h2 {
+   display: block;}
+   padding: 60px 60px 60px 120px;
+ }
 `
 const DecoOuter = styled.div`
 width: 95%;
@@ -136,16 +154,22 @@ const TerCard = styled.div`
     }
   }
 `
-const newText = (text) => {
-  text.split(' ').map((txt, i) => {
-    console.log('<p>', txt, '</p>')
-    return <p key={'txt-' + i}>{txt}</p>
-  }
-  )
-}
 
 const About = (p) => {
-  const Tsub1 = () => newText(p.about.therapies.items[0].title);
+  const data = useStaticQuery(graphql`
+  query aboutData {
+    dataYaml(page: {eq: "home"}) {
+      about_section {
+        about_box {
+          text
+          title
+          name
+          image
+        }
+      }
+    }
+  }
+`)
 
   const avatar = GetImageByName(p.about.about_box.image)
   const decorCenter = GetImageByName(p.about.decor_center)
@@ -167,10 +191,10 @@ const About = (p) => {
       </Decor>
       <AboutBox>
         <GatsbyImage image={avatar} alt='Auddrey' />
+        <h2>{p.about.about_box.name}</h2>
         <AboutText>
-          <h2>{p.about.about_box.name}</h2>
-          <h3>{p.about.about_box.title}</h3>
-          <p>{p.about.about_box.text}</p>
+        <h2>{p.about.about_box.name}</h2>
+        <div dangerouslySetInnerHTML={{ __html: data.dataYaml.about_section.about_box.text }} className="AboutText" />
         </AboutText>
       </AboutBox>
       <DecoOuter>

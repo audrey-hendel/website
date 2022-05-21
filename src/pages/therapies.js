@@ -1,15 +1,20 @@
 import * as React from "react"
-import { Link } from "gatsby"
-
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import Title from "~components/title"
+import Gallery from "../sections/home/gallery"
+import Distance from "../sections/therapies/distance"
+import Details from "~sections/therapies/details"
+import pageData from "~data/therapies.yml"
 
-const SecondPage = () => (
+const Therapies = () => (
   <Layout>
     <Seo title="Therapies" />
-    <h1>Coming soon</h1>
-    <Link to="/">Go back to the homepage</Link>
+    <Title text={pageData.title} />
+    <Distance/>
+    <Gallery gallery={pageData.gallery} />
+    <Details/>
   </Layout>
 )
 
-export default SecondPage
+export default Therapies

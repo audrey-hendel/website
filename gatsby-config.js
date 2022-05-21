@@ -21,6 +21,27 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `styled-components`,
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `Yaml`,
+        path: `./src/data/`,
+      },
+    },
+    {
+      resolve: 'gatsby-transformer-yaml-full',
+      options: {
+        name: `YamlMd`,
+        plugins: [
+          {
+            resolve: 'gatsby-yaml-full-markdown',
+            options: {
+              /* gatsby-yaml-full-markdown options here */
+            }
+          }
+        ],
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `gatsby-starter-default`,
