@@ -15,6 +15,7 @@
     "gatsby-plugin-sharp": "^4.14.1",
     "gatsby-plugin-styled-components": "^5.14.0",
     "gatsby-source-filesystem": "^4.14.0",
+    "gatsby-transformer-remark": "^5.14.0",
     "gatsby-transformer-sharp": "^4.14.0",
     "gatsby-transformer-yaml-full": "^4.0.5",
     "gatsby-yaml-full-markdown": "^4.1.1",

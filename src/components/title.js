@@ -21,8 +21,7 @@ const Navbox = styled.div``
 const Hamburger = styled.div``
 
 const Title = (p) => {
-  console.log(p)
-  return (
+ return (
   <TitleOuter>
       <StaticImage src='../images/decoration-4.png' alt="decoration" className="decor"/>
         <h1>{p.text}</h1>
