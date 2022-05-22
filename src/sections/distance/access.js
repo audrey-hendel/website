@@ -16,8 +16,21 @@ const Access = () => {
   const data = useStaticQuery(graphql`
   query distData {
     dataYaml(page: {eq: "distance-healing"}) {
-      text_1
-      text_2
+      access {
+        text_1
+        text_2
+        title
+      }
+      join_team {
+        text_1
+        text_2
+        title
+      }
+      support {
+        text_1
+        text_2
+        title
+      }
     }
   }
 `)
@@ -37,11 +50,30 @@ const Access = () => {
           </Table>
         )
       })}
-      <div dangerouslySetInnerHTML={{ __html: data.dataYaml.text_1 }} className="access_text" />
+      <div dangerouslySetInnerHTML={{ __html: data.dataYaml.access.text_1 }} className="access_text" />
 
 {/* Zoom button  */}
 
-      <div dangerouslySetInnerHTML={{ __html: data.dataYaml.text_2 }} className="access_text" />
+      <div dangerouslySetInnerHTML={{ __html: data.dataYaml.access.text_2 }} className="access_text" />
+
+
+
+      <SectionHeader 
+        title={pageData.join_team.title} 
+        image={pageData.join_team.image}
+        />
+      <div dangerouslySetInnerHTML={{ __html: data.dataYaml.join_team.text_1 }} className="access_text" />
+
+      <div dangerouslySetInnerHTML={{ __html: data.dataYaml.join_team.text_2 }} className="access_text" />
+
+      <SectionHeader 
+        title={pageData.support.title} 
+        image={pageData.support.image}
+        />
+
+      <div dangerouslySetInnerHTML={{ __html: data.dataYaml.support.text_1 }} className="access_text" />
+
+      <div dangerouslySetInnerHTML={{ __html: data.dataYaml.support.text_2 }} className="access_text" />
 
     </>
   )
