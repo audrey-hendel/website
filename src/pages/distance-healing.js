@@ -1,15 +1,17 @@
 import * as React from "react"
-import { Link } from "gatsby"
+import Layout from "~components/layout"
+import Seo from "~components/seo"
+import Title from "~components/title"
+import Access from "~sections/distance/access"
+import Details from "~sections/therapies/details"
+import pageData from "~data/distance-healing.yml"
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
-
-const SecondPage = () => (
+const Prices = () => (
   <Layout>
-    <Seo title="Distance Healing" />
-    <h1>Coming soon</h1>
-    <Link to="/">Go back to the homepage</Link>
+    <Seo title={pageData.title} />
+    <Title text={pageData.title} />
+    <Access />
   </Layout>
 )
 
-export default SecondPage
+export default Prices

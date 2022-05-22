@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { StaticImage } from "gatsby-plugin-image"
 import { useStaticQuery, graphql } from "gatsby"
 
 const DistanceBox = styled.div`

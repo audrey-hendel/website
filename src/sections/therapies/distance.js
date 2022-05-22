@@ -58,7 +58,7 @@ const Distance = () => {
     <DistanceBox>
       <CardsGrid>
         <Card  >
-          <StaticImage src='../../images/dog.png' alt="gallery image" />
+          <StaticImage src='../../images/img1.png' alt="gallery image" />
           <div dangerouslySetInnerHTML={{ __html: data.dataYaml.col1 }} className="AboutText" />
         </Card>
         <Card  >

@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 const Tables = () => {
   const data = useStaticQuery(graphql`
     query pricePageQuery {
-      markdownRemark {
+      markdownRemark(frontmatter: {page: {eq: "prices"}}) {
         html
       }
     }

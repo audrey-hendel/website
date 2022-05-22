@@ -1,3 +1,6 @@
+---
+page: prices
+---
 ## Shamanic Healing, in euros 
 
 <hr/>

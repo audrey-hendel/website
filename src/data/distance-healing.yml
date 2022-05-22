@@ -1,0 +1,44 @@
+page: distance-healing
+title: Distance Healing
+access:
+  title: Access to healing
+  subtitle: The team of practitioners 
+  image: img1.png 
+  team: 
+  - name: Audrey Hendel
+    bio: Lorem ipsum dolor
+#  - name: 
+#    bio: 
+#  - name: 
+#    bio: 
+prices: 
+- [SHAMANIC SESSION AND EXCHANGE, 60 min., 50]
+- [CHILDREN AND OVER 65 YEARS OF AGE, 60 min., 40]
+- [RAPID INTERVENTION, 20 min., 20]
+
+text_1: !markdown |
+  ### How shamanic distance healing works
+
+  The rapid intervention can be provided differed in time or live.
+
+  ### DIFFERED ON TIME
+
+  We drum, record the session on a sound message, you can hear later in a comfortable place.
+
+  # ZOOM
+
+  1. Download and Install Zoom
+  2. Enter the LET'S BE HAPPY Shamanic Healing Center by clicking on the ENTRY ZOOM logo on
+  the home page of the site letsbehappy.com
+
+text_2: !markdown |
+  3. Wait your turn in the waiting room.
+  4. The practitioner invites you to the Shamanic room.
+  In the chat, you write a **promise of payment** “Yes, I will pay or make a donation” and your contact    details (email or address).
+  5. Enter the shamanic Room. Briefly explain your request. Enjoy the distance shamanic session.
+  6. The session is over, you proceed to the payment by bank transfer or PayPal.
+  Our bank details:
+  
+  Audrey Hendel:
+  Paypal:
+  Wording on payment: LET'S BE HAPPY- Name of the practitioner 
