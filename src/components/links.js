@@ -16,7 +16,11 @@ const Nav = styled.nav`
 `
 
 const Links = () => {
-  const Items = Navigation.map((item, i) => {
+  const navSorted = () => {
+    return (
+    Navigation.sort((a,b) =>  a.order-b.order ))
+  }
+  const Items = navSorted().map((item, i) => {
     return (
       <div className="menuItem" key={"linki-"+i}>
         <Link to={item.link} >
