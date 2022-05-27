@@ -23,8 +23,8 @@ const ContactGrid = styled.section`
   display: grid;
   max-width: 1264px;
   margin: 50px auto;
-  grid-template-columns: 1fr 1fr;
-  @media (min-width: 800px;) {
+  padding: 20px;
+  @media (min-width: 800px) {
     grid-template-columns: 1fr 1fr;
   }
 `

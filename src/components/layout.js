@@ -16,7 +16,6 @@ const Layout = ({ children, path }) => {
       }
     }
   `)
-console.log("layout",path)
   return (
     <>
       <Header path={path} />

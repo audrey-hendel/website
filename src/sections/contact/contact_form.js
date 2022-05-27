@@ -15,8 +15,8 @@ grid-template-rows: auto 60px 60px 200px;
     border: 1px solid rgba(247, 62, 151, 0.1);
     box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.1);
     border-radius: 10px;
-      font-family: 'Damion';
-    placeholder {
+    font-family: 'Damion';
+    &[placeholder] {
       font-style: normal;
       font-weight: 400;
       font-size: 14px;
@@ -38,10 +38,10 @@ const Intro = styled.p`
   color: rgba(51, 51, 51, 0.6);
 `
 const Submit = styled.button`
-height: fit-content;
-width: fit-content;
-padding: 14px 60px;
-margin-left: auto;
+  height: fit-content;
+  width: fit-content;
+  padding: 14px 60px;
+  margin-left: auto;
   background: rgba(247, 62, 151, 0.05);
   border: 2px solid rgba(240, 65, 145, 0.1);
   box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.12);
@@ -58,12 +58,13 @@ margin-left: auto;
 
 const ContactForm = () => {
   return (
-    <Form name="contact" method="POST" netlify-honeypot="sec-field"
+    <Form name="contact" method="POST" netlify-honeypot="antispam-field"
       data-netlify="true"
     >
-      <p class="hidden">
+      <input type="hidden" className="hidden" name="form-name" value="contact" />
+      <p className="hidden">
         <label>
-          Don’t fill this out if you’re human: <input name="sec-field" />
+          Don’t fill this out if you’re human: <input name="antispam-field" />
         </label>
       </p>
       <Intro>If you have any questions, you can write right here by filling out the form</Intro>

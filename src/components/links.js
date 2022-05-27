@@ -18,9 +18,7 @@ const Nav = styled.nav`
 `
 
 const Links = (p) => {
-  console.log("links:", p.p.path)
   const path = p.p.path
-  console.log("path=",path)
   const navSorted = () => {
     return (
     Navigation.sort((a,b) =>  a.order-b.order ))
