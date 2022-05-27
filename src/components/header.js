@@ -1,11 +1,12 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
-import Links from "./links"
+import Links from "~components/links"
 import GetImageByName from "./getImageByName"
 import { GatsbyImage } from "gatsby-plugin-image"
 import styled from 'styled-components'
 
 const NavOuter = styled.header`
+  max-width: 1312px;
   display: flex;
   height: 100px;
   .Logo {
@@ -20,7 +21,7 @@ const Toggle = styled.div``
 const Navbox = styled.div``
 const Hamburger = styled.div``
 
-const Header = () => (
+const Header = (path) => (
   <NavOuter
     style={{
       margin: `0 auto`,
@@ -34,7 +35,7 @@ const Header = () => (
       <GatsbyImage image={GetImageByName("om-rose-.png")} alt="logo" className="Logo"/>
     </Link>
 
-    <Links />
+    <Links p={path} />
 
     <span style={{color: "#F04191"}}>International</span>
     

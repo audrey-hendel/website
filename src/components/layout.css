@@ -174,9 +174,6 @@ p *:last-child {
 li > p {
   margin-bottom: calc(var(--space-4) / 2);
 }
-p {
-  max-width: 680px;
-}
 code {
   font-size: 0.875rem;
 }
@@ -233,4 +230,7 @@ pre tt:after {
   text-decoration: none;
   color: rgba(51, 51, 51, 0.8);
   margin-top: 50px;
+}
+main {
+  min-height: 50vh;
 }

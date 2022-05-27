@@ -1,23 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useStaticQuery, graphql } from "gatsby"
+import { GatsbyImage } from "gatsby-plugin-image"
+import GetImageByName from '~components/getImageByName'
 
 const DistanceBox = styled.div`
-  display: grid;
-  gap: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
-  text-align: center;
-  h2 {
-    font-family: 'Damion';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 26px;
-    text-align: center;
-    letter-spacing: 0.08em;
-    color: rgba(51, 51, 51, 0.5);
-  }
+  padding: 50px 80px;
+  max-width: 1332px;
+  margin: 70px auto;
+  background: rgba(240, 128, 179, 0.07);
+  border-radius: 30px;
   a {
     font-family: 'Damion';
     font-style: normal;
@@ -29,17 +21,20 @@ const DistanceBox = styled.div`
     text-decoration: none;
   }
 `
-const CardsGrid = styled.div`
-  display: grid;
-  @media (min-width: 768px) {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+const Title = styled.h2`
+    font-family: 'Damion';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: 0.08em;
+    color: rgba(51, 51, 51, 0.5);
 `
-const Card = styled.div`
-  display: grid;
-  justify-content: center;
+const Centered = styled.div`
+width: fit-content;
+margin 0 auto;
 `
-
 const Details = () => {
   const data = useStaticQuery(graphql`
   query detailsData {
@@ -50,6 +45,10 @@ const Details = () => {
 `)
   return (
     <>
+    <Centered>
+    <GatsbyImage image={GetImageByName('logo-leaves-circle-150x150.png')} alt='decor' className='center' />
+    </Centered>
+    <Title>Details</Title>
     <DistanceBox>
     <div dangerouslySetInnerHTML={{ __html: data.dataYaml.details }} className="AboutText" />
     </DistanceBox>

@@ -1,31 +1,39 @@
-import React, { useState } from "react"
-import Links from "./links"
-import GetImageByName from "./getImageByName"
+import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import styled from 'styled-components'
 //import decoration from '../src/images/decoration-4.png'
 
 const TitleOuter = styled.div`
   display: flex;
-  height: 100px;
-  .title {
-    width: 60px;
+  justify-content: center;
+  gap: 33px;
+  margin-top: -100px;
+  padding: 160px 20px 60px;
+  background: rgba(240, 128, 179, 0.07);
+  .decor {
+    width: auto;
     height: auto;
     }
+    .gatsby-image-wrapper img {
+      height: auto;
+    }
+  h1 {
+    font-family: 'Damion';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 1.4;
+    letter-spacing: 0.08em;
+    color: rgba(51, 51, 51, 0.5);
+  }
 `
-const Nav = styled.nav`
-  display: flex;
-`
-const Toggle = styled.div``
-const Navbox = styled.div``
-const Hamburger = styled.div``
 
 const Title = (p) => {
  return (
   <TitleOuter>
-      <StaticImage src='../images/decoration-4.png' alt="decoration" className="decor"/>
+      <StaticImage src='../images/decor.png' alt="decoration" className="decor"/>
         <h1>{p.text}</h1>
-      <StaticImage src='../images/decoration-4.png' alt="decoration" className="decor"/>
+      <StaticImage src='../images/decor.png' alt="decoration" className="decor"/>
   </TitleOuter>)
 }
 export default Title

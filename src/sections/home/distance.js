@@ -33,6 +33,11 @@ const DistanceBox = styled.div`
     text-decoration: none;
   }
 `
+const DistanceText = styled.div`
+  margin: 0 auto;
+  max-width: 920px;
+  padding: 20px;
+`
 const CardsGrid = styled.div`
   display: grid;
   @media (min-width: 768px) {
@@ -48,7 +53,7 @@ const Distance = (props) => {
   return (
     <DistanceBox>
       <h2>{props.distance.title}</h2>
-      <>{props.distance.text}</>
+      <DistanceText>{props.distance.text}</DistanceText>
       <CardsGrid>
         {props.distance.three_t.map((sld, i) => {
           return (

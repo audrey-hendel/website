@@ -12,10 +12,19 @@ access:
 #  - name: 
 #    bio: 
   prices: 
-  - [SHAMANIC SESSION AND EXCHANGE, 60 min., 50]
-  - [CHILDREN AND OVER 65 YEARS OF AGE, 60 min., 40]
-  - [RAPID INTERVENTION, 20 min., 20]
-
+  -
+    text: SHAMANIC SESSION AND EXCHANGE
+    time: 60 min.
+    price: 50
+  -
+    text: CHILDREN AND OVER 65 YEARS OF AGE
+    time: 60 min.
+    price: 40
+  -
+    text: RAPID INTERVENTION
+    time: 20 min.
+    price: 20
+ 
   text_1: !markdown |
     ### How shamanic distance healing works
   

@@ -38,9 +38,13 @@ content: !markdown |
   disorders and provide you with support, hope and perspective in case of mental and/or organic 
   illness and difficulties. I promise you an approach without dependency or rigid psychiatric 
   categorization. 
+gallery_text: !markdown |
+  In my office you´ll found, like in a temple a cosy and peaceful atmosphere, 
+  
+  for regeneration, health, and empowering 
+  
+  Let´s be happy and powerful together!
 gallery: 
-#  text: !markdown |
-#    In my office you´ll found, like in a temple a cosy and peaceful atmosphere, for regeneration, health, and empowering Let´s be happy and powerful together!
 - slide:
   - image: therapy_1.png
   - image: therapy_2.png

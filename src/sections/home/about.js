@@ -15,10 +15,17 @@ const AboutSection = styled.section`
   }
 `
 const Intro = styled.p`
-  text-align: center;
+  max-width: 920px;
   margin-left: auto;
   margin-right: auto;
   padding: 20px;
+  font-family: 'Sitka';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 1.2;
+  text-align: center;
+  color: #333333;
 `
 const Decor = styled.div`
   display: grid;
@@ -40,7 +47,7 @@ const AboutBox = styled.div`
   gap: 20px;
   @media (min-width: 1024px){
     grid-template-columns: 5fr 7fr;
-    gap: 40px;
+    gap: 60px;
     padding: 56px;
    }
   .gatsby-image-wrapper {
@@ -60,11 +67,10 @@ const AboutBox = styled.div`
   }
  `
  const AboutText = styled.div`
+ position: relative;
  padding: 10px;
- background: rgba(221, 161, 192, 0.1);
- box-shadow: 1px 4px 5px rgba(51, 51, 51, 0.05);
  border-radius: 30px;
- h2 {
+  h2 {
    font-size: 50px;
    font-family: 'Damion', cursive;
    color: #F04191;
@@ -78,26 +84,36 @@ const AboutBox = styled.div`
    h2 {
    display: block;}
    padding: 60px 60px 60px 120px;
+   &:before {
+    content: "";
+    position: absolute;
+    top: -56px;
+    bottom: -56px;
+    left: -112px;
+    right: -56px;
+    background: rgba(221, 161, 192, 0.1);
+    border-radius: 30px;
+    box-shadow: 1px 4px 5px rgba(51, 51, 51, 0.05);
+   }
  }
 `
 const DecoOuter = styled.div`
-width: 95%;
-max-width: 1260px;
-margin: 0
-  border: 1px solid #aaa;
+  width: 95%;
+  max-width: 1260px;
+  margin: 0 auto;
   border-radius: 0 0 50px 50px;
-  background: linear-gradient(to bottom, transparent, #aaa);
+  background: linear-gradient(to bottom, transparent, #555);
 `
 const DecoInner = styled.div`
-display: flex;
-padding: 20px;
-border-radius: 0 0 50px 50px;
-border: 1px transparent;
+  display: flex;
+  padding: 20px;
+  border-radius: 0 0 50px 50px;
+  border: 1px transparent;
   width: 100%;
-  height: 100%; auto;
+  height: 100%;
   background: #fff;
   @media (min-width: 1024px){
-padding: 60px 0;}
+    padding: 60px 0;}
 `
 const Teraphies = styled.div`
 display: grid;

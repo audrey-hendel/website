@@ -8,7 +8,7 @@ import pageData from "~data/prices.yml"
 
 
 const Prices = () => (
-  <Layout>
+  <Layout path="/prices">
     <Seo title="Prices" />
     <Title text={pageData.title} />
     <Tables />

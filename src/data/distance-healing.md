@@ -1,3 +1,3 @@
 ---
-title: Distance Healing
+page: distance-healing
 ---
