@@ -47,7 +47,7 @@ const AboutBox = styled.div`
   gap: 20px;
   @media (min-width: 1024px){
     grid-template-columns: 5fr 7fr;
-    gap: 60px;
+    gap: 0;
     padding: 56px;
    }
   .gatsby-image-wrapper {
@@ -103,6 +103,10 @@ const DecoOuter = styled.div`
   margin: 0 auto;
   border-radius: 0 0 50px 50px;
   background: linear-gradient(to bottom, transparent, #555);
+  @media (min-width: 1024px) {
+    margin-bottom: -110px;
+    z-index: 2;
+  }
 `
 const DecoInner = styled.div`
   display: flex;
@@ -115,7 +119,7 @@ const DecoInner = styled.div`
   @media (min-width: 1024px){
     padding: 60px 0;}
 `
-const Teraphies = styled.div`
+const Therapies = styled.div`
 display: grid;
   background: rgba(240, 128, 179, 0.07);
   padding: 20px;
@@ -218,7 +222,7 @@ const About = (p) => {
           <GatsbyImage image={decorCenter} alt='decor' className='center' />
         </DecoInner>
       </DecoOuter>
-      <Teraphies>
+      <Therapies>
         <TerTitle>{p.about.therapies.title}</TerTitle>
         <GatsbyImage image={decorCenter} alt='decor' className='center' />
 
@@ -234,7 +238,7 @@ const About = (p) => {
         </TerGrid>
 
         <Link to={p.about.therapies.cta_link} className="buttonCta">{p.about.therapies.cta_label}</Link>
-      </Teraphies>
+      </Therapies>
 
     </AboutSection>
   )

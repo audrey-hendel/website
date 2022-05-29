@@ -9,6 +9,8 @@ const NavOuter = styled.header`
   max-width: 1312px;
   display: flex;
   height: 100px;
+  z-index: 5;
+  background: #f7f0f5;
   .Logo {
     width: 60px;
     height: auto;
@@ -16,10 +18,17 @@ const NavOuter = styled.header`
 `
 const Nav = styled.nav`
   display: flex;
+  z-index: 5;
 `
-const Toggle = styled.div``
-const Navbox = styled.div``
-const Hamburger = styled.div``
+const Toggle = styled.div`
+z-index: 5;
+`
+const Navbox = styled.div`
+z-index: 5;
+`
+const Hamburger = styled.div`
+z-index: 5;
+`
 
 const Header = (path) => (
   <NavOuter
