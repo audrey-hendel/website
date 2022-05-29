@@ -1,12 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 import { GatsbyImage } from "gatsby-plugin-image"
-import GetImageByName from '../../components/getImageByName'
+import GetImageByName from '~components/getImageByName'
 
 const ContactOuter = styled.div`
   position: relative;
 `
-const Restrange = styled.div`
+const Rectangle = styled.div`
   position: absolute;
   top: 10%;
   height: 100%;
@@ -67,7 +67,7 @@ const Contacts = styled.div`
 const Contact = (props) => {
   return (
     <ContactOuter>
-      <Restrange />
+      <Rectangle />
       <ContactGrid>
         <Logo>
           <GatsbyImage image={GetImageByName(props.contact.image)} alt="contact image" />
