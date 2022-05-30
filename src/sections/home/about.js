@@ -97,6 +97,17 @@ const AboutBox = styled.div`
    }
  }
 `
+const DecoOuterTop = styled.div`
+  width: 95%;
+  max-width: 1260px;
+  margin: 0 auto;
+  border-radius: 50px 50px 0 0;
+  background: linear-gradient(to bottom, transparent, #555);
+  @media (min-width: 1024px) {
+    margin-bottom: -110px;
+    z-index: 2;
+  }
+`
 const DecoOuter = styled.div`
   width: 95%;
   max-width: 1260px;
@@ -107,6 +118,20 @@ const DecoOuter = styled.div`
     margin-bottom: -110px;
     z-index: 2;
   }
+`
+const DecoInnerTop = styled.div`
+  display: flex;
+  padding: 20px;
+  border-radius: 50px 50px 0 0;
+  border: 1px transparent;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  .center {
+    margin: 0 auto;
+  }
+  @media (min-width: 1024px){
+    padding: 60px 0;}
 `
 const DecoInner = styled.div`
   display: flex;
@@ -200,8 +225,13 @@ const About = (p) => {
   const image2 = GetImageByName(p.about.therapies.items[1].image)
 
   return (
+    <>
+    <DecoOuterTop>
+        <DecoInnerTop>
+          <GatsbyImage image={decorCenter} alt='decor' className='center' />
+        </DecoInnerTop>
+      </DecoOuterTop>
     <AboutSection>
-      <GatsbyImage image={decorCenter} alt='decor' className='center' />
       <Intro>{p.about.intro}</Intro>
       <Decor>
         <GatsbyImage image={decoeSide} alt='decor' className='decImg-1' />
@@ -241,6 +271,7 @@ const About = (p) => {
       </Therapies>
 
     </AboutSection>
+    </>
   )
 }
 
