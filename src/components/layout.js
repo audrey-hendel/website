@@ -1,9 +1,8 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import Footer from "../components/footer"
-
-import Header from "./header"
+import Footer from "~components/footer"
+import NavBar from "./navbar"
 import "./layout.css"
 
 const Layout = ({ children, path }) => {
@@ -18,7 +17,7 @@ const Layout = ({ children, path }) => {
   `)
   return (
     <>
-      <Header path={path} />
+      <NavBar path={path} />
       <div
         style={{
           margin: `0 auto`,

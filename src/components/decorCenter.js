@@ -6,6 +6,8 @@ import GetImageByName from '~components/getImageByName'
 
 
 const DecorCenter = (p) => {
-  return <GatsbyImage image={GetImageByName(p.image)} />
+  return <GatsbyImage image={GetImageByName(p.image)} 
+    style = {{ zIndex: "-1"}}
+  />
 }
 export default DecorCenter

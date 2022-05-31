@@ -3,8 +3,6 @@ import styled from 'styled-components'
 
 const HeroSection = styled.div` 
   position: relative;
-  top: 0;
-  margin-top: -110px;
   width: 100%;
   padding: 0;
   height: 54vw;
