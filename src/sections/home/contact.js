@@ -24,10 +24,10 @@ const ContactGrid = styled.div`
   font-style: normal;
   font-weight: 400;
   color: rgba(51, 51, 51, 0.8);
-  margin: 100px auto;
+  margin: 200px auto;
   display: grid;
   width: 95%;
-  max-width: 1060px;
+/*max-width: 1060px;*/
   justify-items: center;
   h2 {
     font-weight: 400;
@@ -54,6 +54,9 @@ const Logo = styled.div`
   @media(min-width: 768px) {
     grid-row: 1/3;
     grid-column: 1/2;
+  }
+  @media(min-width: 1250px) {
+    width: 918px;
   }
 `
 const Contacts = styled.div`

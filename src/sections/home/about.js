@@ -102,7 +102,8 @@ const DecoOuterTop = styled.div`
   max-width: 1260px;
   margin: 0 auto;
   border-radius: 50px 50px 0 0;
-  background: linear-gradient(to bottom, transparent, #555);
+  padding: 2px;
+  background: linear-gradient(pink, transparent);
   @media (min-width: 1024px) {
     margin-bottom: -110px;
     z-index: 2;
@@ -113,7 +114,9 @@ const DecoOuter = styled.div`
   max-width: 1260px;
   margin: 0 auto;
   border-radius: 0 0 50px 50px;
-  background: linear-gradient(to bottom, transparent, #555);
+  padding: 2px;
+  background: linear-gradient(transparent, pink);
+
   @media (min-width: 1024px) {
     margin-bottom: -110px;
     z-index: 2;
@@ -127,6 +130,7 @@ const DecoInnerTop = styled.div`
   width: 100%;
   height: 100%;
   background: #fff;
+
   .center {
     margin: 0 auto;
   }
@@ -198,7 +202,14 @@ const TerCard = styled.div`
      }
     }
   }
+  &:nth-child(2){
+    .decorImage {
+      margin-top: 100px;
+    }
+  }
 `
+
+
 
 const About = (p) => {
   const data = useStaticQuery(graphql`

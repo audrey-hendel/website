@@ -47,24 +47,30 @@ gallery:
 #  - image: mountain.png
 #  - image: sea.png
 #  - image: cows.png
+decor_gallery: decoration-gallery.png
 distance:
+  decor_center: decoration-4.png
   title: Shamanic distance healing
   text: |
-    LET’S BE HAPPY is expanding! The objective is clear: to use digital means to become the first international shamanic healing center capable of respond to shamanic requests, 7 days a week, 24 hours a day To achieve this aim, practitioners carefully selected for their skills, their professionalism, and ethics, joined me. More we will work together; more we will be able to serve others and fulfill our dream!
+    LET’S BE HAPPY is expanding! The objective is clear: to use digital means to become the first international shamanic healing center capable of respond to shamanic requests,
+
+    7 days a week, 24 hours a day 
+
+    To achieve this aim, practitioners carefully selected for their skills, their professionalism, and ethics, joined me. More we will work together; more we will be able to serve others and fulfill our dream!
   three_t:  
   - label: Access to healing
     image: img1.png
-    link: "#"
+#  - link: "#"
   - label: Join the team
     image: img2.png
-    link: "#"
+#  - link: "#"
   - label: Support the project 
     image: img3.png
-    link: "#"
+#  - link: "#"
   cta_label: Read more
   cta_link: "#"
 contact:
-  image: girl.png
+  image: Girl2-decor.png
   text:
   - Audrey Hendel
   - Tel. +49 15778872081
