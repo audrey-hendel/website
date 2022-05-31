@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import { GatsbyImage } from "gatsby-plugin-image"
-import GetImageByName from '../../components/getImageByName'
+import GetImageByName from '~components/getImageByName'
+import { useStaticQuery, graphql } from "gatsby"
 
 const SlideshowContainer = styled.section`
   text-align: center;
@@ -12,6 +13,20 @@ const SlideshowContainer = styled.section`
     line-height: 1.2;
     letter-spacing: 0.08em;
     color: rgba(51, 51, 51, 0.5);
+  }
+`
+const DecGallery = styled.div`
+    margin: 0 auto;
+    position: relative;
+    width: 400px;
+    height: 200px;
+
+  .decorTop{
+    top: 0;
+    left: 0;
+  }
+  .decorBottom{
+
   }
 `
 const Slide = styled.div`
@@ -64,8 +79,29 @@ const Slide = styled.div`
 `
 
 const Gallery = (props) => {
+  const data= useStaticQuery(graphql`
+  query galleryData {
+    dataYaml(page: {eq: "home"}) {
+      gallery {
+        slide {
+          image
+          image
+          image
+          image
+        }
+      }
+    }
+  }
+`)
+
+  const decor_gallery = GetImageByName(props.decor_gallery)
+
   return (
+    
     <SlideshowContainer>
+      <DecGallery> 
+        <GatsbyImage image={decor_gallery} alt='decorGallery' className="decorTop" />
+      </DecGallery>
       <h2>Gallery</h2>
       <div>
         {props.gallery.map((sld, i) => {
@@ -81,6 +117,9 @@ const Gallery = (props) => {
             </Slide>)
         })}
       </div>
+      <DecGallery> 
+        <GatsbyImage image={decor_gallery} alt='decorGallery' className="decorBottom" />
+      </DecGallery>
     </SlideshowContainer>
   )
 }
