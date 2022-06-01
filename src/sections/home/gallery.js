@@ -31,8 +31,15 @@ const DecGallery = styled.div`
       display: block;
     }
   }
-  .decorBottom{
-
+  &.decorBottom{
+    display: none;
+    margin: 0 0 0 auto;
+    bottom: 0;
+    right: 0;
+    @media (min-width: 1024px) {
+      display: block;
+      transform: rotate(180deg)
+    }
   }
 `
 const Slide = styled.div`
@@ -111,6 +118,9 @@ const Gallery = (props) => {
             </Slide>)
         })}
       </Carousel>
+      <DecGallery className="decorBottom" > 
+        <GatsbyImage image={decor_gallery} alt='decorGallery' />
+      </DecGallery>
     </SlideshowContainer>
   )
 }
