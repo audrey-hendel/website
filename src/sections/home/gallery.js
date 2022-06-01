@@ -1,7 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import { GatsbyImage } from "gatsby-plugin-image"
-import GetImageByName from '../../components/getImageByName'
+import GetImageByName from '~components/getImageByName'
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 
 const SlideshowContainer = styled.section`
   text-align: center;
@@ -67,7 +69,11 @@ const Gallery = (props) => {
   return (
     <SlideshowContainer>
       <h2>Gallery</h2>
-      <div>
+      <Carousel
+             showArrows={false} 
+             showStatus = {false}
+             showThumbs = {false}
+             >
         {props.gallery.map((sld, i) => {
           return (
             <Slide key={"slide-" + i} className="slideBox">
@@ -80,7 +86,7 @@ const Gallery = (props) => {
               })}
             </Slide>)
         })}
-      </div>
+      </Carousel>
     </SlideshowContainer>
   )
 }

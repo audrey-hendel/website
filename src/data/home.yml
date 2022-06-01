@@ -37,16 +37,11 @@ gallery:
   - image: sea.png
   - image: mountain.png
   - image: cows.png
-#- slide:
-#  - image: cows.png
-#  - image: sea.png
-#  - image: mountain.png
-#  - image: birds.png
-#- slide:
-#  - image: birds.png
-#  - image: mountain.png
-#  - image: sea.png
-#  - image: cows.png
+- slide:
+  - image: therapy_1.png
+  - image: therapy_2.png
+  - image: therapy_3.png
+  - image: therapy_4.png
 decor_gallery: decoration-gallery.png
 distance:
   decor_center: decoration-4.png
