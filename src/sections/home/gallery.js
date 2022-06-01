@@ -2,7 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import { GatsbyImage } from "gatsby-plugin-image"
 import GetImageByName from '~components/getImageByName'
-import { useStaticQuery, graphql } from "gatsby"
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 
 const SlideshowContainer = styled.section`
   text-align: center;
@@ -82,22 +83,7 @@ const Slide = styled.div`
   }
 
 `
-
 const Gallery = (props) => {
-  const data= useStaticQuery(graphql`
-  query galleryData {
-    dataYaml(page: {eq: "home"}) {
-      gallery {
-        slide {
-          image
-          image
-          image
-          image
-        }
-      }
-    }
-  }
-`)
 
   const decor_gallery = GetImageByName(props.decor_gallery)
   return (
@@ -107,7 +93,11 @@ const Gallery = (props) => {
         <GatsbyImage image={decor_gallery} alt='decorGallery' />
       </DecGallery>
       <h2>Gallery</h2>
-      <div>
+      <Carousel
+             showArrows={false} 
+             showStatus = {false}
+             showThumbs = {false}
+             >
         {props.gallery.map((sld, i) => {
           return (
             <Slide key={"slide-" + i} className="slideBox">
@@ -120,10 +110,7 @@ const Gallery = (props) => {
               })}
             </Slide>)
         })}
-      </div>
-      <DecGallery> 
-        <GatsbyImage image={decor_gallery} alt='decorGallery' className="decorBottom" />
-      </DecGallery>
+      </Carousel>
     </SlideshowContainer>
   )
 }

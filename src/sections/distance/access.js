@@ -33,7 +33,7 @@ const RowTitle = styled.div`
     margin: 0;
     border-bottom: 3px solid rgba(240, 65, 145, 0.35);
   }
-  @media (min-width: 920px) {
+  @media (min-width: 768px) {
     grid-template-columns: 1fr 1fr;
     p:nth-child(1) {
       border-right: 3px solid rgba(240, 65, 145, 0.35);
@@ -48,7 +48,7 @@ const Row = styled.div`
     margin: 0;
     border-bottom: 3px solid rgba(240, 65, 145, 0.35);
   }
-  @media (min-width: 920px) {
+  @media (min-width: 768px) {
     grid-template-columns: 1fr 1fr;
     p:nth-child(odd) {
       border-right: 3px solid rgba(240, 65, 145, 0.35);
@@ -68,7 +68,7 @@ p {
   margin: 0;
   padding: 8px 24px;
 }
-@media (min-width: 920px) {
+@media (min-width: 768px) {
   grid-template-columns: 3fr 1fr 1fr;
 }
 `

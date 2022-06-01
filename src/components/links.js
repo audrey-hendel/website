@@ -4,20 +4,25 @@ import Navigation from "../data/navigation.yml"
 import styled from 'styled-components'
 
 const Nav = styled.nav`
+@media(max-width: 767px){
+  background-color: #fff;
+  }
+  background-color: transparent;
   gap: 20px;
   .menuItem a {
     font-family: 'Damion', cursive;
-    color: rgba(51, 51, 51, 0.8);    text-decoration: none;
+    color: rgba(51, 51, 51, 0.8);  
+    text-decoration: none;
     font-size: 20px;
     &.active {
       color: #F04191;
     }
   }
-    @media (min-width: 920px) {
+    @media (min-width: 768px) {
   display: flex;}
 `
 
-const Links = (p) => {
+const Links = (p, {open}) => {
   const path = p.p.path
   const navSorted = () => {
     return (
@@ -25,7 +30,7 @@ const Links = (p) => {
   }
   const Items = navSorted().map((item, i) => {
     return (
-      <div className="menuItem" key={"linki-"+i}>
+      <div className="menuItem" key={"link-"+i}>
         {(path===item.link)?<Link to={item.link} className="active"
         >
           {item.label}
@@ -36,7 +41,7 @@ const Links = (p) => {
       </div>
     )
   })
-  return <Nav className="top_nav hidden_small">{Items}</Nav>
+  return <Nav className="top_nav hidden_small" open={open} >{Items}</Nav>
 }
 
 export default Links

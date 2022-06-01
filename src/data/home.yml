@@ -32,21 +32,16 @@ about_section:
     cta_link: /therapies/
 
 gallery:
-  - slide:
-    - image: birds.png
-    - image: sea.png
-    - image: mountain.png
-    - image: cows.png
-    #- slide:
-    #  - image: cows.png
-    #  - image: sea.png
-    #  - image: mountain.png
-    #  - image: birds.png
-    #- slide:
-    #  - image: birds.png
-    #  - image: mountain.png
-    #  - image: sea.png
-    #  - image: cows.png
+- slide:
+  - image: birds.png
+  - image: sea.png
+  - image: mountain.png
+  - image: cows.png
+- slide:
+  - image: therapy_1.png
+  - image: therapy_2.png
+  - image: therapy_3.png
+  - image: therapy_4.png
 decor_gallery: decor_c.png
 
 distance:

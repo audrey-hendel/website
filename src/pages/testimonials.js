@@ -29,7 +29,7 @@ const TmCard = styled.div`
    }
   }
 }
-@media (min-width: 920px) {
+@media (min-width: 768px) {
   .content {
     width: 110%;
    }
