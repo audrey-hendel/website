@@ -47,7 +47,7 @@ gallery:
     #  - image: mountain.png
     #  - image: sea.png
     #  - image: cows.png
-decor_gallery: decoration-gallery.png
+decor_gallery: decor_c.png
 
 distance:
   decor_center: decoration-4.png

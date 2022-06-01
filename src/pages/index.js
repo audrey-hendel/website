@@ -13,7 +13,7 @@ const IndexPage = () => (
     <Seo title="Home" />
     <Hero />
     <About about={homeData.about_section} />
-    <Gallery gallery={homeData.gallery} />
+    <Gallery gallery={homeData.gallery} decor_gallery={homeData.decor_gallery}/>
     <Distance distance={homeData.distance} />
     <Contact contact={homeData.contact} />
   </Layout>
