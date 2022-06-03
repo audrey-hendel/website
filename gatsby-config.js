@@ -21,6 +21,7 @@ module.exports = {
     `babel-plugin-styled-components`,
     `gatsby-plugin-styled-components`,
     `styled-components`,
+    `gatsby-plugin-netlify-cms`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

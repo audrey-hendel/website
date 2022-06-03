@@ -1,0 +1,23 @@
+backend:
+  name: git-gateway
+  branch: vs/blog-posts
+publish_mode: editorial_workflow
+media_folder: packages/landing-gatsby/static/images
+public_folder: packages/landing-gatsby/images
+
+collections:
+  - label: "Site Main page"
+    name: "mainpage"
+    files:
+
+      - name: "navigation"
+        label: "navigation menu"
+        file: "../../src/data/navigation.yml"
+        fields:
+        - label: "Navigation items"
+          name: "items"
+          widget: "list"
+          fields:
+          - { label: "label", name: "label", widget: "string" }
+          - { label: "link",  name: "link",  widget: "string", default: "#" }
+          - { label: "order",  name: "order",  widget: "number", default: "9" }
