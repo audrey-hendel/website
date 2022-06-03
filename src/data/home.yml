@@ -64,7 +64,7 @@ distance:
     image: img3.png
 #  - link: "#"
   cta_label: Read more
-  cta_link: "#"
+  cta_link: "/distance-healing"
 contact:
   image: Girl2-decor.png
   text:
