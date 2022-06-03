@@ -5,7 +5,7 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import GetImageByName from '~components/getImageByName'
 
 const DistanceBox = styled.div`
-  padding: 50px 80px;
+  padding: 40px 80px;
   max-width: 1332px;
   margin: 70px auto;
   background: rgba(240, 128, 179, 0.07);
@@ -29,11 +29,16 @@ const Title = styled.h2`
     line-height: 26px;
     text-align: center;
     letter-spacing: 0.08em;
-    color: rgba(51, 51, 51, 0.5);
+    color: rgba(240, 65, 145, 0.8);
+    margin: 0;
 `
 const Centered = styled.div`
 width: fit-content;
-margin 0 auto;
+margin: 0 auto;
+img{
+  width: 50%;
+  margin: 0 auto;
+}
 `
 const Details = () => {
   const data = useStaticQuery(graphql`
@@ -48,7 +53,7 @@ const Details = () => {
     <Centered>
     <GatsbyImage image={GetImageByName('logo-leaves-circle-150x150.png')} alt='decor' className='center' />
     </Centered>
-    <Title>Details</Title>
+    <Title>+details</Title>
     <DistanceBox>
     <div dangerouslySetInnerHTML={{ __html: data.dataYaml.details }} className="AboutText" />
     </DistanceBox>
