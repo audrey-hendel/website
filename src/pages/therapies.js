@@ -10,8 +10,8 @@ import pageData from "~data/therapies.yml"
 const Therapies = () => (
   <Layout path="/therapies">
     <Seo title="Therapies" />
-    <Title text={pageData.title} />
-    <Distance/>
+    <Title text={pageData.title}/>
+    <Distance />
     <Gallery gallery={pageData.gallery} />
     <Details/>
   </Layout>

@@ -1,7 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import { StaticImage } from "gatsby-plugin-image"
+import DecorCenter from '~components/decorCenter'
 import { useStaticQuery, graphql } from "gatsby"
+
 
 const TerGrid = styled.div`
   text-align: center;
@@ -46,6 +48,55 @@ const TerGrid = styled.div`
   }
   }
 `
+const DecoOuterTop = styled.div`
+  width: 95%;
+  max-width: 1260px;
+  margin: 0 auto;
+  border-radius: 50px 50px 0 0;
+  padding: 2px;
+  background: linear-gradient(pink, transparent);
+  @media (min-width: 1024px) {
+    margin-bottom: -100px;
+    margin-top: -20px;
+    z-index: 2;
+  }
+`
+const DecoInnerTop = styled.div`
+  display: flex;
+  padding: 20px;
+  border-radius: 50px 50px 0 0;
+  border: 1px transparent;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+
+  @media (min-width: 1024px){
+    padding: 60px 0;}
+`
+const DecoOuter = styled.div`
+  width: 95%;
+  max-width: 1260px;
+  margin: 0 auto;
+  border-radius: 0 0 50px 50px;
+  padding: 2px;
+  background: linear-gradient(transparent, pink);
+
+  @media (min-width: 1024px) {
+    margin-bottom: -75px;
+    z-index: 2;
+  }
+`
+const DecoInner = styled.div`
+  display: flex;
+  padding: 20px;
+  border-radius: 0 0 50px 50px;
+  border: 1px transparent;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  @media (min-width: 1024px){
+    padding: 15px 0;}
+`
 const TerCard = styled.div`
   display: grid;
   justify-content: center;
@@ -73,6 +124,7 @@ const Content = styled.div`
     align-items: center;
     letter-spacing: 0.03em;
     color: rgba(51, 51, 51, 0.8);
+    margin-bottom: 30px;
 `
 
 
@@ -88,8 +140,15 @@ const Distance = () => {
     }
   }
 `)
+
+
   return (
     <>
+    <DecoOuterTop>
+        <DecoInnerTop>
+          <DecorCenter image='decoration-4.png' />
+        </DecoInnerTop>
+    </DecoOuterTop>
     <TerGrid>
       <TerCard>
           <StaticImage src='../../images/dog.png' alt="gallery image" />
@@ -103,6 +162,11 @@ const Distance = () => {
     <Content>
       <div dangerouslySetInnerHTML={{ __html: data.dataYaml.content }} />
     </Content>
+    <DecoOuter>
+        <DecoInner>
+        <DecorCenter image='decoration-4.png' />
+        </DecoInner>
+      </DecoOuter>
     </>
   )
 }
