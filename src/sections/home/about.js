@@ -76,9 +76,13 @@ const AboutBox = styled.div`
    color: #F04191;
    font-weight: 400;
    display: none;
+   margin-top: 42px;
  }
  h3 {
-   color: rgba(240, 65, 145, 0.6);
+   color: rgba(51, 51, 51, 0.5);
+   margin: 42px 0;
+   font-size: 25px;
+   font-family: 'Sitka';
  }
  @media (min-width: 1024px) {
    h2 {
@@ -105,7 +109,8 @@ const DecoOuterTop = styled.div`
   padding: 2px;
   background: linear-gradient(pink, transparent);
   @media (min-width: 1024px) {
-    margin-bottom: -110px;
+    margin-bottom: -100px;
+    margin-top: -20px;
     z-index: 2;
   }
 `
@@ -118,9 +123,20 @@ const DecoOuter = styled.div`
   background: linear-gradient(transparent, pink);
 
   @media (min-width: 1024px) {
-    margin-bottom: -110px;
+    margin-bottom: -75px;
     z-index: 2;
   }
+`
+const DecoInner = styled.div`
+  display: flex;
+  padding: 20px;
+  border-radius: 0 0 50px 50px;
+  border: 1px transparent;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  @media (min-width: 1024px){
+    padding: 60px 0;}
 `
 const DecoInnerTop = styled.div`
   display: flex;
@@ -137,23 +153,14 @@ const DecoInnerTop = styled.div`
   @media (min-width: 1024px){
     padding: 60px 0;}
 `
-const DecoInner = styled.div`
-  display: flex;
-  padding: 20px;
-  border-radius: 0 0 50px 50px;
-  border: 1px transparent;
-  width: 100%;
-  height: 100%;
-  background: #fff;
-  @media (min-width: 1024px){
-    padding: 60px 0;}
-`
+
 const Therapies = styled.div`
-display: grid;
+  display: grid;
   background: rgba(240, 128, 179, 0.07);
   padding: 20px;
   @media (min-width: 1024px){
   padding: 142px 20px 60px;}
+
 `
 const TerTitle = styled.h2`
   margin: 0 auto;
@@ -174,18 +181,26 @@ const TerSub = styled.div`
   color: rgba(51, 51, 51, 0.5);
   letter-spacing: 0.08em;
   white-space: pre-wrap;
+  &:nth-child(1){
+    width: 50%;
+  }
+  &:nth-child(2){
+    width: 70%;
+  }
 `
 const TerGrid = styled.div`
   margin: 0 auto;
   display: grid;
   justify-content: center;
   @media (min-width: 768px) {
-  grid-template-columns: 1fr 1fr;}
+  grid-template-columns: 1fr 1fr;: 60px;
+  margin-top: 60px;}
 `
 const TerCard = styled.div`
   display: grid;
   justify-content: center;
   gap: 39px;
+  
   img {
     display: block;
     width: auto;
@@ -193,6 +208,15 @@ const TerCard = styled.div`
     margin: auto;
   }
   &:nth-child(1) {
+    &::after{
+      content: "";
+      border: 3px solid rgba(240, 65, 145, 0.35);
+      border-radius:50px;
+      position: absolute;
+      height: 343px;
+      left: 50%;
+      transform: translate (-50%);
+    }
     .decorImage {
       order: -1;
     }
@@ -203,8 +227,9 @@ const TerCard = styled.div`
     }
   }
   &:nth-child(2){
+    padding-left: 50px;
     .decorImage {
-      margin-top: 100px;
+     
     }
   }
 `

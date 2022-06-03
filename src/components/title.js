@@ -8,7 +8,7 @@ const TitleOuter = styled.div`
   justify-content: center;
   gap: 33px;
   margin-top: -100px;
-  padding: 160px 20px 60px;
+  padding: 170px 20px 100px;
   background: rgba(240, 128, 179, 0.07);
   .decor {
     width: auto;
