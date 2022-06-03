@@ -1,6 +1,59 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import styled from 'styled-components'
+import { GatsbyImage } from "gatsby-plugin-image"
+import GetImageByName from '~components/getImageByName'
 import "./tables.css"
+
+const DecoOuterTop = styled.div`
+  width: 95%;
+  max-width: 1260px;
+  margin: 0 auto;
+  border-radius: 50px 50px 0 0;
+  padding: 2px;
+  background: linear-gradient(pink, transparent);
+  @media (min-width: 1024px) {
+    margin-bottom: -100px;
+    margin-top: -20px;
+    z-index: 2;
+  }
+`
+const DecoOuter = styled.div`
+  width: 95%;
+  max-width: 1260px;
+  margin: 0 auto;
+  border-radius: 0 0 50px 50px;
+  padding: 2px;
+  background: linear-gradient(transparent, pink);
+
+  @media (min-width: 1024px) {
+    margin-bottom: -75px;
+    z-index: 2;
+  }
+`
+const DecoInner = styled.div`
+  display: flex;
+  padding: 20px;
+  border-radius: 0 0 50px 50px;
+  border: 1px transparent;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  @media (min-width: 1024px){
+    padding: 60px 0;}
+`
+const DecoInnerTop = styled.div`
+  display: flex;
+  padding: 20px;
+  border-radius: 50px 50px 0 0;
+  border: 1px transparent;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+
+  @media (min-width: 1024px){
+    padding: 60px 0;}
+`
 
 const Tables = () => {
   const data = useStaticQuery(graphql`
@@ -10,7 +63,19 @@ const Tables = () => {
       }
     }
   `)
-  return (<div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} className="price_table" />)
+  return (
+    <>
+    <DecoOuterTop>
+        <DecoInnerTop>
+        </DecoInnerTop>
+      </DecoOuterTop>
+  <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} className="price_table" />
+  <DecoOuter>
+        <DecoInner>
+        </DecoInner>
+      </DecoOuter>
+  </>
+  )
 }
 
 export default Tables
