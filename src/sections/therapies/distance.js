@@ -16,11 +16,14 @@ const TerGrid = styled.div`
   li, a, p {
     text-align: left;
   }
+  li{
+    font-size: 22px;
+  }
   h2 {
     font-family: 'Damion';
     font-style: normal;
     font-weight: 400;
-    font-size: 30px;
+    font-size: 35px;
     line-height: 26px;
     text-align: center;
     letter-spacing: 0.08em;
@@ -38,7 +41,7 @@ const TerGrid = styled.div`
   }
   @media (min-width: 1440px) {
     max-width: 1264px;
-    padding: 77px 220px;
+    padding: 77px 75px;
     .content {
     padding: 50px 80px;
     max-width: 1328;
@@ -56,8 +59,8 @@ const DecoOuterTop = styled.div`
   padding: 2px;
   background: linear-gradient(pink, transparent);
   @media (min-width: 1024px) {
-    margin-bottom: -100px;
-    margin-top: -20px;
+    margin-bottom: -125px;
+    margin-top: -50px;
     z-index: 2;
   }
 `
@@ -103,12 +106,30 @@ const TerCard = styled.div`
   align-content: start;
   grid-template-rows: fit-content auto;
   gap: 39px;
+  &:nth-child(1) {
+    padding-right: 20px;
+    &::after{
+      content: "";
+      border: 3px solid rgba(240, 65, 145, 0.35);
+      border-radius:50px;
+      position: absolute;
+      height: 550px;
+      left: 50%;
+      transform: translate (-50%);
+      top: 85%;
+    }
+  }
+  &:nth-child(2){
+    padding-left: 60px;
+  }
+
   img {
     display: block;
     width: auto;
     height: auto;
     margin: 0 auto;
   }
+
 `
 const Content = styled.div`
     padding: 50px 80px;
