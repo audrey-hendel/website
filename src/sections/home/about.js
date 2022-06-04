@@ -208,7 +208,8 @@ const TerCard = styled.div`
     margin: auto;
   }
   &:nth-child(1) {
-    &::after{
+    @media (min-width: 1024px){
+      &::after{
       content: "";
       border: 3px solid rgba(240, 65, 145, 0.35);
       border-radius:50px;
@@ -217,6 +218,8 @@ const TerCard = styled.div`
       left: 50%;
       transform: translate (-50%);
     }
+    }
+
     .decorImage {
       order: -1;
     }
@@ -227,9 +230,8 @@ const TerCard = styled.div`
     }
   }
   &:nth-child(2){
-    padding-left: 50px;
-    .decorImage {
-     
+    @media (min-width: 1024px) {
+      padding-left: 50px;
     }
   }
 `

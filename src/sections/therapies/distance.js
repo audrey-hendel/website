@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import { StaticImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
+import GetImageByName from '~components/getImageByName'
 import DecorCenter from '~components/decorCenter'
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -72,7 +74,9 @@ const DecoInnerTop = styled.div`
   width: 100%;
   height: 100%;
   background: #fff;
-
+  .center {
+    margin: 0 auto;
+  }
   @media (min-width: 1024px){
     padding: 60px 0;}
 `
@@ -107,20 +111,27 @@ const TerCard = styled.div`
   grid-template-rows: fit-content auto;
   gap: 39px;
   &:nth-child(1) {
+    @media (min-width: 1024px){
     padding-right: 20px;
+    }
     &::after{
-      content: "";
-      border: 3px solid rgba(240, 65, 145, 0.35);
-      border-radius:50px;
-      position: absolute;
-      height: 550px;
-      left: 50%;
-      transform: translate (-50%);
-      top: 85%;
+      @media (min-width: 1024px){
+        content: "";
+        border: 3px solid rgba(240, 65, 145, 0.35);
+        border-radius:50px;
+        position: absolute;
+        height: 550px;
+        left: 50%;
+        transform: translate (-50%);
+        top: 85%;
+      }
     }
   }
   &:nth-child(2){
-    padding-left: 60px;
+    @media (min-width: 1024px){
+      padding-left: 60px;
+    }
+
   }
 
   img {
@@ -132,20 +143,25 @@ const TerCard = styled.div`
 
 `
 const Content = styled.div`
-    padding: 50px 80px;
+    padding: 50px 25px;
     max-width: 1328px;
     margin: 0 auto;
     background: rgba(240, 128, 179, 0.07);
     border-radius: 30px;
     font-family: 'Sitka';
     font-style: normal;
-    font-size: 22px;
+    font-size: 16px;
     line-height: 1.27;
     display: flex;
     align-items: center;
     letter-spacing: 0.03em;
     color: rgba(51, 51, 51, 0.8);
     margin-bottom: 30px;
+    @media (min-width: 1024px){
+      padding: 50px 80px;
+      font-size: 22px;
+    }
+    
 `
 
 
@@ -167,7 +183,7 @@ const Distance = () => {
     <>
     <DecoOuterTop>
         <DecoInnerTop>
-          <DecorCenter image='decoration-4.png' />
+        <GatsbyImage image={GetImageByName('decoration-4.png')} alt='decor' className='center' />
         </DecoInnerTop>
     </DecoOuterTop>
     <TerGrid>
@@ -187,7 +203,7 @@ const Distance = () => {
         <DecoInner>
         <DecorCenter image='decoration-4.png' />
         </DecoInner>
-      </DecoOuter>
+    </DecoOuter>
     </>
   )
 }

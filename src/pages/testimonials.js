@@ -113,11 +113,71 @@ font-size: 22px;
 line-height: 1.3;
 color: rgba(51, 51, 51, 0.8);
 `
+const DecoOuterTop = styled.div`
+  width: 95%;
+  max-width: 1260px;
+  margin: 0 auto;
+  border-radius: 50px 50px 0 0;
+  padding: 2px;
+  background: linear-gradient(pink, transparent);
+  @media (min-width: 1024px) {
+    margin-bottom: -125px;
+    margin-top: -50px;
+    z-index: 2;
+  }
+`
+const DecoInnerTop = styled.div`
+  display: flex;
+  padding: 20px;
+  border-radius: 50px 50px 0 0;
+  border: 1px transparent;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  .center {
+    margin: 0 auto;
+  }
+  @media (min-width: 1024px){
+    padding: 60px 0;}
+`
+const DecoOuter = styled.div`
+  width: 95%;
+  max-width: 1260px;
+  margin: 0 auto;
+  border-radius: 0 0 50px 50px;
+  padding: 2px;
+  background: linear-gradient(transparent, pink);
+
+  @media (min-width: 1024px) {
+    margin-bottom: -75px;
+    z-index: 2;
+  }
+`
+const DecoInner = styled.div`
+  display: flex;
+  padding: 20px;
+  border-radius: 0 0 50px 50px;
+  border: 1px transparent;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  .center {
+    margin: 0 auto;
+  }
+  @media (min-width: 1024px){
+    padding: 15px 0;}
+`
+
 
 const SecondPage = () => (
   <Layout path="/testimonials">
     <Seo title="testimonials" />
     <Title text='Testimonials' />
+    <DecoOuterTop>
+      <DecoInnerTop>
+        <GatsbyImage image={GetImageByName('decoration-4.png')} alt='decor' className='center' />
+      </DecoInnerTop>
+    </DecoOuterTop>
     <TmGrid>
       {pageData.map((ct, i) => {
         return (
@@ -135,6 +195,11 @@ const SecondPage = () => (
         )
       })}
     </TmGrid>
+    <DecoOuter>
+      <DecoInner>
+        <GatsbyImage image={GetImageByName('decoration-4.png')} alt='decor' className='center' />
+      </DecoInner>
+    </DecoOuter>
   </Layout>
 )
 

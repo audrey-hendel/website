@@ -3,7 +3,7 @@ import Layout from "~components/layout"
 import Seo from "~components/seo"
 import Title from "~components/title"
 import Tables from "~sections/prices/tables"
-import Details from "~sections/therapies/details"
+import Detail from "~sections/prices/detail"
 import pageData from "~data/prices.yml"
 
 
@@ -12,7 +12,7 @@ const Prices = () => (
     <Seo title="Prices" />
     <Title text={pageData.title} />
     <Tables />
-    <Details/>
+    <Detail/>
   </Layout>
 )
 

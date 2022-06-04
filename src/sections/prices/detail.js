@@ -5,16 +5,12 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import GetImageByName from '~components/getImageByName'
 
 const DistanceBox = styled.div`
-  padding: 40px 25px;
+  padding: 40px 80px;
   max-width: 1332px;
   margin: 70px auto;
   background: rgba(240, 128, 179, 0.07);
   border-radius: 30px;
-  font-size: 16px;
-  @media (min-width: 768px) {
-    padding: 40px 80px;
-    font-size: 22px;
-  }
+  font-size: 22px;
   a {
     font-family: 'Damion';
     font-style: normal;
@@ -40,15 +36,16 @@ const Title = styled.h2`
 const Centered = styled.div`
 width: fit-content;
 margin: 0 auto;
+margin-top: 150px;
 img{
   width: 50%;
   margin: 0 auto;
 }
 `
-const Details = () => {
+const Detail= () => {
   const data = useStaticQuery(graphql`
-  query detailsData {
-    dataYaml(page: {eq: "therapies"}) {
+  query detailData {
+    dataYaml(page: {eq: "prices"}) {
       details
     }
   }
@@ -66,4 +63,4 @@ const Details = () => {
   )
 }
 
-export default Details
+export default Detail
