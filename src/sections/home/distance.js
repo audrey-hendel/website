@@ -24,14 +24,23 @@ const DistanceBox = styled.div`
     color: rgba(51, 51, 51, 0.5);
     z-index: 2;
   }
-  a {
+  h3{
     font-family: 'Damion';
     font-style: normal;
     font-weight: 400;
     font-size: 40px;
+    line-height: 55px;
+    letter-spacing: 0.08em;
+    color: rgba(51, 51, 51, 0.6);
+  }
+  a {
+    font-family: 'Sitka';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
     line-height: 34px;
     letter-spacing: 0.08em;
-    color: rgba(51, 51, 51, 0.8);
+    color: rgba(51, 51, 51, 0.6);
     text-decoration: none;
   }
   .center {
@@ -138,7 +147,7 @@ const Distance = (props) => {
             return (
               <Card key={"thr" + i} >
                 <GatsbyImage image={GetImageByName(sld.image)} alt="gallery image" />
-                <Link to={sld.image}>{sld.label}</Link>
+                <h3 to={sld.image}>{sld.label}</h3>
               </Card>)
           })}
         </CardsGrid>

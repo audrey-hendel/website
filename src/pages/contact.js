@@ -28,15 +28,76 @@ const ContactGrid = styled.section`
     grid-template-columns: 1fr 1fr;
   }
 `
+const DecoOuterTop = styled.div`
+  width: 95%;
+  max-width: 1260px;
+  margin: 0 auto;
+  border-radius: 50px 50px 0 0;
+  padding: 2px;
+  background: linear-gradient(pink, transparent);
+  @media (min-width: 1024px) {
+    margin-bottom: -100px;
+    margin-top: -20px;
+    z-index: 2;
+  }
+`
+const DecoOuter = styled.div`
+  width: 95%;
+  max-width: 1260px;
+  margin: 0 auto;
+  border-radius: 0 0 50px 50px;
+  padding: 2px;
+  background: linear-gradient(transparent, pink);
+
+  @media (min-width: 1024px) {
+    margin-bottom: -75px;
+    z-index: 2;
+  }
+`
+const DecoInner = styled.div`
+  display: flex;
+  padding: 20px;
+  border-radius: 0 0 50px 50px;
+  border: 1px transparent;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  @media (min-width: 1024px){
+    padding: 60px 0;}
+`
+const DecoInnerTop = styled.div`
+  display: flex;
+  padding: 20px;
+  border-radius: 50px 50px 0 0;
+  border: 1px transparent;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+
+  .center {
+    margin: 0 auto;
+  }
+  @media (min-width: 1024px){
+    padding: 60px 0;}
+`
+
 
 const ContactPage = () => (
   <Layout path="/contact">
     <Seo title="Contact" />
     <Title text="Contact" />
+    <DecoOuterTop>
+      <DecoInnerTop>
+      </DecoInnerTop>
+    </DecoOuterTop>
     <ContactGrid>
       <Contact contact={homeData.contact} />
       <ContactForm/>
     </ContactGrid>
+    <DecoOuter>
+        <DecoInner>
+        </DecoInner>
+      </DecoOuter>
   </Layout>
 )
 

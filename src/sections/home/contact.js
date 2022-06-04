@@ -24,7 +24,7 @@ const ContactGrid = styled.div`
   font-style: normal;
   font-weight: 400;
   color: rgba(51, 51, 51, 0.8);
-  margin: 200px auto;
+  margin: 200px auto 0;
   display: grid;
   width: 95%;
 /*max-width: 1060px;*/
