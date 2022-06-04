@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import Navigation from "../data/navigation.yml"
+import Navigation from "~data/navigation.yml"
 import styled from 'styled-components'
 
 const Nav = styled.nav`
@@ -26,7 +26,7 @@ const Links = (p, {open}) => {
   const path = p.p.path
   const navSorted = () => {
     return (
-    Navigation.sort((a,b) =>  a.order-b.order ))
+    Navigation.items.sort((a,b) =>  a.order-b.order ))
   }
   const Items = navSorted().map((item, i) => {
     return (
