@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import SectionHeader from "~sections/distance/section-header"
+import { GatsbyImage } from "gatsby-plugin-image"
+import GetImageByName from '~components/getImageByName'
 import pageData from "~data/distance-healing.yml"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -62,6 +64,61 @@ const Row = styled.div`
     }
   }
 `
+const DecoOuterTop = styled.div`
+  width: 95%;
+  max-width: 1260px;
+  margin: 0 auto;
+  border-radius: 50px 50px 0 0;
+  padding: 2px;
+  background: linear-gradient(pink, transparent);
+  @media (min-width: 1024px) {
+    margin-bottom: -100px;
+    margin-top: -20px;
+    z-index: 2;
+  }
+`
+const DecoOuter = styled.div`
+  width: 95%;
+  max-width: 1260px;
+  margin: 0 auto;
+  border-radius: 0 0 50px 50px;
+  padding: 2px;
+  background: linear-gradient(transparent, pink);
+
+  @media (min-width: 1024px) {
+    margin-bottom: -75px;
+    z-index: 2;
+  }
+`
+const DecoInner = styled.div`
+  display: flex;
+  padding: 20px;
+  border-radius: 0 0 50px 50px;
+  border: 1px transparent;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  .center {
+    margin: 0 auto;
+  }
+  @media (min-width: 1024px){
+    padding: 60px 0;}
+`
+const DecoInnerTop = styled.div`
+  display: flex;
+  padding: 20px;
+  border-radius: 50px 50px 0 0;
+  border: 1px transparent;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+
+  .center {
+    margin: 0 auto;
+  }
+  @media (min-width: 1024px){
+    padding: 60px 0;}
+`
 const PriceRow = styled.div`
 display: grid;
 p {
@@ -96,6 +153,11 @@ const Access = () => {
   }
 `)
   return (
+    <>
+      <DecoOuterTop>
+        <DecoInnerTop>
+        </DecoInnerTop>
+      </DecoOuterTop>
     <DistHeal>
       <SectionHeader
         title={pageData.access.title}
@@ -144,7 +206,13 @@ const Access = () => {
       {/* Zoom button  */}
 
       <div dangerouslySetInnerHTML={{ __html: data.dataYaml.access.text_2 }} className="access_text" />
-
+      </DistHeal>
+      <DecoOuter>
+        <DecoInner>
+        <GatsbyImage image={GetImageByName('decoration-4.png')} alt='decor' className='center' />
+        </DecoInner>
+      </DecoOuter>
+      <DistHeal>
       <SectionHeader
         title={pageData.join_team.title}
         image={pageData.join_team.image}
@@ -152,7 +220,13 @@ const Access = () => {
       <div dangerouslySetInnerHTML={{ __html: data.dataYaml.join_team.text_1 }} className="access_text" />
 
       <div dangerouslySetInnerHTML={{ __html: data.dataYaml.join_team.text_2 }} className="access_text" />
-
+      </DistHeal>
+      <DecoOuterTop>
+        <DecoInnerTop>
+        <GatsbyImage image={GetImageByName('decoration-4.png')} alt='decor' className='center' />
+        </DecoInnerTop>
+      </DecoOuterTop>
+      <DistHeal>
       <SectionHeader
         title={pageData.support.title}
         image={pageData.support.image}
@@ -163,6 +237,11 @@ const Access = () => {
       <div dangerouslySetInnerHTML={{ __html: data.dataYaml.support.text_2 }} className="access_text" />
 
     </DistHeal>
+    <DecoOuter>
+        <DecoInner>
+        </DecoInner>
+    </DecoOuter>
+    </>
   )
 }
 

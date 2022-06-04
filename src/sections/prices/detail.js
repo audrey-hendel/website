@@ -10,6 +10,7 @@ const DistanceBox = styled.div`
   margin: 70px auto;
   background: rgba(240, 128, 179, 0.07);
   border-radius: 30px;
+  font-size: 22px;
   a {
     font-family: 'Damion';
     font-style: normal;
@@ -35,6 +36,7 @@ const Title = styled.h2`
 const Centered = styled.div`
 width: fit-content;
 margin: 0 auto;
+margin-top: 150px;
 img{
   width: 50%;
   margin: 0 auto;

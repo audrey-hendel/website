@@ -1,8 +1,6 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from 'styled-components'
-import { GatsbyImage } from "gatsby-plugin-image"
-import GetImageByName from '~components/getImageByName'
 import "./tables.css"
 
 const DecoOuterTop = styled.div`
@@ -40,7 +38,7 @@ const DecoInner = styled.div`
   height: 100%;
   background: #fff;
   @media (min-width: 1024px){
-    padding: 60px 0;}
+    padding: 35px 0;}
 `
 const DecoInnerTop = styled.div`
   display: flex;

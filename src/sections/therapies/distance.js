@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import { StaticImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
+import GetImageByName from '~components/getImageByName'
 import DecorCenter from '~components/decorCenter'
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -72,7 +74,9 @@ const DecoInnerTop = styled.div`
   width: 100%;
   height: 100%;
   background: #fff;
-
+  .center {
+    margin: 0 auto;
+  }
   @media (min-width: 1024px){
     padding: 60px 0;}
 `
@@ -167,7 +171,7 @@ const Distance = () => {
     <>
     <DecoOuterTop>
         <DecoInnerTop>
-          <DecorCenter image='decoration-4.png' />
+        <GatsbyImage image={GetImageByName('decoration-4.png')} alt='decor' className='center' />
         </DecoInnerTop>
     </DecoOuterTop>
     <TerGrid>
@@ -187,7 +191,7 @@ const Distance = () => {
         <DecoInner>
         <DecorCenter image='decoration-4.png' />
         </DecoInner>
-      </DecoOuter>
+    </DecoOuter>
     </>
   )
 }
