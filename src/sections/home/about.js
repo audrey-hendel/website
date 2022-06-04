@@ -214,15 +214,6 @@ const TerCard = styled.div`
     width: auto;
     height: auto;
     margin: auto;
-    &:nth-child(1) {
-      &::before {
-        content: "";
-        background-image: url(/images/decor-dog.png);
-        width: 300px;
-        height: 300px;
-        position: absolute;
-      }
-    }
   }
   &:nth-child(1) {
     &::before {
