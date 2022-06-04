@@ -18,7 +18,7 @@ const DistanceBox = styled.div`
     font-style: normal;
     font-weight: 400;
     font-size: 60px;
-    line-height: 26px;
+    line-height: 0.9;
     text-align: center;
     letter-spacing: 0.08em;
     color: rgba(51, 51, 51, 0.5);

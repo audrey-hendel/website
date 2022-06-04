@@ -111,20 +111,27 @@ const TerCard = styled.div`
   grid-template-rows: fit-content auto;
   gap: 39px;
   &:nth-child(1) {
+    @media (min-width: 1024px){
     padding-right: 20px;
+    }
     &::after{
-      content: "";
-      border: 3px solid rgba(240, 65, 145, 0.35);
-      border-radius:50px;
-      position: absolute;
-      height: 550px;
-      left: 50%;
-      transform: translate (-50%);
-      top: 85%;
+      @media (min-width: 1024px){
+        content: "";
+        border: 3px solid rgba(240, 65, 145, 0.35);
+        border-radius:50px;
+        position: absolute;
+        height: 550px;
+        left: 50%;
+        transform: translate (-50%);
+        top: 85%;
+      }
     }
   }
   &:nth-child(2){
-    padding-left: 60px;
+    @media (min-width: 1024px){
+      padding-left: 60px;
+    }
+
   }
 
   img {
@@ -136,20 +143,25 @@ const TerCard = styled.div`
 
 `
 const Content = styled.div`
-    padding: 50px 80px;
+    padding: 50px 25px;
     max-width: 1328px;
     margin: 0 auto;
     background: rgba(240, 128, 179, 0.07);
     border-radius: 30px;
     font-family: 'Sitka';
     font-style: normal;
-    font-size: 22px;
+    font-size: 16px;
     line-height: 1.27;
     display: flex;
     align-items: center;
     letter-spacing: 0.03em;
     color: rgba(51, 51, 51, 0.8);
     margin-bottom: 30px;
+    @media (min-width: 1024px){
+      padding: 50px 80px;
+      font-size: 22px;
+    }
+    
 `
 
 

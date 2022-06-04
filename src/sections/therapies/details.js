@@ -5,11 +5,16 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import GetImageByName from '~components/getImageByName'
 
 const DistanceBox = styled.div`
-  padding: 40px 80px;
+  padding: 40px 25px;
   max-width: 1332px;
   margin: 70px auto;
   background: rgba(240, 128, 179, 0.07);
   border-radius: 30px;
+  font-size: 16px;
+  @media (min-width: 768px) {
+    padding: 40px 80px;
+    font-size: 22px;
+  }
   a {
     font-family: 'Damion';
     font-style: normal;
