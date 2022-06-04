@@ -2,9 +2,10 @@ backend:
   name: git-gateway
   #name: github
   branch: master
+  repo: vosaul/AUDREY
 publish_mode: editorial_workflow
-media_folder: packages/landing-gatsby/static/images
-public_folder: packages/landing-gatsby/images
+media_folder: /src/images
+public_folder: /src/images
 
 
 collections:
@@ -15,7 +16,7 @@ collections:
   files:
   - name: "navigation"
     label: "navigation menu"
-    file: "../../src/data/navigation.yml"
+    file: "/src/data/navigation.yml"
     fields:
     - label: "Navigation items"
       name: "items"
