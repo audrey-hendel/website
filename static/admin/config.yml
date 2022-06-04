@@ -26,15 +26,77 @@ collections:
       - { label: "link",  name: "link",  widget: "string", default: "#" }
       - { label: "order",  name: "order",  widget: "number", default: "9" }
 
-# - label: Pages
-#   name: pages
-#   editor:
-#     preview: true
-#   files:
-#     - label: Homepage
-#       name: homepage
-#       file: "pages/index.md"
-#       fields:
-#   - label: "Site Main page"
-#    name: "mainpage"
-#    files:
+- label: Pages
+  name: pages
+  editor:
+    preview: true
+  files:
+  - label: Homepage
+    name: homepage
+    file: "/src/data/home.yml"
+    fields:
+    - name: title
+      widget: string
+    - name: subtitle
+      widget: string
+    - name: text
+      widget: string
+    - name: about_section
+      label: About section
+      widget: object
+      fields: 
+      - {name: intro, widget: text}
+      - {name: decor_center, widget: image}
+      - {name: decor_left, widget: image}
+      - {name: decor_right, widget: image}
+      - {name: image_1, widget: image}
+      - {name: image_2, widget: image}
+      - name: about_box
+        widget: object
+        fields: 
+        - {name: image, widget: image}
+        - {name: name, widget: string}
+        - {name: title, widget: string}
+        - {name: text, widget: markdown}
+        - {name: file, widget: string}
+      - name: therapies
+        widget: object
+        fields: 
+        - {name: cta_label, widget: string}
+        - {name: cta_link, widget: string}        
+        - {name: title, widget: string}
+        - name: items
+          widget: list
+          fields: 
+          - {name: title, widget: string}
+          - {name: image, widget: image}
+
+    - name: gallery
+      widget: list
+      minimize_collapsed: false
+      fields:
+      - name: slide
+        minimize_collapsed: false
+        widget: list
+        fields:
+        - {name: image, widget: image, minimize_collapsed: true}
+        
+    - name: decor_gallery
+      widget: image
+    - name: distance
+      widget: object
+      fields: 
+      - {name: decor_center, widget: image}
+      - {name: title, widget: string}
+      - {name: text, widget: markdown}
+      - name: three_t
+        widget: list
+        fields: 
+        - {name: label, widget: string}
+        - {name: image, widget: image}
+    - name: contact
+      widget: object
+      fields:
+      - {name: image, widget: image}
+      - {name: text, widget: list}
+ 
