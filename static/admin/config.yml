@@ -142,3 +142,18 @@ collections:
       - {name: image, widget: image}
       - {name: text_1, widget: markdown}
       - {name: text_2, widget: markdown}
+
+  - label: Prices
+    name: prices
+    file: "/src/data/prices.yml"
+    fields:
+    - name: title
+      widget: string
+    - name: details
+      widget: markdown
+  - label: Prices table
+    name: prices-table
+    file: /src/data/prices-table.md
+    fields:
+    - name: body
+      widget: markdown
