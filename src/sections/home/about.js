@@ -28,8 +28,7 @@ const AboutSection = styled.section`
 `
 const Intro = styled.p`
   max-width: 80%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   font-family: "Sitka";
   font-style: normal;
   font-weight: 400;
@@ -97,8 +96,11 @@ const AboutBox = styled.div`
       width: 100%;
       grid-row: 1/3;
     }
-    .avatarAudrey{
-
+    &.avatarAudrey{
+      align-self: center;
+      img {
+        height: auto;
+      }
     }
   }
   h2 {
@@ -133,7 +135,7 @@ const AboutText = styled.div`
     color: #f04191;
     font-weight: 400;
     display: none;
-    margin-top: 42px;
+    margin: 0;
     text-align: left;
   }
   h3 {
@@ -143,7 +145,7 @@ const AboutText = styled.div`
     font-family: "Sitka";
     text-align: center;
     @media (min-width: 500px) {
-      margin: 42px 0;
+      margin: 22px 0;
       text-align: left;
       font-size: 25px;
     }
@@ -158,7 +160,7 @@ const AboutText = styled.div`
     }
     @media (min-width: 1024px) {
       font-size: 22px;
-
+      line-height: 1.2;
     }
 
   }
@@ -166,14 +168,14 @@ const AboutText = styled.div`
     h2 {
       display: block;
     }
-    padding: 60px 60px 60px 120px;
+    padding: 56pX;
     &:before {
       content: "";
       position: absolute;
-      top: -56px;
-      bottom: -56px;
-      left: -112px;
-      right: -56px;
+      top: 0;
+      bottom: 0;
+      left: -56px;
+      right: 0;
       background: rgba(221, 161, 192, 0.1);
       border-radius: 30px;
       box-shadow: 1px 4px 5px rgba(51, 51, 51, 0.05);
