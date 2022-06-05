@@ -8,84 +8,159 @@ import { useStaticQuery, graphql } from "gatsby"
 const AboutSection = styled.section`
   display: grid;
   justify-content: center;
-  padding-top: 60px;
   gap: 20px;
   .center {
     margin: 0 auto;
+    img{
+      width: 60%;
+      margin: 0 auto;
+    }
+    @media (min-width: 500px) {
+      img{
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
+  }
+  @media (min-width: 1024px){
+    padding-top: 60px;
   }
 `
 const Intro = styled.p`
-  max-width: 920px;
+  max-width: 80%;
   margin-left: auto;
   margin-right: auto;
-  padding: 20px;
   font-family: "Sitka";
   font-style: normal;
   font-weight: 400;
-  font-size: 25px;
+  font-size: 14px;
   line-height: 1.2;
   text-align: center;
   color: #333333;
+  @media (min-width: 500px){
+    padding: 20px;
+    font-size: 20px;
+  }
+  @media (min-width: 1024px){
+    font-size: 25px;
+    max-width: 920px;
+  }
 `
 const Decor = styled.div`
   display: grid;
   padding: 20px;
   gap: 26px;
-  @media (min-width: 768px) {
-    grid-template-columns: 1fr 1fr;
-  }
+  grid-template: 1fr 1fr 1fr/ 1fr 1fr;
+
   @media (min-width: 1024px) {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template: 1fr /1fr 1fr 1fr 1fr;
   }
   .decImg-1 {
-    grid-template-row: 1/2;
+    grid-column: 1/3;
+    transform: rotate(180deg);
+    @media (min-width: 1024px){
+      grid-column: 1/1;
+      grid-template-row: 1/2;
+
+    }
+  }
+  .decImg-2, .decImg-3{
+    border-radius: 16px;
+  }
+  .decImg-4{
+    grid-column: 1/3;
+    @media (min-width: 1024px){
+      grid-column: 4/4;
+  }
   }
 `
 const AboutBox = styled.div`
   padding: 10px;
   max-width: 1440px;
-  margin: 70px auto 0;
+  margin: -50px auto 0;
   display: grid;
   gap: 20px;
   @media (min-width: 1024px) {
+    margin: 70px auto 0;
     grid-template-columns: 5fr 7fr;
     gap: 0;
     padding: 56px;
   }
   .gatsby-image-wrapper {
     border-radius: 24px;
+    width: 70%;
+    margin: 0 auto;
     @media (min-width: 768px) {
+      width: 50%;
+    }
+    @media (min-width: 1024px) {
+      width: 100%;
       grid-row: 1/3;
+    }
+    .avatarAudrey{
+
     }
   }
   h2 {
-    font-size: 50px;
+    font-size: 35px;
     font-family: "Damion", cursive;
     color: #f04191;
     font-weight: 400;
     grid-row: 1/2;
-    @media (min-width: 1024px) {
+    text-align: center;
+    margin: 0;
+    @media (min-width: 500px) {
       display: none;
     }
   }
 `
 const AboutText = styled.div`
   position: relative;
-  padding: 10px;
   border-radius: 30px;
+  padding: 0 20px;
+  @media (min-width: 500px){
+    padding: 0 60px;
+  }
+  @media (min-width: 1024px) {
+    padding: 10px;
+  }
   h2 {
-    font-size: 50px;
+    font-size: 35px;
     font-family: "Damion", cursive;
     color: #f04191;
     font-weight: 400;
     display: none;
     margin-top: 42px;
+    text-align: left;
+    @media (min-width: 1024px) {
+      font-size: 50px;
+    }
   }
   h3 {
     color: rgba(51, 51, 51, 0.5);
-    margin: 42px 0;
-    font-size: 25px;
+    margin: 15px 0;
+    font-size: 18px;
     font-family: "Sitka";
+    text-align: center;
+    @media (min-width: 500px) {
+      margin: 42px 0;
+      text-align: left;
+      font-size: 25px;
+    }
+  }
+  p{
+    font-size: 14px;
+    margin-bottom: 10px;
+    @media (min-width: 768px) {
+      font-size: 18px;
+      margin-bottom: 24px;
+      
+    }
+    @media (min-width: 1024px) {
+      font-size: 22px;
+
+    }
+
   }
   @media (min-width: 1024px) {
     h2 {
@@ -109,13 +184,41 @@ const DecoOuterTop = styled.div`
   width: 95%;
   max-width: 1260px;
   margin: 0 auto;
-  border-radius: 50px 50px 0 0;
+  border-radius: 30px 30px 0 0;
   padding: 2px;
   background: linear-gradient(pink, transparent);
   @media (min-width: 1024px) {
+    border-radius: 50px 50px 0 0;
     margin-bottom: -100px;
     margin-top: -20px;
     z-index: 2;
+  }
+`
+const DecoInnerTop = styled.div`
+  display: flex;
+  padding: 20px;
+  border-radius: 30px 30px 0 0;
+  border: 1px transparent;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+
+  .center {
+    margin: 0 auto;
+    img{
+      width: 60%;
+      margin: 0 auto;
+    }
+    @media (min-width: 500px) {
+      img{
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
+  }
+  @media (min-width: 1024px) {
+    border-radius: 50px 50px 0 0;
+    padding: 60px 0;
   }
 `
 const DecoOuter = styled.div`
@@ -143,28 +246,20 @@ const DecoInner = styled.div`
     padding: 60px 0;
   }
 `
-const DecoInnerTop = styled.div`
-  display: flex;
-  padding: 20px;
-  border-radius: 50px 50px 0 0;
-  border: 1px transparent;
-  width: 100%;
-  height: 100%;
-  background: #fff;
 
-  .center {
-    margin: 0 auto;
-  }
-  @media (min-width: 1024px) {
-    padding: 60px 0;
-  }
-`
 
 const Therapies = styled.div`
   display: grid;
   background: rgba(240, 128, 179, 0.07);
   padding: 20px;
+  padding: 100px 20px 60px;
+  margin-top: -70px;
+  z-index: -1;
+  @media (min-width: 768px) {
+    margin-top: -70px;
+  }
   @media (min-width: 1024px) {
+    margin-top: 0;
     padding: 142px 20px 60px;
   }
 `
@@ -172,21 +267,30 @@ const TerTitle = styled.h2`
   margin: 0 auto;
   font-family: "Damion", cursive;
   text-align: center;
-  font-size: 60px;
+  font-size: 35px;
   font-weight: 400;
   color: rgba(51, 51, 51, 0.5);
   letter-spacing: 0.08em;
+  @media (min-width: 500px) {
+    font-size: 60px;
+  }
 `
 const TerSub = styled.div`
   margin: 0 auto;
   font-family: "Damion", cursive;
   text-align: center;
-  font-size: 40px;
+  font-size: 20px;
   font-weight: 400;
   line-height: 1.15;
   color: rgba(51, 51, 51, 0.5);
   letter-spacing: 0.08em;
   white-space: pre-wrap;
+  @media (min-width: 500px){
+    font-size: 30px;
+  }
+  @media (min-width: 1024px){
+    font-size: 40px;
+  }
   &:nth-child(1) {
     width: 50%;
   }
@@ -197,17 +301,25 @@ const TerSub = styled.div`
 const TerGrid = styled.div`
   margin: 0 auto;
   display: grid;
+  margin-top: 60px;
   justify-content: center;
+  gap: 40px;
+  @media (min-width: 425px){
+    gap: 60px;
+  }
   @media (min-width: 768px) {
     grid-template-columns: 1fr 1fr;
-    :60px ;
-    margin-top: 60px;
+    gap: 0;
+
   }
 `
 const TerCard = styled.div`
   display: grid;
   justify-content: center;
-  gap: 39px;
+  gap: 15px;
+  @media (min-width: 768px) {
+    gap: 39px;
+  }
 
   img {
     display: block;
@@ -225,7 +337,10 @@ const TerCard = styled.div`
         width: 180px;
         height: 190px;
         margin-top: -71px;
-        margin-left: 20px;
+        margin-left: -25px;
+        @media (min-width: 1024px) {
+          margin-left: 20px;
+        }
         @media (min-width: 1210px) {
           width: 240px;
           height: 250px;
@@ -233,17 +348,18 @@ const TerCard = styled.div`
           margin-left: -30px;
         }
       }
-    @media (min-width: 1024px) {
-      &::after {
-        content: "";
-        border: 3px solid rgba(240, 65, 145, 0.35);
-        border-radius: 50px;
-        position: absolute;
-        height: 343px;
-        left: 50%;
-        transform: translate (-50%);
+      @media (min-width: 768px){
+        &::after {
+          content: "";
+          border: 3px solid rgba(240, 65, 145, 0.35);
+          border-radius: 50px;
+          position: absolute;
+          height: 343px;
+          left: 50%;
+          transform: translateX (-50%);
+        }
       }
-    }
+
 
     .decorImage {
       order: -1;
@@ -263,9 +379,15 @@ const TerCard = styled.div`
         background-size: 100%;
         width: 238px;
         height: 145px;
-        margin-top: 120px;
-        margin-left: 220px;
-
+        margin-top: 130px;
+        margin-left: 48px;
+        @media (min-width: 500px){
+          margin-left: 126px;
+          margin-top: 135px;
+        }
+        @media (min-width: 815px){
+          margin-left: 170px;
+        }
         @media (min-width: 1210px){
           width: 322px;
           height: 145px;
@@ -319,7 +441,7 @@ const About = p => {
           <GatsbyImage image={decoeSide} alt="decor" className="decImg-4" />
         </Decor>
         <AboutBox>
-          <GatsbyImage image={avatar} alt="Auddrey" />
+          <GatsbyImage image={avatar} alt="Auddrey" class="avatarAudrey"/>
           <h2>{p.about.about_box.name}</h2>
           <AboutText>
             <h2>{p.about.about_box.name}</h2>

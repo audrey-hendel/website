@@ -10,10 +10,13 @@ const SlideshowContainer = styled.section`
   h2 {
     font-family: 'Damion';
     font-weight: 400;
-    font-size: 60px;
+    font-size: 35px;
     line-height: 1.2;
     letter-spacing: 0.08em;
     color: rgba(51, 51, 51, 0.5);
+    @media (min-width: 500px) {
+      font-size: 60px;
+    }
   }
 `
 const DecGallery = styled.div`
@@ -45,10 +48,15 @@ const DecGallery = styled.div`
 const Slide = styled.div`
   width: 95%;
   max-width: 1112px;
-  margin: 60px auto;
+  margin: 0px auto 60px;
   display: grid;
   gap: 1rem;
   grid-template-columns: 1fr 1fr;
+  padding-bottom: 30px; 
+  @media (min-width: 500px){
+    margin: 60px auto;
+    padding-bottom:70px; 
+  }
   .slideItem {
     border-radius: 16px;
   }

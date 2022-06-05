@@ -13,26 +13,49 @@ const DistanceBox = styled.div`
   padding-left: 20px;
   padding-right: 20px;
   text-align: center;
+  margin-top: 100px;
+  @media ( min-width: 1024px){
+    margin-top: 0;
+  }
   h2 {
     font-family: 'Damion';
     font-style: normal;
     font-weight: 400;
-    font-size: 60px;
+    font-size: 35px;
     line-height: 0.9;
     text-align: center;
     letter-spacing: 0.08em;
     color: rgba(51, 51, 51, 0.5);
     z-index: 2;
+    margin: 0;
+    @media ( min-width: 500px){
+      margin: 30px 0;
+      font-size: 60px;
+      line-height: 0.9;
+    }
   }
   h3{
     font-family: 'Damion';
     font-style: normal;
     font-weight: 400;
-    font-size: 40px;
+    font-size: 20px;
     line-height: 55px;
     letter-spacing: 0.08em;
     color: rgba(51, 51, 51, 0.6);
+    margin-top: -10px;
+    @media ( min-width: 500px){
+      font-size: 40px;
+      margin-top: 20px;
+    }
   }
+  img{
+    width: 75%;
+    margin: 0 auto;
+    @media ( min-width: 500px){
+      width: 100%;
+    }
+  }
+
   a {
     font-family: 'Sitka';
     font-style: normal;
@@ -45,6 +68,16 @@ const DistanceBox = styled.div`
   }
   .center {
     margin: 0 auto;
+    img{
+      width: 60%;
+      margin: 0 auto;
+    }
+    @media (min-width: 500px) {
+      img{
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
   }
 `
 const DecoOuterTop = styled.div`
@@ -83,6 +116,16 @@ const DecoInnerTop = styled.div`
 
   .center {
     margin: 0 auto;
+    img{
+      width: 60%;
+      margin: 0 auto;
+    }
+    @media (min-width: 500px) {
+      img{
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
   }
   @media (min-width: 1024px){
     padding: 60px 0;}
@@ -102,11 +145,15 @@ const DecoInner = styled.div`
 const DistanceText = styled.div`
   margin: 0 auto;
   max-width: 920px;
-  padding: 20px;
+  font-size: 14px;
+    @media (min-width: 500px){
+      padding: 20px;
+      font-size: 22px;
+    }
 `
 const CardsGrid = styled.div`
   display: grid;
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     grid-template-columns: 1fr 1fr 1fr;
   }
 `
