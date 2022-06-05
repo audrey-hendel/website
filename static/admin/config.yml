@@ -7,22 +7,6 @@ media_folder: /src/images
 public_folder: /images
 
 collections:
-- name: sections
-  label: sections
-  editor:
-    preview: true
-  files:
-  - name: "navigation"
-    label: "navigation menu"
-    file: "/src/data/navigation.yml"
-    fields:
-    - label: "Navigation items"
-      name: "items"
-      widget: "list"
-      fields:
-      - { label: "label", name: "label", widget: "string" }
-      - { label: "link",  name: "link",  widget: "string", default: "#" }
-      - { label: "order",  name: "order",  widget: "number", default: "9" }
 
 - label: Pages
   name: pages
@@ -186,3 +170,20 @@ collections:
       widget: markdown
     - name: details
       widget: markdown
+
+- name: sections
+  label: sections
+  editor:
+    preview: true
+  files:
+  - name: "navigation"
+    label: "navigation menu"
+    file: "/src/data/navigation.yml"
+    fields:
+    - label: "Navigation items"
+      name: "items"
+      widget: "list"
+      fields:
+      - { label: "label", name: "label", widget: "string" }
+      - { label: "link",  name: "link",  widget: "string", default: "#" }
+      - { label: "order",  name: "order",  widget: "number", default: "9" }
