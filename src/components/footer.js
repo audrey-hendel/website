@@ -14,7 +14,13 @@ bottom: 0;
   font-style: normal;
   font-weight: 400;
   background: #CFE8C0;
+  margin-top: 20px;
+  @media (min-width: 768px) {
+  margin-top: 130px;
+  }
+  @media (min-width: 1024px) {
   margin-top: 160px;
+  }
   h2 {
     color: rgba(240, 65, 145, 0.8);
     font-size: 20px;
