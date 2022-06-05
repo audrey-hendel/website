@@ -8,8 +8,12 @@ const LogoOuter = styled.div`
   z-index: 5;
   align-self: center;
   .Logo {
-    width: 60px;
-    height: auto;
+    width: 40px;
+    heigh: auto;
+    @media (min-width: 768px){
+      width: 60px;
+      height: auto;
+      }
     }
 `
 

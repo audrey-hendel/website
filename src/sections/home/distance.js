@@ -10,12 +10,14 @@ const SlideshowContainer = styled.div`
 const DistanceBox = styled.div`
   display: grid;
   gap: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
   text-align: center;
-  margin-top: 100px;
+  margin-top: 50px;
+  margin-bottom: -20px;
   @media ( min-width: 1024px){
-    margin-top: 0;
+    margin: 0;
+    margin-bottom: -35px;
   }
   h2 {
     font-family: 'Damion';
@@ -27,7 +29,8 @@ const DistanceBox = styled.div`
     letter-spacing: 0.08em;
     color: rgba(51, 51, 51, 0.5);
     z-index: 2;
-    margin: 0;
+    margin-top: -50px;
+    margin-bottom: 0;
     @media ( min-width: 500px){
       margin: 30px 0;
       font-size: 60px;
@@ -56,15 +59,23 @@ const DistanceBox = styled.div`
     }
   }
 
+
   a {
     font-family: 'Sitka';
     font-style: normal;
     font-weight: 400;
-    font-size: 22px;
-    line-height: 34px;
+    font-size: 14px;
+    line-height: 20px;
     letter-spacing: 0.08em;
     color: rgba(51, 51, 51, 0.6);
     text-decoration: none;
+    margin-top: 0;
+    @media (min-width: 500px){
+      font-size: 22px;
+      line-height: 34px;
+      margin-top: 30px;
+    }
+
   }
   .center {
     margin: 0 auto;
@@ -81,13 +92,14 @@ const DistanceBox = styled.div`
   }
 `
 const DecoOuterTop = styled.div`
-  width: 95%;
+  width: 100%;
   max-width: 1260px;
   margin: 0 auto;
   border-radius: 50px 50px 0 0;
   padding: 2px;
   background: linear-gradient(pink, transparent);
   @media (min-width: 1024px) {
+    width: 95%;
     margin-bottom: -110px;
     z-index: 1;
   }
@@ -107,7 +119,7 @@ const DecoOuter = styled.div`
 `
 const DecoInnerTop = styled.div`
   display: flex;
-  padding: 20px;
+  padding: 40px 0;
   border-radius: 50px 50px 0 0;
   border: 1px transparent;
   width: 100%;
@@ -128,11 +140,12 @@ const DecoInnerTop = styled.div`
     }
   }
   @media (min-width: 1024px){
-    padding: 60px 0;}
+    padding: 60px 0;
+    }
 `
 const DecoInner = styled.div`
   display: flex;
-  padding: 20px;
+  padding: 40px 0;
   border-radius: 0 0 50px 50px;
   border: 1px transparent;
   width: 100%;
@@ -181,11 +194,13 @@ const Distance = (props) => {
   const decorCenter = GetImageByName(props.distance.decor_center)
 
   return (
+    <>
+
       <DistanceBox>
-      <DecoOuterTop>
-        <DecoInnerTop>
-        </DecoInnerTop>
-      </DecoOuterTop>
+        <DecoOuterTop>
+          <DecoInnerTop>
+          </DecoInnerTop>
+        </DecoOuterTop>
         <h2>{props.distance.title}</h2>
         <GatsbyImage image={decorCenter} alt='decor' className='center' />
         <DistanceText>{props.distance.text}</DistanceText>
@@ -199,12 +214,13 @@ const Distance = (props) => {
           })}
         </CardsGrid>
         <Link to={props.distance.cta_link} className="buttonCta">{props.distance.cta_label}</Link>
-        <DecoOuter>
+
+      </DistanceBox>
+      <DecoOuter>
         <DecoInner>
         </DecoInner>
       </DecoOuter>
-      </DistanceBox>
-    
+    </>
   )
 }
 

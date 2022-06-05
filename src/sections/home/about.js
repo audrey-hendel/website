@@ -110,6 +110,9 @@ const AboutBox = styled.div`
     text-align: center;
     margin: 0;
     @media (min-width: 500px) {
+      font-size: 50px;
+    }
+    @media (min-width: 1024px) {
       display: none;
     }
   }
@@ -117,7 +120,7 @@ const AboutBox = styled.div`
 const AboutText = styled.div`
   position: relative;
   border-radius: 30px;
-  padding: 0 20px;
+  padding: 0 10px;
   @media (min-width: 500px){
     padding: 0 60px;
   }
@@ -125,16 +128,13 @@ const AboutText = styled.div`
     padding: 10px;
   }
   h2 {
-    font-size: 35px;
+    font-size: 50px;
     font-family: "Damion", cursive;
     color: #f04191;
     font-weight: 400;
     display: none;
     margin-top: 42px;
     text-align: left;
-    @media (min-width: 1024px) {
-      font-size: 50px;
-    }
   }
   h3 {
     color: rgba(51, 51, 51, 0.5);
@@ -225,11 +225,12 @@ const DecoOuter = styled.div`
   width: 95%;
   max-width: 1260px;
   margin: 0 auto;
-  border-radius: 0 0 50px 50px;
+  border-radius: 0 0 30px 30px;
   padding: 2px;
   background: linear-gradient(transparent, pink);
 
   @media (min-width: 1024px) {
+    border-radius: 0 0 50px 50px;
     margin-bottom: -75px;
     z-index: 2;
   }
@@ -237,13 +238,14 @@ const DecoOuter = styled.div`
 const DecoInner = styled.div`
   display: flex;
   padding: 20px;
-  border-radius: 0 0 50px 50px;
+  border-radius: 0 0 30px 30px;
   border: 1px transparent;
   width: 100%;
   height: 100%;
   background: #fff;
   @media (min-width: 1024px) {
     padding: 60px 0;
+    border-radius: 0 0 50px 50px;
   }
 `
 
@@ -254,7 +256,7 @@ const Therapies = styled.div`
   padding: 20px;
   padding: 100px 20px 60px;
   margin-top: -70px;
-  z-index: -1;
+  z-index: ;
   @media (min-width: 768px) {
     margin-top: -70px;
   }
@@ -322,10 +324,14 @@ const TerCard = styled.div`
   }
 
   img {
-    display: block;
-    width: auto;
-    height: auto;
-    margin: auto;
+    width: 140px;
+    margin: 0 auto;
+    @media (min-width: 500px){
+      display: block;
+      width: auto;
+      height: auto;
+      margin: auto;
+    }
   }
   &:nth-child(1) {
     &::before {
@@ -379,8 +385,8 @@ const TerCard = styled.div`
         background-size: 100%;
         width: 238px;
         height: 145px;
-        margin-top: 130px;
-        margin-left: 48px;
+        margin-top: 55px;
+        margin-left: 45px;
         @media (min-width: 500px){
           margin-left: 126px;
           margin-top: 135px;
@@ -461,7 +467,6 @@ const About = p => {
         <Therapies>
           <TerTitle>{p.about.therapies.title}</TerTitle>
           <GatsbyImage image={decorCenter} alt="decor" className="center" />
-
           <TerGrid>
             <TerCard>
               <GatsbyImage image={image1} alt="decor" class="decorDog" />

@@ -8,6 +8,7 @@ import Distance from "~sections/home/distance"
 import Contact from "~sections/home/contact"
 import homeData from "~data/home.yml"
 
+
 const IndexPage = () => (
   <Layout path="/">
     <Seo title="Home" />

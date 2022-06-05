@@ -25,6 +25,13 @@ bottom: 0;
     color: rgba(51, 51, 51, 0.8);
     font-size: 16px;
   }
+  img{
+    width: 40px;
+    height: auto;
+    @media (min-width: 768px){
+      width: 60px;
+    }
+  }
 `
 const FooterGrid = styled.div`
   max-width: 1060px;

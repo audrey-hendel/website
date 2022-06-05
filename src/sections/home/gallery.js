@@ -52,7 +52,7 @@ const Slide = styled.div`
   display: grid;
   gap: 1rem;
   grid-template-columns: 1fr 1fr;
-  padding-bottom: 30px; 
+  padding-bottom: 50px; 
   @media (min-width: 500px){
     margin: 60px auto;
     padding-bottom:70px; 
