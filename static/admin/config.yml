@@ -59,13 +59,16 @@ collections:
         - {name: title, widget: string}
         - {name: text, widget: markdown}
         - {name: file, widget: string}
+
       - name: therapies
         widget: object
+        allow_add: false
         fields: 
         - {name: cta_label, widget: string}
         - {name: cta_link, widget: string}        
         - {name: title, widget: string}
         - name: items
+          allow_add: false
           widget: list
           fields: 
           - {name: title, widget: string}
@@ -73,14 +76,9 @@ collections:
 
     - name: gallery
       widget: list
-      minimize_collapsed: false
-      fields:
-      - name: slide
-        minimize_collapsed: false
-        widget: list
-        fields:
-        - {name: image, widget: image, minimize_collapsed: true}
-        
+  #    field:
+  #    - {name: slide, widget: list, field: {name: image, widget: image}}
+  #      
     - name: decor_gallery
       widget: image
     - name: distance
@@ -90,6 +88,7 @@ collections:
       - {name: title, widget: string}
       - {name: text, widget: markdown}
       - name: three_t
+        allow_add: false
         widget: list
         fields: 
         - {name: label, widget: string}
@@ -100,3 +99,46 @@ collections:
       - {name: image, widget: image}
       - {name: text, widget: list}
  
+  - label: Distance Healing
+    name: distance-healing
+    file: "/src/data/distance-healing.yml"
+    fields:
+    - name: title
+      widget: string
+    - name: access
+      widget: object
+      fields:
+      - {name: title, widget: string}
+      - {name: subtitle, widget: string}
+      - {name: image, widget: image}
+      - name: team
+        label: team members
+        widget: list
+        fields: 
+        - name: name
+          widget: string
+        - name: bio
+          widget: string
+      - name: prices
+        widget: list
+        fields:
+        - {name: text, widget: string}
+        - {name: time, widget: string}
+        - {name: price, widget: number}
+      - {name: text_1, widget: markdown}
+      - {name: text_2, widget: markdown}
+    - name: join_team
+      label: join team
+      widget: object
+      fields:
+      - {name: title, widget: string}
+      - {name: image, widget: image}
+      - {name: text_1, widget: markdown}
+      - {name: text_2, widget: markdown}
+    - name: support
+      widget: object
+      fields:
+      - {name: title, widget: string}
+      - {name: image, widget: image}
+      - {name: text_1, widget: markdown}
+      - {name: text_2, widget: markdown}
