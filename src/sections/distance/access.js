@@ -134,12 +134,15 @@ const DecoInnerTop = styled.div`
 `
 const PriceRow = styled.div`
 display: grid;
+margin-bottom: 16px;
 p {
   margin: 0;
+  @media (min-width: 768px) {
   padding: 8px 24px;
   font-size: 22px;
+  }
 }
-i{
+i {
   font-size: 18px;
   padding-left: 21px;
   &::before{

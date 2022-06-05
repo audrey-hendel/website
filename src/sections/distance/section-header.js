@@ -8,7 +8,7 @@ const SectionTitle = styled.div`
   img {
     width: 252px;
     height: auto;
-    margin: 0 auto;
+    margin: 50px auto 0;
   }
   h2 {
     text-align: center;

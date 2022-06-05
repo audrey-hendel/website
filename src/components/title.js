@@ -8,7 +8,7 @@ const TitleOuter = styled.div`
   justify-content: center;
   gap: 33px;
   margin-top: -100px;
-  padding: 170px 20px 100px;
+  padding: 170px 20px 40px;
   background: rgba(240, 128, 179, 0.07);
   .decor {
     width: auto;
@@ -18,6 +18,7 @@ const TitleOuter = styled.div`
       height: auto;
     }
   h1 {
+    text-align: center;
     font-family: 'Damion';
     font-style: normal;
     font-weight: 400;
@@ -25,6 +26,9 @@ const TitleOuter = styled.div`
     line-height: 1.4;
     letter-spacing: 0.08em;
     color: rgba(51, 51, 51, 0.5);
+  }
+  @media (min-width: 1024px) {
+    padding: 170px 20px 100px;
   }
 `
 
