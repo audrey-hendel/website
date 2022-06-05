@@ -1,7 +1,10 @@
 .price_table {
   max-width: 1263px;
-  padding: 0 103px 10px;
+  padding: 0 60px 10px;
   margin: 0 auto;
+  @media (min-width: 1024px) {
+    padding: 0 103px 10px;
+  }
 }
 .price_table h2 {
   font-family: 'Damion';
@@ -25,6 +28,10 @@
 .price_table table img{
   margin-bottom: 0;
   padding-right: 15px;
+  margin-left: -80px;
+  @media (min-width: 1024px) {
+    margin-left: 0;
+  }
 }
 .price_table table td:nth-child(1) {
     width: 60%;
