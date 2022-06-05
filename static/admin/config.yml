@@ -1,6 +1,5 @@
 backend:
-  #name: git-gateway
-  name: github
+  name: git-gateway
   branch: master
   repo: vosaul/AUDREY
 publish_mode: editorial_workflow
