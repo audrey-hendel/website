@@ -158,11 +158,12 @@ collections:
     - name: body
       widget: markdown
 
-  - label: testimonials
+  - label: Testimonials
     name: testimonials
     file: "/src/data/testimonials.yml"
     fields:
     - name: items
+      label: testimonials
       widget: list
       fields:
       - {name: name, widget: string}
@@ -170,3 +171,20 @@ collections:
       - {name: stars, widget: number}
       - {name: date, widget: date}
       - {name: response, widget: text}
+
+  - name: therapies
+    label: Therapies
+    file: "/src/data/therapies.yml"
+    fields:
+    - name: title
+      widget: string
+    - name: col1
+      widget: markdown
+    - name: col2
+      widget: markdown
+    - name: content
+      widget: markdown
+    - name: gallery_text
+      widget: markdown
+    - name: details
+      widget: markdown
