@@ -3,8 +3,8 @@ import styled from 'styled-components'
 import { Link } from 'gatsby';
 import { GatsbyImage } from "gatsby-plugin-image"
 import GetImageByName from './getImageByName'
-import dataHome from '../data/home.yml'
-import dataNav from '../data/navigation.yml'
+import dataHome from '~data/home.yml'
+import dataNav from '~data/navigation.yml'
 
 const PageFooter = styled.footer`
 position: relative;
@@ -60,7 +60,7 @@ const Footer = () => {
         </Col>
         <Col>
           <h2>Navigation Menu</h2>
-          {dataNav.map((item, i) => {
+          {dataNav.items.map((item, i) => {
             return (
               <p key={'link' + i}>
                 <Link to={item.link}>

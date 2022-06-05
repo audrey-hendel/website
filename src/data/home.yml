@@ -20,7 +20,6 @@ about_section:
       After studying eight years **Philosophy and Psychology** at the French university, I trained  Psychopathology and various psychotherapeutic approaches in Germany. My professional       experience in psychiatric hospitals for children and adults has given me the field-bases approach  and the desire to propose a complementary therapeutic approach: the combination of  shamanism and psychotherapy. 
 
       I developed my healing and shamanic divination techniques with the FSSE, The Foundation for       Shamanic Studies Europe*, a very professional and closed to my heart organization. In addition,      **Tibetan Buddhism** grounds and frames my ethic and dedicated spirituality. My therapies are      gentle, respectful of your own wishes, healing rhythm and based on an ethic of universal   compassion. Living in Germany where the status of psychological counselor is recognized,       validated, and supervised by the Ministry of Health, I practice as “Heilpraktikerin für       Psychotherapie"
-    file: ./file.md
   therapies: 
     title: Therapies
     items:
@@ -42,6 +41,7 @@ gallery:
   - image: therapy_2.png
   - image: therapy_3.png
   - image: therapy_4.png
+  
 decor_gallery: decor_c.png
 
 distance:

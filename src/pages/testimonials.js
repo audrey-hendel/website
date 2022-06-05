@@ -193,7 +193,7 @@ const SecondPage = () => (
       </DecoInnerTop>
     </DecoOuterTop>
     <TmGrid>
-      {pageData.map((ct, i) => {
+      {pageData.items.map((ct, i) => {
         return (
           <TmCard>
             

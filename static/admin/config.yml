@@ -1,23 +1,189 @@
 backend:
   name: git-gateway
-  branch: vs/blog-posts
+  branch: master
+  repo: vosaul/AUDREY
 publish_mode: editorial_workflow
-media_folder: packages/landing-gatsby/static/images
-public_folder: packages/landing-gatsby/images
+media_folder: /src/images
+public_folder: /images
 
 collections:
-  - label: "Site Main page"
-    name: "mainpage"
-    files:
 
-      - name: "navigation"
-        label: "navigation menu"
-        file: "../../src/data/navigation.yml"
+- label: Pages
+  name: pages
+  editor:
+    preview: true
+  files:
+  - label: Homepage
+    name: homepage
+    file: "/src/data/home.yml"
+    fields:
+    - name: title
+      widget: string
+    - name: subtitle
+      widget: string
+    - name: text
+      widget: string
+    - name: about_section
+      label: About section
+      widget: object
+      fields: 
+      - {name: intro, widget: text}
+      - {name: decor_center, widget: image}
+      - {name: decor_left, widget: image}
+      - {name: decor_right, widget: image}
+      - {name: image_1, widget: image}
+      - {name: image_2, widget: image}
+      - name: about_box
+        widget: object
+        fields: 
+        - {name: image, widget: image}
+        - {name: name, widget: string}
+        - {name: title, widget: string}
+        - {name: text, widget: markdown}
+        - {name: file, widget: string}
+
+      - name: therapies
+        widget: object
+        allow_add: false
+        fields: 
+        - {name: cta_label, widget: string}
+        - {name: cta_link, widget: string}        
+        - {name: title, widget: string}
+        - name: items
+          allow_add: false
+          widget: list
+          fields: 
+          - {name: title, widget: string}
+          - {name: image, widget: image}
+
+    - name: gallery
+      widget: list
+  #    field:
+  #    - {name: slide, widget: list, field: {name: image, widget: image}}
+  #      
+    - name: decor_gallery
+      widget: image
+    - name: distance
+      widget: object
+      fields: 
+      - {name: decor_center, widget: image}
+      - {name: title, widget: string}
+      - {name: text, widget: markdown}
+      - name: three_t
+        allow_add: false
+        widget: list
+        fields: 
+        - {name: label, widget: string}
+        - {name: image, widget: image}
+    - name: contact
+      widget: object
+      fields:
+      - {name: image, widget: image}
+      - {name: text, widget: list}
+ 
+  - label: Distance Healing
+    name: distance-healing
+    file: "/src/data/distance-healing.yml"
+    fields:
+    - name: title
+      widget: string
+    - name: access
+      widget: object
+      fields:
+      - {name: title, widget: string}
+      - {name: subtitle, widget: string}
+      - {name: image, widget: image}
+      - name: team
+        label: team members
+        widget: list
+        fields: 
+        - name: name
+          widget: string
+        - name: bio
+          widget: string
+      - name: prices
+        widget: list
         fields:
-        - label: "Navigation items"
-          name: "items"
-          widget: "list"
-          fields:
-          - { label: "label", name: "label", widget: "string" }
-          - { label: "link",  name: "link",  widget: "string", default: "#" }
-          - { label: "order",  name: "order",  widget: "number", default: "9" }
+        - {name: text, widget: string}
+        - {name: time, widget: string}
+        - {name: price, widget: number}
+      - {name: text_1, widget: markdown}
+      - {name: text_2, widget: markdown}
+    - name: join_team
+      label: join team
+      widget: object
+      fields:
+      - {name: title, widget: string}
+      - {name: image, widget: image}
+      - {name: text_1, widget: markdown}
+      - {name: text_2, widget: markdown}
+    - name: support
+      widget: object
+      fields:
+      - {name: title, widget: string}
+      - {name: image, widget: image}
+      - {name: text_1, widget: markdown}
+      - {name: text_2, widget: markdown}
+
+  - label: Prices
+    name: prices
+    file: "/src/data/prices.yml"
+    fields:
+    - name: title
+      widget: string
+    - name: details
+      widget: markdown
+  - label: Prices table
+    name: prices-table
+    file: /src/data/prices-table.md
+    fields:
+    - name: body
+      widget: markdown
+
+  - label: Testimonials
+    name: testimonials
+    file: "/src/data/testimonials.yml"
+    fields:
+    - name: items
+      label: testimonials
+      widget: list
+      fields:
+      - {name: name, widget: string}
+      - {name: image, widget: image}
+      - {name: stars, widget: number}
+      - {name: date, widget: date}
+      - {name: response, widget: text}
+
+  - name: therapies
+    label: Therapies
+    file: "/src/data/therapies.yml"
+    fields:
+    - name: title
+      widget: string
+    - name: col1
+      widget: markdown
+    - name: col2
+      widget: markdown
+    - name: content
+      widget: markdown
+    - name: gallery_text
+      widget: markdown
+    - name: details
+      widget: markdown
+
+- name: sections
+  label: sections
+  editor:
+    preview: true
+  files:
+  - name: "navigation"
+    label: "navigation menu"
+    file: "/src/data/navigation.yml"
+    fields:
+    - label: "Navigation items"
+      name: "items"
+      widget: "list"
+      fields:
+      - { label: "label", name: "label", widget: "string" }
+      - { label: "link",  name: "link",  widget: "string", default: "#" }
+      - { label: "order",  name: "order",  widget: "number", default: "9" }
