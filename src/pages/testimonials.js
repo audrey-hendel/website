@@ -179,7 +179,7 @@ const SecondPage = () => (
       </DecoInnerTop>
     </DecoOuterTop>
     <TmGrid>
-      {pageData.map((ct, i) => {
+      {pageData.items.map((ct, i) => {
         return (
           <TmCard>
             <GatsbyImage image={GetImageByName(ct.image)} alt="avatar" className="tmAvatar" />

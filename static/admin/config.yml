@@ -157,3 +157,16 @@ collections:
     fields:
     - name: body
       widget: markdown
+
+  - label: testimonials
+    name: testimonials
+    file: "/src/data/testimonials.yml"
+    fields:
+    - name: items
+      widget: list
+      fields:
+      - {name: name, widget: string}
+      - {name: image, widget: image}
+      - {name: stars, widget: number}
+      - {name: date, widget: date}
+      - {name: response, widget: text}
