@@ -10,6 +10,9 @@ const DistHeal = styled.article`
   max-width: 1190px;
   padding: 20px;
   margin: 0 auto;
+  &:nth-child(2){
+    margin-top: 120px;
+  }
   h3 {
     margin-top: 40px;
     font-family: 'Sitka';
@@ -19,6 +22,15 @@ const DistHeal = styled.article`
     line-height: 1.25;
     letter-spacing: 0.08em;
     color: rgba(51, 51, 51, 0.6);
+  }
+  .access_text{
+    font-family: 'Sitka';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 28px;
+    letter-spacing: 0.03em;
+    color: #333333;
   }
 `
 const Table = styled.div`
@@ -32,6 +44,7 @@ const RowTitle = styled.div`
   p {
     padding: 20px;
     text-align: center;
+    font-size: 20px;
     margin: 0;
     border-bottom: 3px solid rgba(240, 65, 145, 0.35);
   }
@@ -124,6 +137,22 @@ display: grid;
 p {
   margin: 0;
   padding: 8px 24px;
+  font-size: 22px;
+}
+i{
+  font-size: 18px;
+  padding-left: 21px;
+  &::before{
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(240, 65, 145, 0.05);
+    box-shadow: 0px 0px 6px 1px rgba(240, 65, 145, 0.24);
+    margin-left: -21px;
+    margin-top: 8px;
+  }
 }
 @media (min-width: 768px) {
   grid-template-columns: 3fr 1fr 1fr;

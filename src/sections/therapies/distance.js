@@ -111,6 +111,23 @@ const TerCard = styled.div`
   grid-template-rows: fit-content auto;
   gap: 39px;
   &:nth-child(1) {
+    &::before {
+        content: "";
+        background: url(/images/decor-dog.png);
+        position: absolute;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        width: 180px;
+        height: 190px;
+        margin-top: -71px;
+        margin-left: 20px;
+        @media (min-width: 1210px) {
+          width: 240px;
+          height: 250px;
+          margin-top: -90px;
+          margin-left: -30px;
+        }
+      }
     @media (min-width: 1024px){
     padding-right: 20px;
     }
@@ -128,6 +145,24 @@ const TerCard = styled.div`
     }
   }
   &:nth-child(2){
+    &::before {
+        content: "";
+        background: url(/images/decor-horse.png);
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        width: 238px;
+        height: 145px;
+        margin-top: 120px;
+        margin-left: 220px;
+
+        @media (min-width: 1210px){
+          width: 322px;
+          height: 145px;
+          margin-top: 95px;
+          margin-left: 230px;
+        }
+      }
     @media (min-width: 1024px){
       padding-left: 60px;
     }

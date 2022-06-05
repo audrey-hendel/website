@@ -13,6 +13,7 @@ const TmGrid = styled.div`
   padding: 20px;
   display: grid;
   gap: 70px;
+  margin-top: 100px;
 `
 const TmCard = styled.div`
   display: grid;
@@ -23,7 +24,7 @@ const TmCard = styled.div`
     div:nth-child
     }
     &:nth-child(even) {
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 3fr 1fr;
     div:nth-child(1) {
       order: 2;
    }
@@ -42,8 +43,20 @@ const TmCard = styled.div`
     margin: 0 -10% 0 0;
     }
   }
+  .tmAvatar::before{
+      content: "";
+      background: url(/images/decor-testimonials.png);
+      position: absolute;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      width: 407px;
+    height: 365px;
+    margin-left: -54px;
+    top: 50%;
+    transform: translatey(-50%);
+}
 .gatsby-image-wrapper {
-    justify-self: center;
+    //*justify-self: center;
     z-index: 5;
     background: #fff;
     align-self: center;
@@ -51,7 +64,8 @@ const TmCard = styled.div`
     border: 4px solid #bbb;
     width: 290px;
     height: 290px;
-    padding: 30px;
+    padding: 30px;*//
+
     img {
       object-fit: cover;
       opacity: 1;
@@ -165,7 +179,7 @@ const DecoInner = styled.div`
     margin: 0 auto;
   }
   @media (min-width: 1024px){
-    padding: 15px 0;}
+    padding: 60px 0;}
 `
 
 
@@ -182,6 +196,7 @@ const SecondPage = () => (
       {pageData.items.map((ct, i) => {
         return (
           <TmCard>
+            
             <GatsbyImage image={GetImageByName(ct.image)} alt="avatar" className="tmAvatar" />
             <Content className="content">
               <Response>{ct.response}</Response>
