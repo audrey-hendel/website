@@ -193,7 +193,7 @@ const SecondPage = () => (
               <p>{ct.name}</p>
               <Rating>
                 <Stars className={'stars-' + ct.stars} />
-              </Rating>
+              </Rating>AvatarBox
               <Date>{ct.date}</Date>
             </Content>
           </TmCard>
