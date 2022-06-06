@@ -13,13 +13,15 @@ const Nav = styled.nav`
     font-family: 'Damion', cursive;
     color: rgba(51, 51, 51, 0.8);  
     text-decoration: none;
-    font-size: 20px;
+    font-size: 1.8rem;
     &.active {
       color: #F04191;
     }
   }
     @media (min-width: 768px) {
-  display: flex;}
+  display: flex;
+  font-size: 20px;
+  }
 `
 
 const Links = (p, {open}) => {
