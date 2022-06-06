@@ -243,3 +243,6 @@ pre tt:after {
 main {
   min-height: 50vh;
 }
+.gatsby-image-wrapper div:nth-child(2) {
+  background-color: rgba(240,128,179,0.07) !important;
+}
