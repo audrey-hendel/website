@@ -43,20 +43,9 @@ const TmCard = styled.div`
     margin: 0 -10% 0 0;
     }
   }
-  .tmAvatar::before{
-      content: "";
-      background: url(/images/decor-testimonials.png);
-      position: absolute;
-      background-repeat: no-repeat;
-      background-size: 100%;
-      width: 407px;
-    height: 365px;
-    margin-left: -54px;
-    top: 50%;
-    transform: translatey(-50%);
-}
+  
 .gatsby-image-wrapper {
-    //*justify-self: center;
+    justify-self: center;
     z-index: 5;
     background: #fff;
     align-self: center;
@@ -64,7 +53,7 @@ const TmCard = styled.div`
     border: 4px solid #bbb;
     width: 290px;
     height: 290px;
-    padding: 30px;*//
+    padding: 30px;
 
     img {
       object-fit: cover;
@@ -196,7 +185,6 @@ const SecondPage = () => (
       {pageData.items.map((ct, i) => {
         return (
           <TmCard>
-            
             <GatsbyImage image={GetImageByName(ct.image)} alt="avatar" className="tmAvatar" />
             <Content className="content">
               <Response>{ct.response}</Response>
