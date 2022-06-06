@@ -220,7 +220,6 @@ const DecoOuterTop = styled.div`
   padding: 2px;
   background: linear-gradient(pink, transparent);
   @media (min-width: 1024px) {
-    margin-bottom: -125px;
     margin-top: -50px;
     z-index: 2;
   }

@@ -191,7 +191,6 @@ const DecoOuterTop = styled.div`
   background: linear-gradient(pink, transparent);
   @media (min-width: 1024px) {
     border-radius: 50px 50px 0 0;
-    margin-bottom: -100px;
     margin-top: -20px;
     z-index: 2;
   }
@@ -313,7 +312,7 @@ const TerGrid = styled.div`
   }
   @media (min-width: 768px) {
     grid-template-columns: 1fr 1fr;
-    gap: 0;
+    gap: 20px;
 
   }
 `
