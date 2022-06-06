@@ -14,11 +14,9 @@ const DistHeal = styled.article`
       padding: 20px 30px;
     }
   @media (min-width: 768px){
-      padding: 20px 70px;
+      padding: 70px 70px 30px;
     }
-    @media (min-width: 1200px){
-      padding: 20px;
-    }
+
     h2{
       font-size: 30px;
       line-height: 34px;
