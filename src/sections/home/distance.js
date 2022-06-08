@@ -100,7 +100,7 @@ const DecoOuterTop = styled.div`
   background: linear-gradient(pink, transparent);
   @media (min-width: 1024px) {
     width: 95%;
-    margin-bottom: -110px;
+    margin-bottom: 110px;
     z-index: 1;
   }
 `
