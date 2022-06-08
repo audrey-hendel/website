@@ -1,7 +1,12 @@
 .price_table {
   max-width: 1263px;
-  padding: 0 10px 10px;
-  margin: 0 auto;
+  padding: 0 25px 10px;
+  margin: -110px auto 0;
+}
+@media (min-width: 500px) {
+  .price_table {
+    margin: -100px auto 0;
+  }
 }
 @media (min-width: 768px) {
   .price_table {
@@ -18,41 +23,112 @@
   font-family: "Damion";
   font-style: normal;
   font-weight: 400;
-  font-size: 40px;
+  font-size: 18px;
   line-height: 1.375;
   letter-spacing: 0.08em;
   color: rgba(51, 51, 51, 0.8);
   border-bottom: 3px solid rgba(240, 65, 145, 0.35);
 }
+@media (min-width: 500px) {
+  .price_table h2{
+    font-size: 28px;
+    line-height: 1.375;
+  }
+}
+@media (min-width: 768px) {
+  .price_table h2{
+    font-size: 40px;
+    line-height: 1.375;
+  }
+}
 .price_table h3 {
   color: rgba(51, 51, 51, 0.8);
-  font-size: 1rem;
+  font-size: 14px;
+  margin-bottom: 0;
 }
+@media (min-width:500px) {
+  .price_table h3{
+    font-size: 20px;
+  }
+}
+@media (min-width: 768px) {
+  .price_table h3{
+    font-size: 25px;
+    line-height: 1.375;
+
+  }
+}
+
 .price_table tr {
   margin-bottom: 20px;
 }
 .price_table table {
   width: 100%;
-  font-size: 1rem;
+  font-size: 12px;
   color: rgba(51, 51, 51, 0.5);
   overflow-x: scroll;
 }
-.price_table table img {
-  margin-bottom: 0;
-  padding-right: 15px;
-  margin-left: -80px;
-  @media (min-width: 1024px) {
-    margin-left: 0;
+@media (min-width: 500px) {
+  .price_table table{
+    font-size: 18px;
   }
 }
-.price_table table td:nth-child(1) {
+@media (min-width: 768px) {
+  .price_table table{
+    font-size: 22px;
+    line-height: 1.375;
+  }
+}
+.price_table em{
+  font-size: 10px;
+  line-height: 12px;
+}
+@media (min-width: 500px) {
+  .price_table em{
+    font-size: 16px;
+  }
+}
+@media (min-width: 768px) {
+  .price_table em{
+    font-size: 22px;
+  }
+}
+.price_table table img {
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-left: -80px;
   width: 50%;
 }
+@media (min-width: 500px) {
+  .price_table table img {
+    width: auto;
+  }
+}
+
+.price_table table td:nth-child(1) {
+  width: 65%;
+  padding-right: 20px;
+}
+@media (min-width: 452px){
+  .price_table table td:nth-child(1){
+    width: 50%;
+  }
+}
 .price_table table td:nth-child(2) {
-  width: 30%;
+  width: 25%;
+}
+@media (min-width: 500px){
+  .price_table table td:nth-child(2){
+    width: 30%;
+  }
 }
 .price_table table td:nth-child(3) {
-  width: 20%;
+  width: 10%;
+}
+@media (min-width: 500px){
+  .price_table table td:nth-child(2){
+    width: 20%;
+  }
 }
 @media (min-width: 920px) {
   .price_table {

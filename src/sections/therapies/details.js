@@ -7,7 +7,7 @@ import GetImageByName from '~components/getImageByName'
 const DistanceBox = styled.div`
   padding: 40px 25px;
   max-width: 1332px;
-  margin: 70px auto;
+  margin: 70px auto 0;
   background: rgba(240, 128, 179, 0.07);
   border-radius: 30px;
   font-size: 16px;
@@ -30,19 +30,26 @@ const Title = styled.h2`
     font-family: 'Damion';
     font-style: normal;
     font-weight: 400;
-    font-size: 30px;
-    line-height: 26px;
+    font-size: 14px;
+    line-height: 18px;
     text-align: center;
     letter-spacing: 0.08em;
     color: rgba(240, 65, 145, 0.8);
     margin: 0;
+    @media (min-width: 500px){
+      font-size: 25px;
+      line-height: 26px;
+  }
 `
 const Centered = styled.div`
 width: fit-content;
 margin: 0 auto;
 img{
-  width: 50%;
+  width: 25%;
   margin: 0 auto;
+  @media (min-width: 500px){
+    width: 50%;
+  }
 }
 `
 const Details = () => {
