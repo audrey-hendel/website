@@ -6,13 +6,29 @@ import styled from 'styled-components'
 const TitleOuter = styled.div`
   display: flex;
   justify-content: center;
-  gap: 33px;
+  gap: 0px;
   margin-top: -100px;
-  padding: 170px 20px 40px;
+  padding: 147px 20px 83px;
+  align-items: center;
   background: rgba(240, 128, 179, 0.07);
+  @media (min-width: 425px){
+    padding: 185px 20px 115px;
+    gap: 20px;
+  }
+  @media (min-width: 768px){
+    gap: 33px;
+  }
   .decor {
-    width: auto;
+    min-width: 70px;
     height: auto;
+    margin-top: 8px;
+    width: 100%;
+
+    @media (min-width: 768px){
+      width: auto;
+      height: auto;
+    }
+
     }
     .gatsby-image-wrapper img {
       height: auto;
@@ -22,14 +38,19 @@ const TitleOuter = styled.div`
     font-family: 'Damion';
     font-style: normal;
     font-weight: 400;
-    font-size: 50px;
-    line-height: 1.4;
+    font-size: 30px;
     letter-spacing: 0.08em;
     color: rgba(51, 51, 51, 0.5);
+    margin-bottom: 0;
+    @media (min-width: 425px){
+      font-size: 40px;
+    }
+    @media (min-width: 600px){
+      font-size: 50px;
+      line-height: 1.4;
+    }
   }
-  @media (min-width: 1024px) {
-    padding: 170px 20px 100px;
-  }
+
 `
 
 const Title = (p) => {
