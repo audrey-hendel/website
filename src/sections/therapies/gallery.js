@@ -6,7 +6,7 @@ import DecorCenter from '~components/decorCenter'
 import { useStaticQuery, graphql } from "gatsby"
 
 const SlideshowContainer = styled.section`
-  margin-top: 157px;
+  margin-top: 80px;
   text-align: center;
     font-family: 'Damion';
     font-weight: 400;
@@ -14,10 +14,33 @@ const SlideshowContainer = styled.section`
     line-height: 1.36;
     letter-spacing: 0.08em;
     color: rgba(51, 51, 51, 0.5);
+    @media (min-width: 1024px){
+      margin-top: 157px;
+    }
+  .center {
+    margin: 0 auto;
+    img{
+      width: 60%;
+      margin: 0 auto;
+    }
+    @media (min-width: 500px) {
+      img{
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
+  }
   .headLines {
     margin-top: 30px;
+    padding: 0 20px;
     p {
+      font-size: 18px;
       margin-bottom: 0;
+      letter-spacing: -0.01em;
+      @media (min-width: 500px){
+        font-size: 25px;
+        letter-spacing: 0.08em;
+    }
     }
     p:nth-child(3) {
      color: rgba(240, 65, 145, 0.8);
@@ -83,7 +106,7 @@ const Gallery = (props) => {
 `)
   return (
     <SlideshowContainer>
-      <DecorCenter image='decoration-4.png' />
+      <DecorCenter image='decoration-4.png' className="center"/>
       <div dangerouslySetInnerHTML={{ __html: data.dataYaml.gallery_text }} className="center headLines" />
 
         {props.gallery.map((sld, i) => {
