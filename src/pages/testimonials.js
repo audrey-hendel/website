@@ -27,12 +27,11 @@ const TmCard = styled.div`
   position: relative;
   @media (min-width: 768px) {
     &:nth-child(odd) {
-    grid-template-columns: 1fr 4fr;
-    div:nth-child
+    grid-template-columns: 1fr 3fr;
     }
     &:nth-child(even) {
     grid-template-columns: 3fr 1fr;
-    div:nth-child(1) {
+    .avatarBox {
       order: 2;
    }
   }
@@ -97,12 +96,14 @@ const Content = styled.div`
       width: auto;
       height: auto;
       transform: rotate(180deg);
+      padding-top: 20px;
     }
   }
   .quotBottom{
     img{
       width: auto;
       height: auto;
+      margin-left: auto;
     }
   }
 `
@@ -110,6 +111,7 @@ const AvatarBox = styled.div`
 position: relative;
 display: grid;
 justify-items: center;
+overflow-x: hidden;
 @media (min-width: 768px){
   display: block;
 }
@@ -123,8 +125,8 @@ justify-items: center;
     border-radius: 50%;
     border: 3px solid rgba(51, 51, 51, 0.16);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1); 
-    width: 290px;
-    height: 290px;
+    width: 280px;
+    height: 280px;
     padding: 30px;
     position: relative;
     img {
@@ -280,19 +282,19 @@ const SecondPage = () => (
       {pageData.items.map((ct, i) => {
         return (
           <TmCard>
-            <AvatarBox>
+            <AvatarBox className="avatarBox">
               <GatsbyImage image={GetImageByName(ct.image)} alt="avatar" className="tmAvatar" />
               <GatsbyImage image={GetImageByName('decoration-test.png')} alt='decor' className='decor' />
             </AvatarBox>
             <Content className="content">
             <GatsbyImage image={GetImageByName('quot.png')} alt='decor' className='quoTop' />
               <Response >{ct.response}</Response>
+              <GatsbyImage image={GetImageByName('quot.png')} alt='decor' className='quotBottom' />
               <p className="name">{ct.name}</p>
               <Rating>
                 <Stars className={'stars-' + ct.stars} />
               </Rating>
               <Date>{ct.date}</Date>
-              <GatsbyImage image={GetImageByName('quot.png')} alt='decor' className='quotBottom' />
             </Content>
           </TmCard>
         )
