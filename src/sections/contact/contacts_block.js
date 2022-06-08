@@ -13,7 +13,7 @@ const ContactGrid = styled.div`
   font-style: normal;
   font-weight: 400;
   color: rgba(51, 51, 51, 0.8);
-  margin: 30px auto;
+  margin: 30px auto 0;
   display: grid;
   width: 95%;
   max-width: 584px;
@@ -35,8 +35,17 @@ const Logo = styled.div`
   }
 `
 const Contacts = styled.div`
-  font-size: 25px;
-  line-height: 1.36;
+  font-size: 14px;
+  @media (min-width: 500px){
+    font-size: 25px;
+    line-height: 1.36;
+  }
+  p{
+    margin-bottom: 10px;
+    @media (min-width: 500px){
+      margin-bottom: 24px;
+    }
+  }
 `
 const Contact = (props) => {
   return (

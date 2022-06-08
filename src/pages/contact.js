@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import Layout from "~components/layout"
 import Seo from "~components/seo"
 import Title from "~components/title"
+import { GatsbyImage } from "gatsby-plugin-image"
+import GetImageByName from '~components/getImageByName'
 import ContactForm from "~sections/contact/contact_form"
 import Contact from "~sections/contact/contacts_block"
 import homeData from "~data/home.yml"
@@ -22,10 +24,30 @@ const Figure = styled.div`
 const ContactGrid = styled.section`
   display: grid;
   max-width: 1264px;
-  margin: 50px auto;
   padding: 20px;
+  margin-top: -110px;
   @media (min-width: 800px) {
     grid-template-columns: 1fr 1fr;
+    margin: -30px auto;
+  }
+  .center {
+    display: block;
+    margin: 5px auto 15px;
+
+    img{
+      width: 60%;
+      margin: 0 auto;
+    }
+    @media (min-width: 500px) {
+      margin-bottom: 30px;
+      img{
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
+    @media (min-width: 800px){
+      display: none;
+    }
   }
 `
 const DecoOuterTop = styled.div`
@@ -35,8 +57,9 @@ const DecoOuterTop = styled.div`
   border-radius: 50px 50px 0 0;
   padding: 2px;
   background: linear-gradient(pink, transparent);
+  margin-top: -30px;
   @media (min-width: 1024px) {
-    margin-top: -20px;
+    margin-top: -50px;
     z-index: 2;
   }
 `
@@ -61,7 +84,7 @@ const DecoInner = styled.div`
   width: 100%;
   height: 100%;
   background: #fff;
-  @media (min-width: 1024px){
+  @media (min-width: 780px){
     padding: 60px 0;}
 `
 const DecoInnerTop = styled.div`
@@ -72,12 +95,14 @@ const DecoInnerTop = styled.div`
   width: 100%;
   height: 100%;
   background: #fff;
+  padding: 40px 0;
 
   .center {
     margin: 0 auto;
   }
-  @media (min-width: 1024px){
-    padding: 60px 0;}
+  @media (min-width: 780px){
+
+    }
 `
 
 
@@ -91,6 +116,7 @@ const ContactPage = () => (
     </DecoOuterTop>
     <ContactGrid>
       <Contact contact={homeData.contact} />
+      <GatsbyImage image={GetImageByName('decoration-4.png')} alt='decor' className='center' />
       <ContactForm/>
     </ContactGrid>
     <DecoOuter>
