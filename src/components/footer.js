@@ -14,7 +14,7 @@ bottom: 0;
   font-style: normal;
   font-weight: 400;
   background: #CFE8C0;
-  margin-top: 20px;
+  margin-top: 30px;
   @media (min-width: 768px) {
   margin-top: 130px;
   }
