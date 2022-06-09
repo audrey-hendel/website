@@ -218,6 +218,7 @@ pre tt:after {
   content: none;
 }
 .buttonCta {
+  z-index: 8;
   margin: 10px auto;
   display: block;
   width: fit-content;
