@@ -5,13 +5,14 @@ import GetImageByName from '~components/getImageByName'
 
 const DistanceBox = styled.div`
   .AboutText {
-    overflow: hidden;
     height: ${props => (props.open ? "500px" : "0")};
-    transition: all 0.5s linear;
+    transition: height 0.5s linear;
   }
   padding: 20px;
   max-width: 1332px;
   margin: 40px auto 0;
+  transition: opacity 0.5s linear;
+  opacity: ${props => (props.open ? "1" : "0" )};
   background: rgba(240, 128, 179, 0.07);
   border-radius: 0px;
   font-size: 14px;
