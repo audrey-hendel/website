@@ -3,10 +3,7 @@ import styled from 'styled-components'
 import { GatsbyImage } from "gatsby-plugin-image"
 import GetImageByName from '~components/getImageByName'
 import { Link } from 'gatsby'
-import { useStaticQuery, graphql } from "gatsby"
-const SlideshowContainer = styled.div`
-  text-align: center;
-`
+
 const DistanceBox = styled.div`
   display: grid;
   gap: 20px;
@@ -176,27 +173,11 @@ const Card = styled.div`
   justify-content: center;
 `
 const Distance = (props) => {
-  const data = useStaticQuery(graphql`
-  query DistanceData {
-    dataYaml(page: {eq: "home"}) {
-      distance{
-          title
-          text
-          three_t{
-            label
-            image
-          }
-        cta_label
-      }
-    }
-  }
-`)
 
   const decorCenter = GetImageByName(props.distance.decor_center)
 
   return (
     <>
-
       <DistanceBox>
         <DecoOuterTop>
           <DecoInnerTop>

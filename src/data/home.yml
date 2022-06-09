@@ -27,7 +27,7 @@ about_section:
       image: dog.png
     - title: Psycho-Shamanic Therapy
       image: horse.png
-    cta_label: Read more
+    cta_label: Read more
     cta_link: /therapies/
 
 gallery:
@@ -63,7 +63,7 @@ distance:
   - label: Support the project 
     image: img3.png
 #  - link: "#"
-  cta_label: Read more
+  cta_label: Read more
   cta_link: "/distance-healing"
 contact:
   image: Girl2-decor.png

@@ -1,4 +1,3 @@
-import React from 'react'
 import { useStaticQuery, graphql } from "gatsby"
 
 const GetImageByName = (name) => {
@@ -26,7 +25,8 @@ const GetImageByName = (name) => {
       if (n.node.parent.base === name) {
         imageData = n.node.gatsbyImageData
       }
-    }
+      return imageData
+     }
     )
     return imageData
   }

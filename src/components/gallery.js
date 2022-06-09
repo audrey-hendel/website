@@ -96,7 +96,6 @@ const Slide = styled.div`
     grid-row: 2/6;
   }
   }
-
 `
 const Gallery = (props) => {
 

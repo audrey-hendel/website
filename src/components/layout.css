@@ -249,3 +249,7 @@ main {
 .gatsby-image-wrapper div:nth-child(2) {
   background-color: rgba(240,128,179,0.07) !important;
 }
+main .carousel .control-dots .dot {
+  background-color: #555;
+  box-shadow: 2px 2px 4px rgb(0 0 0 / 50%);
+}

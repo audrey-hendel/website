@@ -1,9 +1,9 @@
 import * as React from "react"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import Layout from "~components/layout"
+import Seo from "~components/seo"
 import Title from "~components/title"
-import Gallery from "../sections/therapies/gallery"
-import Distance from "../sections/therapies/distance"
+import Gallery from "~components/gallery"
+import Distance from "~sections/therapies/distance"
 import Details from "~sections/therapies/details"
 import pageData from "~data/therapies.yml"
 
@@ -12,7 +12,7 @@ const Therapies = () => (
     <Seo title="Therapies" />
     <Title text={pageData.title}/>
     <Distance />
-    <Gallery gallery={pageData.gallery} />
+    <Gallery gallery={pageData.gallery} decor_gallery={pageData.decor_gallery}/>
     <Details/>
   </Layout>
 )

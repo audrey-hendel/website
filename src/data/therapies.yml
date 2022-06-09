@@ -51,6 +51,19 @@ gallery:
   - image: therapy_2.png
   - image: therapy_3.png
   - image: therapy_4.png
+- slide:
+  - image: birds.png
+  - image: sea.png
+  - image: mountain.png
+  - image: cows.png
+- slide:
+  - image: therapy_4.png
+  - image: therapy_2.png
+  - image: therapy_3.png
+  - image: therapy_1.png
+  
+decor_gallery: decor_c.png
+
 details: !markdown |
   **Customers.** Adults, children, couples, and families, experiencing psychological and/or somatic  difficulties.
   **Complementarity.** Shamanic and Psycho-Shamanic methods harmonies perfectly with medical,     psychiatric, and psychotherapeutic approaches. I work in partnership with doctors.

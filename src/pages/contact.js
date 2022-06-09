@@ -9,18 +9,6 @@ import ContactForm from "~sections/contact/contact_form"
 import Contact from "~sections/contact/contacts_block"
 import homeData from "~data/home.yml"
 
-const Figure = styled.div`
-  position: absolute;
-  top: 10%;
-  height: 100%;
-  width: 100%;
-  background: rgba(240, 128, 179, 0.04);
-  border-top: 1px solid rgba(240, 65, 145, 0.47);
-  border-bottom: 1px solid rgba(240, 65, 145, 0.47);
-  @media (min-width: 1024px) {
-    height: 80%
-  }
-`
 const ContactGrid = styled.section`
   display: grid;
   max-width: 1264px;
@@ -58,6 +46,7 @@ const DecoOuterTop = styled.div`
   padding: 2px;
   background: linear-gradient(pink, transparent);
   margin-top: -30px;
+
   @media (min-width: 1024px) {
     margin-top: -50px;
     z-index: 2;
@@ -97,16 +86,10 @@ const DecoInnerTop = styled.div`
   height: 100%;
   background: #fff;
   padding: 40px 0;
-
   .center {
     margin: 0 auto;
   }
-  @media (min-width: 780px){
-
-    }
 `
-
-
 const ContactPage = () => (
   <Layout path="/contact">
     <Seo title="Contact" />
