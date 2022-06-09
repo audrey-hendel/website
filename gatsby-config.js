@@ -3,8 +3,8 @@ module.exports = {
     title: `Audrey Hendel`,
     description: `Wonderful! You’ve made the choice of Joy, Power and Happiness and are taking your health in hand. I’m Audrey Hendel, psychological counselor and shamanic healer and accompany you, with compassion, tenderness, and a touch magic towards Happiness! With a touch of Magic and Love nothing is impossible.
     `,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    author: `Audrey Hendel`,
+    avatar: `images/audrey.png`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
