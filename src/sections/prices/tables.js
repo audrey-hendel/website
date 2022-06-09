@@ -67,14 +67,12 @@ const Tables = () => {
   return (
     <>
     <DecoOuterTop>
-        <DecoInnerTop>
-        </DecoInnerTop>
+        <DecoInnerTop/>
       </DecoOuterTop>
   <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} className="price_table" />
-  <DecoOuter>
-        <DecoInner>
-        </DecoInner>
-      </DecoOuter>
+     <DecoOuter style={{marginBottom: `30px`}}>
+        <DecoInner/>
+     </DecoOuter>
   </>
   )
 }

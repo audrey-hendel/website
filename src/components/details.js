@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import GetImageByName from '~components/getImageByName'
 
@@ -67,17 +66,10 @@ img{
   }
 }
 `
-const Details = () => {
+const Details = (prop) => {
   const [detailsOpen, setDetailsOpen] = useState(false)
-  const data = useStaticQuery(graphql`
-  query detailsData {
-    dataYaml(page: {eq: "therapies"}) {
-      details
-    }
-  }
-`)
   return (
-    <>
+    <div>
     <Centered>
     <GatsbyImage image={GetImageByName('logo-leaves-circle-150x150.png')} alt='decor' className='center' />
     </Centered>
@@ -87,11 +79,11 @@ const Details = () => {
         {detailsOpen ? '-details' : '+details'}
       </Title>
       {detailsOpen ? <DistanceBox open > 
-    <div dangerouslySetInnerHTML={{ __html: data.dataYaml.details }} className="AboutText" />
+    <div dangerouslySetInnerHTML={{ __html: prop.details }} className="AboutText" />
     </DistanceBox> : <DistanceBox> 
-    <div dangerouslySetInnerHTML={{ __html: data.dataYaml.details }} className="AboutText" />
+    <div dangerouslySetInnerHTML={{ __html: prop.details }} className="AboutText" />
     </DistanceBox>}
-    </>
+    </div>
   )
 }
 export default Details

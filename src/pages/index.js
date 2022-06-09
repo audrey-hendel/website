@@ -6,17 +6,17 @@ import Hero from "~sections/home/hero"
 import About from "~sections/home/about"
 import Distance from "~sections/home/distance"
 import Contact from "~sections/home/contact"
-import homeData from "~data/home.yml"
+import pageData from "~data/home.yml"
 
 
 const IndexPage = () => (
   <Layout path="/">
     <Seo title="Home" />
     <Hero />
-    <About about={homeData.about_section} />
-    <Gallery gallery={homeData.gallery} decor_gallery={homeData.decor_gallery}/>
-    <Distance distance={homeData.distance} />
-    <Contact contact={homeData.contact} />
+    <About about={pageData.about_section} />
+    <Gallery gallery={pageData.gallery} decor_gallery={pageData.decor_gallery}/>
+    <Distance distance={pageData.distance} />
+    <Contact contact={pageData.contact} />
   </Layout>
 )
 
