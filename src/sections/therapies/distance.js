@@ -14,8 +14,9 @@ const TerGrid = styled.div`
   justify-content: center;
   width: 95%;
   @media (min-width: 768px) {
-  grid-template-columns: 1fr 1fr;
-  padding: 60px 20px;
+    gap: 1.5rem;
+    grid-template-columns: 1fr 1fr;
+    padding: 60px 20px;
   }
   li, a, p {
     text-align: left;
@@ -135,8 +136,6 @@ const TerCard = styled.div`
   display: grid;
   justify-content: center;
   align-content: start;
-  grid-template-rows: fit-content auto;
-  gap: 39px;
   &:nth-child(1) {
     &::before {
         content: "";
@@ -179,6 +178,9 @@ const TerCard = styled.div`
         left: 50%;
         transform: translate (-50%);
         top: 95%;
+      }
+      @media (min-width: 1024px){
+        height: 430px;
       }
     }
   }

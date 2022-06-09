@@ -286,6 +286,7 @@ const DecoInnerTop = styled.div`
     padding: 60px 0;}
 `
 const DecoOuter = styled.div`
+  position: relative;
   width: 95%;
   max-width: 1260px;
   margin: 0 auto;
@@ -324,7 +325,6 @@ const DecoInner = styled.div`
     border-radius: 0 0 50px 50px;
     padding: 60px 0;}
 `
-
 
 const SecondPage = () => (
   <Layout path="/testimonials">

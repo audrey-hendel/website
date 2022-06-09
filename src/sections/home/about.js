@@ -48,29 +48,45 @@ const Intro = styled.p`
 const Decor = styled.div`
   display: grid;
   padding: 20px;
-  gap: 26px;
-  grid-template: 1fr 1fr 1fr/ 1fr 1fr;
-
-  @media (min-width: 1024px) {
-    grid-template: 1fr /1fr 1fr 1fr 1fr;
-  }
+  gap: 10px;
+  grid-template-columns: 1fr 1fr;
   .decImg-1 {
-    grid-column: 1/3;
+    grid-column: 1/2;
     transform: rotate(180deg);
-    @media (min-width: 1024px){
-      grid-column: 1/1;
-      grid-template-row: 1/2;
-
-    }
+  }
+  .decImg-2 {
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+  .decImg-3 {
+    grid-row: 2/3;
+    grid-column: 2/3;
   }
   .decImg-2, .decImg-3{
     border-radius: 16px;
   }
   .decImg-4{
-    grid-column: 1/3;
+    grid-row: 3/4;
+    grid-column: 2/3;
     @media (min-width: 1024px){
       grid-column: 4/4;
+    }
   }
+  @media (min-width: 1024px) {
+    gap: 26px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    .decImg-2 {
+      grid-row: 1/2;
+      grid-column: 2/3;
+    }
+    .decImg-3 {
+      grid-row: 1/2;
+      grid-column: 3/4;
+    }
+    .decImg-4 {
+      grid-row: 1/2;
+      grid-column: 4/5;
+    }
   }
 `
 const AboutBox = styled.div`
@@ -223,6 +239,7 @@ const DecoInnerTop = styled.div`
   }
 `
 const DecoOuter = styled.div`
+  position: relative;
   width: 95%;
   max-width: 1260px;
   margin: 0 auto;
@@ -448,7 +465,7 @@ const About = p => {
           <GatsbyImage image={decoeSide} alt="decor" className="decImg-4" />
         </Decor>
         <AboutBox>
-          <GatsbyImage image={avatar} alt="Auddrey" class="avatarAudrey"/>
+          <GatsbyImage image={avatar} alt="Auddrey" class="avatarAudrey" />
           <h2>{p.about.about_box.name}</h2>
           <AboutText>
             <h2>{p.about.about_box.name}</h2>

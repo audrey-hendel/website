@@ -56,6 +56,7 @@ const Intro = styled.p`
   }
 `
 const Submit = styled.button`
+  z-index: 5;
   height: fit-content;
   width: fit-content;
   padding: 8px 45px;

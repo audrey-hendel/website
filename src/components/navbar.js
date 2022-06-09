@@ -40,7 +40,7 @@ const NavBox = styled.div`
   justify-content: space-between;
   margin: 0 auto;
   padding: 0 5vw;
-  z-index: 2;
+  z-index: 7;
   align-self: center;
 
   @media (max-width: 767px) {
@@ -99,7 +99,7 @@ const Container = styled.div`
   max-width: 1312px;
   display: flex;
   height: 100px;
-  z-index: 5;
+  z-index: 8;
   margin: 0 auto;
   width: 100%;
   padding: 24px 32px;

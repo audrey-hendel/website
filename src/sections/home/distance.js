@@ -105,6 +105,7 @@ const DecoOuterTop = styled.div`
   }
 `
 const DecoOuter = styled.div`
+  position: relative;
   width: 95%;
   max-width: 1260px;
   margin: 0 auto;
