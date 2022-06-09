@@ -4,7 +4,11 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import GetImageByName from '~components/getImageByName'
 
 const DistanceBox = styled.div`
-  display: ${props => (props.open ? "block" : "none")};
+  .AboutText {
+    overflow: hidden;
+    height: ${props => (props.open ? "500px" : "0")};
+    transition: all 0.5s linear;
+  }
   padding: 20px;
   max-width: 1332px;
   margin: 40px auto 0;
