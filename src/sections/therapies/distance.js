@@ -134,6 +134,7 @@ const DecoInner = styled.div`
 `
 const TerCard = styled.div`
   display: grid;
+  grid-template-columns: 1fr;
   justify-content: center;
   align-content: start;
   &:nth-child(1) {
@@ -169,18 +170,16 @@ const TerCard = styled.div`
     padding-right: 20px;
     }
     &::after{
+      display: none;
       @media (min-width: 1024px){
         content: "";
         border: 3px solid rgba(240, 65, 145, 0.35);
         border-radius:50px;
         position: absolute;
-        height: 550px;
+        height: 430px;
         left: 50%;
         transform: translate (-50%);
         top: 95%;
-      }
-      @media (min-width: 1024px){
-        height: 430px;
       }
     }
   }
