@@ -13,10 +13,14 @@ const TerGrid = styled.div`
   display: grid;
   justify-content: center;
   width: 95%;
+  padding: 20px;
+  @media (min-width: 500px){
+    padding: 60px;
+  }
   @media (min-width: 768px) {
+    padding: 60px 20px;
     gap: 1.5rem;
     grid-template-columns: 1fr 1fr;
-    padding: 60px 20px;
   }
   li, a, p {
     text-align: left;
@@ -137,6 +141,18 @@ const TerCard = styled.div`
   grid-template-columns: 1fr;
   justify-content: center;
   align-content: start;
+
+
+  img {
+    width: 140px;
+    margin: 0 auto;
+    @media (min-width: 500px){
+      display: block;
+      width: auto;
+      height: auto;
+      margin: auto;
+    }
+  }
   &:nth-child(1) {
     &::before {
         content: "";
@@ -144,16 +160,20 @@ const TerCard = styled.div`
         position: absolute;
         background-size: 100%;
         background-repeat: no-repeat;
-        width: 180px;
-        height: 190px;
-        margin-top: -71px;
-        margin-left: -25px;
-        @media (min-width: 500px){
-          margin-top: -50px;
-          margin-left: 168px;
+        width: 140px;
+        height: 150px;
+        margin-top: -55px;
+        @media(min-width: 375px){
+          margin-left: 25px;
+        }
+        @media( min-width: 500px){
+          width: 180px;
+          height: 190px;
+        }
+        @media (min-width: 640px){
+          margin-left: 80px;
         }
         @media (min-width: 768px){
-          margin-top: -71px;
           margin-left: -25px;
         }
         @media (min-width: 1024px) {
@@ -193,13 +213,25 @@ const TerCard = styled.div`
         width: 238px;
         height: 145px;
         margin-top: 55px;
-        margin-left: 45px;
+        margin-left: 54px;
+        @media (min-width: 375px){
+          margin-left: 85px;
+        }
+        @media (min-width: 425px){
+          margin-left: 140px;
+        }
         @media (min-width: 500px){
-          margin-left: 126px;
+          margin-left: 190px;
           margin-top: 135px;
         }
+        @media (min-width: 650px){
+          margin-left: 250px;
+        }
+        @media (min-width: 768px){
+          margin-left: 120px;
+        }
         @media (min-width: 815px){
-          margin-left: 170px;
+          margin-left: 160px;
         }
         @media (min-width: 1210px){
           width: 322px;
@@ -213,12 +245,6 @@ const TerCard = styled.div`
     }
   }
 
-  img {
-    display: block;
-    width: auto;
-    height: auto;
-    margin: 0 auto;
-  }
 
 `
 
