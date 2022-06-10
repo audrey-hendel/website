@@ -22,9 +22,7 @@ const AboutSection = styled.section`
       }
     }
   }
-  @media (min-width: 1024px){
-    padding-top: 60px;
-  }
+
 `
 const Intro = styled.p`
   max-width: 80%;
@@ -48,11 +46,18 @@ const Intro = styled.p`
 const Decor = styled.div`
   display: grid;
   padding: 20px;
-  gap: 10px;
+  row-gap: 0;
+  column-gap: 10px;
   grid-template-columns: 1fr 1fr;
+  margin-bottom: -64px;
+  margin-top: -60px;
+  
   .decImg-1 {
     grid-column: 1/2;
-    transform: rotate(180deg);
+    transform: rotate(190deg);
+    margin-left: -20px;
+    z-index: -2;
+    margin-bottom: -34px;
   }
   .decImg-2 {
     grid-row: 2/3;
@@ -68,6 +73,8 @@ const Decor = styled.div`
   .decImg-4{
     grid-row: 3/4;
     grid-column: 2/3;
+    margin-top: -34px;
+    z-index: -2;
     @media (min-width: 1024px){
       grid-column: 4/4;
     }
@@ -75,6 +82,7 @@ const Decor = styled.div`
   @media (min-width: 1024px) {
     gap: 26px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-top: 0;
     .decImg-2 {
       grid-row: 1/2;
       grid-column: 2/3;
@@ -92,7 +100,7 @@ const Decor = styled.div`
 const AboutBox = styled.div`
   padding: 10px;
   max-width: 1440px;
-  margin: -50px auto 0;
+  margin: 0 auto;
   display: grid;
   gap: 20px;
   @media (min-width: 1024px) {
@@ -120,7 +128,7 @@ const AboutBox = styled.div`
     }
   }
   h2 {
-    font-size: 35px;
+    font-size: 30px;
     font-family: "Damion", cursive;
     color: #f04191;
     font-weight: 400;
@@ -262,7 +270,7 @@ const DecoInner = styled.div`
   height: 100%;
   background: #fff;
   @media (min-width: 1024px) {
-    padding: 60px 0;
+    padding: 0 0 60px; 
     border-radius: 0 0 50px 50px;
   }
 `
@@ -287,7 +295,7 @@ const TerTitle = styled.h2`
   margin: 0 auto;
   font-family: "Damion", cursive;
   text-align: center;
-  font-size: 35px;
+  font-size: 30px;
   font-weight: 400;
   color: rgba(51, 51, 51, 0.5);
   letter-spacing: 0.08em;
@@ -323,10 +331,7 @@ const TerGrid = styled.div`
   display: grid;
   margin-top: 60px;
   justify-content: center;
-  gap: 40px;
-  @media (min-width: 425px){
-    gap: 60px;
-  }
+  gap: 60px;
   @media (min-width: 768px) {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
@@ -358,10 +363,15 @@ const TerCard = styled.div`
         position: absolute;
         background-size: 100%;
         background-repeat: no-repeat;
-        width: 180px;
-        height: 190px;
-        margin-top: -71px;
-        margin-left: -25px;
+        width: 140px;
+        height: 150px;
+        margin-top: -55px;
+        @media( min-width: 500px){
+          width: 180px;
+          height: 190px;
+          margin-left: -25px;
+          margin-top: -71px;
+        }
         @media (min-width: 1024px) {
           margin-left: 20px;
         }
@@ -378,9 +388,12 @@ const TerCard = styled.div`
           border: 3px solid rgba(240, 65, 145, 0.35);
           border-radius: 50px;
           position: absolute;
-          height: 343px;
+          height: 300px;
           left: 50%;
           transform: translateX (-50%);
+          @media (min-width: 1024px){
+            height: 343px;
+          }
         }
       }
 
@@ -395,6 +408,25 @@ const TerCard = styled.div`
     }
   }
   &:nth-child(2) {
+    position: relative;
+    &::after{
+    content: "";
+    position: absolute;
+    width: 151px;
+    height: 0px;
+    border: 2px solid rgba(240, 65, 145, 0.35);
+    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -15%;
+    @media(min-width: 500px){
+      width: 240px;
+      top: -10%;
+    }
+    @media(min-width: 768px){
+      display: none;
+    }
+  }
     &::before {
         content: "";
         background: url(/images/decor-horse.png);
@@ -404,7 +436,7 @@ const TerCard = styled.div`
         width: 238px;
         height: 145px;
         margin-top: 55px;
-        margin-left: 45px;
+        margin-left: 30px;
         @media (min-width: 500px){
           margin-left: 126px;
           margin-top: 135px;

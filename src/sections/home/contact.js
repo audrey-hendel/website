@@ -24,13 +24,13 @@ const ContactGrid = styled.div`
   font-style: normal;
   font-weight: 400;
   color: rgba(51, 51, 51, 0.8);
-  margin: 60px auto 0;
+  margin: 60px auto;
   display: grid;
   width: 95%;
 /*max-width: 1060px;*/
   justify-items: center;
   @media (min-width: 500px){
-    margin: 150px auto 0;
+    margin: 150px auto 100px;
   }
   @media (min-width: 1024px) {
     margin: 250px auto 0;
@@ -38,7 +38,7 @@ const ContactGrid = styled.div`
   
   h2 {
     font-weight: 400;
-    font-size: 35px;
+    font-size: 30px;
     line-height: 1.2;
     letter-spacing: 0.08em;
     align-self: end;

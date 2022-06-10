@@ -10,24 +10,22 @@ const DistanceBox = styled.div`
   padding-left: 10px;
   padding-right: 10px;
   text-align: center;
-  margin-top: 50px;
   margin-bottom: -20px;
+  margin-top: -60px;
   @media ( min-width: 1024px){
-    margin: 0;
     margin-bottom: -35px;
   }
   h2 {
     font-family: 'Damion';
     font-style: normal;
     font-weight: 400;
-    font-size: 35px;
+    font-size: 30px;
     line-height: 0.9;
     text-align: center;
     letter-spacing: 0.08em;
     color: rgba(51, 51, 51, 0.5);
     z-index: 2;
-    margin-top: -50px;
-    margin-bottom: 0;
+    margin: 0;
     @media ( min-width: 500px){
       margin: 30px 0;
       font-size: 60px;
@@ -39,20 +37,22 @@ const DistanceBox = styled.div`
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
-    line-height: 55px;
+    line-height: 24px;
     letter-spacing: 0.08em;
     color: rgba(51, 51, 51, 0.6);
     margin-top: -10px;
     @media ( min-width: 500px){
       font-size: 40px;
+      line-height: 55px;
       margin-top: 20px;
     }
   }
   img{
-    width: 75%;
+    width: 57%;
     margin: 0 auto;
+    height: auto;
     @media ( min-width: 500px){
-      width: 100%;
+      width: 80%;
     }
   }
 
@@ -88,70 +88,6 @@ const DistanceBox = styled.div`
     }
   }
 `
-const DecoOuterTop = styled.div`
-  width: 100%;
-  max-width: 1260px;
-  margin: 0 auto;
-  border-radius: 50px 50px 0 0;
-  padding: 2px;
-  background: linear-gradient(pink, transparent);
-  @media (min-width: 1024px) {
-    width: 95%;
-    margin-bottom: 110px;
-    z-index: 1;
-  }
-`
-const DecoOuter = styled.div`
-  position: relative;
-  width: 95%;
-  max-width: 1260px;
-  margin: 0 auto;
-  border-radius: 0 0 50px 50px;
-  padding: 2px;
-  background: linear-gradient(transparent, pink);
-
-  @media (min-width: 1024px) {
-    margin-bottom: -110px;
-    z-index: 2;
-  }
-`
-const DecoInnerTop = styled.div`
-  display: flex;
-  padding: 40px 0;
-  border-radius: 50px 50px 0 0;
-  border: 1px transparent;
-  width: 100%;
-  height: 100%;
-  background: #fff;
-
-  .center {
-    margin: 0 auto;
-    img{
-      width: 60%;
-      margin: 0 auto;
-    }
-    @media (min-width: 500px) {
-      img{
-        width: 100%;
-        margin: 0 auto;
-      }
-    }
-  }
-  @media (min-width: 1024px){
-    padding: 60px 0;
-    }
-`
-const DecoInner = styled.div`
-  display: flex;
-  padding: 40px 0;
-  border-radius: 0 0 50px 50px;
-  border: 1px transparent;
-  width: 100%;
-  height: 100%;
-  background: #fff;
-  @media (min-width: 1024px){
-    padding: 60px 0;}
-`
 
 const DistanceText = styled.div`
   margin: 0 auto;
@@ -164,8 +100,17 @@ const DistanceText = styled.div`
 `
 const CardsGrid = styled.div`
   display: grid;
+  
+  max-width: 1440px;
+    margin: 0 auto;
   @media (min-width: 1024px) {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+  @media (min-width: 1150px) {
+    gap: 50px;
+  }
+  @media (min-width: 1300px) {
+    gap: 100px;
   }
 `
 const Card = styled.div`
@@ -179,10 +124,6 @@ const Distance = (props) => {
   return (
     <>
       <DistanceBox>
-        <DecoOuterTop>
-          <DecoInnerTop>
-          </DecoInnerTop>
-        </DecoOuterTop>
         <h2>{props.distance.title}</h2>
         <GatsbyImage image={decorCenter} alt='decor' className='center' />
         <DistanceText>{props.distance.text}</DistanceText>
@@ -198,10 +139,6 @@ const Distance = (props) => {
         <Link to={props.distance.cta_link} className="buttonCta">{props.distance.cta_label}</Link>
 
       </DistanceBox>
-      <DecoOuter>
-        <DecoInner>
-        </DecoInner>
-      </DecoOuter>
     </>
   )
 }
