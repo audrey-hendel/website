@@ -5,7 +5,7 @@ import GetImageByName from '~components/getImageByName'
 
 const DistanceBox = styled.div`
   .AboutText {
-    height: ${props => (props.open ? "500px" : "0")};
+    height: ${props => (props.open ? "auto" : "0")};
     transition: height 0.5s linear;
   }
   padding: 20px;
@@ -19,10 +19,11 @@ const DistanceBox = styled.div`
   @media(min-width: 500px){
     padding: 40px 25px;
     margin: 70px auto 0;
+    font-size: 22px;
   }
   @media (min-width: 768px) {
     padding: 40px 80px;
-    font-size: 22px;
+
   }
   @media (min-width: 1350px) {
     border-radius: 30px;

@@ -14,7 +14,7 @@ const DistHeal = styled.article`
       padding: 20px 30px;
     }
   @media (min-width: 768px){
-      padding: 70px 70px 30px;
+      padding: 0 70px 30px;
     }
 
     h2{
@@ -85,7 +85,7 @@ const DistWrapper = styled.div`
   margin-bottom: -50px;
   margin-top: -50px;
   @media (min-width: 768px){
-    padding: 100px 0;
+    padding: 150px 0;
     margin-bottom: -50px;
   }
   @media (min-width: 1024px){

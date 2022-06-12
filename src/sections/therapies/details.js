@@ -6,7 +6,7 @@ import GetImageByName from '~components/getImageByName'
 
 const DistanceBox = styled.div`
   display: ${props => (props.open ? "block" : "none")};
-  padding: 20px;
+  padding: 0 20px;
   max-width: 1332px;
   margin: 40px auto 0;
   background: rgba(240, 128, 179, 0.07);

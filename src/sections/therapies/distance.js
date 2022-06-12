@@ -14,8 +14,10 @@ const TerGrid = styled.div`
   justify-content: center;
   width: 95%;
   padding: 20px;
+  gap: 40px;
   @media (min-width: 500px){
     padding: 60px;
+    gap: 60px;
   }
   @media (min-width: 768px) {
     padding: 60px 20px;
@@ -133,7 +135,7 @@ const DecoInner = styled.div`
   
   @media (min-width: 1024px){
     border-radius: 0 0 50px 50px;
-    padding: 15px 0;
+    padding: 40px 0;
   }
 `
 const TerCard = styled.div`
@@ -155,55 +157,71 @@ const TerCard = styled.div`
   }
   &:nth-child(1) {
     &::before {
-        content: "";
-        background: url(/images/decor-dog.png);
-        position: absolute;
-        background-size: 100%;
-        background-repeat: no-repeat;
-        width: 140px;
-        height: 150px;
-        margin-top: -55px;
-        @media(min-width: 375px){
-          margin-left: 25px;
-        }
-        @media( min-width: 500px){
-          width: 180px;
-          height: 190px;
-        }
-        @media (min-width: 640px){
-          margin-left: 80px;
-        }
-        @media (min-width: 768px){
-          margin-left: -25px;
-        }
-        @media (min-width: 1024px) {
-          margin-left: 20px;
-        }
-        @media (min-width: 1210px) {
-          width: 240px;
-          height: 250px;
-          margin-top: -90px;
-          margin-left: -30px;
-        }
+      content: "";
+      background: url(/images/decor-dog.png);
+      position: absolute;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      width: 140px;
+      height: 150px;
+      margin-top: -55px;
+      @media(min-width: 375px){
+        margin-left: 25px;
       }
+      @media( min-width: 500px){
+        width: 180px;
+        height: 190px;
+      }
+      @media (min-width: 640px){
+        margin-left: 80px;
+      }
+      @media (min-width: 768px){
+        margin-left: -25px;
+      }
+      @media (min-width: 1024px) {
+        margin-left: 20px;
+      }
+      @media (min-width: 1210px) {
+        width: 240px;
+        height: 250px;
+        margin-top: -90px;
+        margin-left: -30px;
+      }
+    }
     @media (min-width: 1024px){
     padding-right: 20px;
-    }
-    &::after{
-      display: none;
-      @media (min-width: 1024px){
-        content: "";
-        border: 3px solid rgba(240, 65, 145, 0.35);
-        border-radius:50px;
-        position: absolute;
-        height: 430px;
-        left: 50%;
-        transform: translate (-50%);
-        top: 95%;
-      }
+    &::after {
+          content: "";
+          border: 3px solid rgba(240, 65, 145, 0.35);
+          border-radius: 50px;
+          position: absolute;
+          height: 491px;
+          left: 50%;
+          transform: translateX (-50%);
+          top: 87%;
+        }
     }
   }
   &:nth-child(2) {
+    position: relative;
+    &::after{
+    content: "";
+    position: absolute;
+    width: 151px;
+    height: 0px;
+    border: 2px solid rgba(240, 65, 145, 0.35);
+    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -7%;
+    @media(min-width: 500px){
+      width: 400px;
+      top: -5%;
+    }
+    @media(min-width: 768px){
+      display: none;
+    }
+  }
     &::before {
         content: "";
         background: url(/images/decor-horse.png);
@@ -297,7 +315,6 @@ const Distance = () => {
     <>
     <DecoOuterTop>
         <DecoInnerTop>
-        <GatsbyImage image={GetImageByName('decoration-4.png')} alt='decor' className='center' />
         </DecoInnerTop>
     </DecoOuterTop>
     <TerGrid>
@@ -315,7 +332,6 @@ const Distance = () => {
     </Content>
     <DecoOuter>
         <DecoInner>
-        <DecorCenter image='decoration-4.png' />
         </DecoInner>
     </DecoOuter>
     </>

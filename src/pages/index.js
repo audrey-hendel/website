@@ -13,11 +13,11 @@ const DecoOuterTop = styled.div`
   width: 95%;
   max-width: 1260px;
   margin: 0 auto;
-  border-radius: 50px 50px 0 0;
+  border-radius: 30px 30px 0 0;
   padding: 2px;
   background: linear-gradient(pink, transparent);
   @media (min-width: 1024px) {
-    border-radius: 30px 30px 0 0;
+    border-radius: 50px 50px 0 0;
     z-index: 1;
   }
 `
@@ -26,11 +26,11 @@ const DecoOuter = styled.div`
   width: 95%;
   max-width: 1260px;
   margin: 0 auto;
-  border-radius: 0 0 50px 50px;
+  border-radius: 0 0 30px 30px;
   padding: 2px;
   background: linear-gradient(transparent, pink);
   @media (min-width: 1024px) {
-    border-radius: 0 0 30px 30px;
+    border-radius: 0 0 50px 50px;
     margin-bottom: -110px;
     z-index: 2;
   }
@@ -38,7 +38,7 @@ const DecoOuter = styled.div`
 const DecoInnerTop = styled.div`
   display: flex;
   padding: 40px 0;
-  border-radius: 50px 50px 0 0;
+  border-radius: 30px 30px 0 0;
   border: 1px transparent;
   width: 100%;
   height: 100%;
@@ -58,20 +58,20 @@ const DecoInnerTop = styled.div`
     }
   }
   @media (min-width: 1024px){
-    border-radius: 30px 30px 0 0;
+    border-radius: 50px 50px 0 0;
     padding: 60px 0;
     }
 `
 const DecoInner = styled.div`
   display: flex;
   padding: 0 0 40px;
-  border-radius: 0 0 50px 50px;
+  border-radius: 0 0 30px 30px;
   border: 1px transparent;
   width: 100%;
   height: 100%;
   background: #fff;
   @media (min-width: 1024px){
-    border-radius: 0 0 30px 30px;
+    border-radius: 0 0 50px 50px;
     padding: 60px 0;}
 `
 
