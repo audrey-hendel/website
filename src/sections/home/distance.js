@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { GatsbyImage } from "gatsby-plugin-image"
 import GetImageByName from '~components/getImageByName'
 import { Link } from 'gatsby'
+import { useStaticQuery, graphql } from "gatsby"
 
 const DistanceBox = styled.div`
   display: grid;
@@ -93,6 +94,12 @@ const DistanceText = styled.div`
   margin: 0 auto;
   max-width: 920px;
   font-size: 14px;
+  .fd1 {
+
+  }
+  .fd2 {
+    
+  }
     @media (min-width: 500px){
       padding: 20px;
       font-size: 22px;
@@ -118,6 +125,13 @@ const Card = styled.div`
   justify-content: center;
 `
 const Distance = (props) => {
+  const data = useStaticQuery(graphql`
+  query DistQuery {
+    markdownRemark(frontmatter: {page: {eq: "home"}}) {
+      html
+    }
+  }
+  `)
 
   const decorCenter = GetImageByName(props.distance.decor_center)
 
@@ -126,7 +140,9 @@ const Distance = (props) => {
       <DistanceBox>
         <h2>{props.distance.title}</h2>
         <GatsbyImage image={decorCenter} alt='decor' className='center' />
-        <DistanceText>{props.distance.text}</DistanceText>
+        <DistanceText>
+          <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}/>
+        </DistanceText>
         <CardsGrid>
           {props.distance.three_t.map((sld, i) => {
             return (

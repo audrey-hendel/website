@@ -56,13 +56,10 @@ distance:
   three_t:  
   - label: Access to healing
     image: img1.png
-#  - link: "#"
   - label: Join the team
     image: img2.png
-#  - link: "#"
   - label: Support the project 
     image: img3.png
-#  - link: "#"
   cta_label: Read more
   cta_link: "/distance-healing"
 contact:
