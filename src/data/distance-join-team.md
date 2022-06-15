@@ -1,5 +1,6 @@
 ---
 page: distance-healing
+section: join_team
 ---
 Let's unite compassion, shamanic competences, and digital progress to bring healing, empowering and divination at the international level! I invite You to join my project, join the <span class="pink">**LET'S BE HAPPY**</span>
 practitioner team and expand the spatial possibilities of compassion.
