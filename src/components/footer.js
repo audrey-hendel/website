@@ -30,6 +30,9 @@ bottom: 0;
   p, a {
     color: rgba(51, 51, 51, 0.8);
     font-size: 16px;
+    margin-bottom: 5px;
+    @media (min-width: 500px){
+    }
   }
   img{
     width: 40px;

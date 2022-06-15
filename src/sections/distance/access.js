@@ -9,13 +9,15 @@ import { useStaticQuery, graphql } from "gatsby"
 const DistHeal = styled.article`
   max-width: 1190px;
   margin: 0 auto;
-  padding: 20px 15px;
+  padding: 0 15px;
+
   @media (min-width: 425px){
       padding: 20px 30px;
-    }
+  }
   @media (min-width: 768px){
       padding: 0 70px 30px;
-    }
+  }
+
 
     h2{
       font-size: 30px;
@@ -62,6 +64,22 @@ const DistHeal = styled.article`
     line-height: 18px;
     letter-spacing: 0.03em;
     color: #333333;
+    .pink {
+      color: #F04191;
+    }
+    .featured_text {
+      line-height: 1.2;
+      text-align: center;
+      b {
+        font-size: 2rem;
+        font-weight: 500;
+      }
+      i {
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 500;
+      }
+    }
     @media (min-width: 500px){
       font-size: 22px;
       line-height: 28px;
@@ -81,7 +99,7 @@ const DistHeal = styled.article`
 const DistWrapper = styled.div`
   width: 100%;
   background: rgba(240, 128, 179, 0.07);
-  padding: 26px 0;
+  padding: 80px 0;
   margin-bottom: -50px;
   margin-top: -50px;
   @media (min-width: 768px){
@@ -159,15 +177,15 @@ const DecoOuterTop = styled.div`
   border-radius: 30px 30px 0 0;
   padding: 2px;
   background: linear-gradient(pink, transparent);
+  margin-top: -30px;
   @media (min-width: 1024px) {
     border-radius: 50px 50px 0 0;
-    margin-top: -20px;
-    z-index: 2;
+    margin-top: -50px;
   }
 `
 const DecoInnerTop = styled.div`
   display: flex;
-  padding: 20px;
+  padding: 40px 0;
   border-radius: 30px 30px 0 0;
   border: 1px transparent;
   width: 100%;
@@ -274,6 +292,9 @@ i{
 const Access = () => {
   const data = useStaticQuery(graphql`
   query distData {
+    join: markdownRemark(frontmatter: {page: {eq: "distance-healing"}}) {
+      html
+    }
     dataYaml(page: {eq: "distance-healing"}) {
       access {
         text_1
@@ -299,7 +320,7 @@ const Access = () => {
         <DecoInnerTop>
         </DecoInnerTop>
       </DecoOuterTop>
-    <DistHeal>
+    <DistHeal className="itemHeal" style={{ marginTop: "-50px"}} >
       <SectionHeader
         title={pageData.access.title}
         image={pageData.access.image}
@@ -356,13 +377,11 @@ const Access = () => {
       </DecoOuter>
       <DistWrapper>
       <DistHeal>
-      <SectionHeader
-        title={pageData.join_team.title}
-        image={pageData.join_team.image}
-      />
-      <div dangerouslySetInnerHTML={{ __html: data.dataYaml.join_team.text_1 }} className="access_text" />
-
-      <div dangerouslySetInnerHTML={{ __html: data.dataYaml.join_team.text_2 }} className="access_text" />
+        <SectionHeader
+          title={pageData.join_team.title}
+          image={pageData.join_team.image}
+        />
+        <div dangerouslySetInnerHTML={{ __html: data.join.html }} className="access_text" />
       </DistHeal>
       </DistWrapper>
       <DecoOuterTop>
@@ -370,7 +389,7 @@ const Access = () => {
         <GatsbyImage image={GetImageByName('decoration-4.png')} alt='decor' className='center' />
         </DecoInnerTop>
       </DecoOuterTop>
-      <DistHeal>
+      <DistHeal  className="itemHeal">
 
       <SectionHeader
         title={pageData.support.title}
