@@ -62,6 +62,22 @@ const DistHeal = styled.article`
     line-height: 18px;
     letter-spacing: 0.03em;
     color: #333333;
+    .pink {
+      color: #F04191;
+    }
+    .featured_text {
+      line-height: 1.2;
+      text-align: center;
+      b {
+        font-size: 2rem;
+        font-weight: 500;
+      }
+      i {
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 500;
+      }
+    }
     @media (min-width: 500px){
       font-size: 22px;
       line-height: 28px;
@@ -274,6 +290,9 @@ i{
 const Access = () => {
   const data = useStaticQuery(graphql`
   query distData {
+    join: markdownRemark(frontmatter: {page: {eq: "distance-healing"}}) {
+      html
+    }
     dataYaml(page: {eq: "distance-healing"}) {
       access {
         text_1
@@ -356,13 +375,11 @@ const Access = () => {
       </DecoOuter>
       <DistWrapper>
       <DistHeal>
-      <SectionHeader
-        title={pageData.join_team.title}
-        image={pageData.join_team.image}
-      />
-      <div dangerouslySetInnerHTML={{ __html: data.dataYaml.join_team.text_1 }} className="access_text" />
-
-      <div dangerouslySetInnerHTML={{ __html: data.dataYaml.join_team.text_2 }} className="access_text" />
+        <SectionHeader
+          title={pageData.join_team.title}
+          image={pageData.join_team.image}
+        />
+        <div dangerouslySetInnerHTML={{ __html: data.join.html }} className="access_text" />
       </DistHeal>
       </DistWrapper>
       <DecoOuterTop>
