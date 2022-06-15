@@ -292,7 +292,14 @@ i{
 const Access = () => {
   const data = useStaticQuery(graphql`
   query distData {
-    join: markdownRemark(frontmatter: {page: {eq: "distance-healing"}}) {
+    join: markdownRemark(
+      frontmatter: {page: {eq: "distance-healing"}, section: {eq: "join_team"}}
+    ) {
+      html
+    }
+    support: markdownRemark(
+      frontmatter: {page: {eq: "distance-healing"}, section: {eq: "support"}}
+    ) {
       html
     }
     dataYaml(page: {eq: "distance-healing"}) {
@@ -302,13 +309,9 @@ const Access = () => {
         title
       }
       join_team {
-        text_1
-        text_2
         title
       }
       support {
-        text_1
-        text_2
         title
       }
     }
@@ -317,94 +320,91 @@ const Access = () => {
   return (
     <>
       <DecoOuterTop>
-        <DecoInnerTop>
-        </DecoInnerTop>
+        <DecoInnerTop/>
       </DecoOuterTop>
-    <DistHeal className="itemHeal" style={{ marginTop: "-50px"}} >
-      <SectionHeader
-        title={pageData.access.title}
-        image={pageData.access.image}
-      />
-      <h3>{pageData.access.subtitle}</h3>
+      <DistHeal className="itemHeal" style={{ marginTop: "-50px" }} >
+        <SectionHeader
+          title={pageData.access.title}
+          image={pageData.access.image}
+        />
+        <h3>{pageData.access.subtitle}</h3>
 
-      <Table>
-      <RowTitle>
-        <p>Name</p>
-        <p>Biography</p>
-      </RowTitle>
-        {pageData.access.team.map((m, i) => {
-          return (
-            <Row>
-              <p>{m.name}</p>
-              <p>{m.bio}</p>
-            </Row>
-          )
-        })}
+        <Table>
+          <RowTitle>
+            <p>Name</p>
+            <p>Biography</p>
+          </RowTitle>
+          {pageData.access.team.map((m, i) => {
+            return (
+              <Row>
+                <p>{m.name}</p>
+                <p>{m.bio}</p>
+              </Row>
+            )
+          })}
 
-      <h3>Price in euros</h3>
-      </Table>
+          <h3>Price in euros</h3>
+        </Table>
 
-      <Table style={{
-        borderTop: "3px solid #C4C4C4",
-        borderBottom: "3px solid #C4C4C4",
-        padding: "20px 0"
-      }} >
-        {pageData.access.prices.map((r,i) => {
-          return (
-            <PriceRow key={'pr-'+i}>
-              <p>{r.text}</p>
-              <p>{r.time}</p>
-              <p>{r.price}</p>
-            </PriceRow>
-          )
-        })}
-        <PriceRow>
-          <p/><p/><i>All Tax Include</i>
-        </PriceRow>
-      </Table>
+        <Table style={{
+          borderTop: "3px solid #C4C4C4",
+          borderBottom: "3px solid #C4C4C4",
+          padding: "20px 0"
+        }} >
+          {pageData.access.prices.map((r, i) => {
+            return (
+              <PriceRow key={'pr-' + i}>
+                <p>{r.text}</p>
+                <p>{r.time}</p>
+                <p>{r.price}</p>
+              </PriceRow>
+            )
+          })}
+          <PriceRow>
+            <p /><p /><i>All Tax Include</i>
+          </PriceRow>
+        </Table>
 
-      <div dangerouslySetInnerHTML={{ __html: data.dataYaml.access.text_1 }} className="access_text" />
-      <p className='entryZoom'>Entry Zoom</p>
+        <div dangerouslySetInnerHTML={{ __html: data.dataYaml.access.text_1 }} className="access_text" />
+        <p className='entryZoom'>Entry Zoom</p>
 
-      <GatsbyImage image={GetImageByName('logo-black.png')} alt='decor' className='logoBlack' />
+        <GatsbyImage image={GetImageByName('logo-black.png')} alt='decor' className='logoBlack' />
 
-      <div dangerouslySetInnerHTML={{ __html: data.dataYaml.access.text_2 }} className="access_text" />
+        <div dangerouslySetInnerHTML={{ __html: data.dataYaml.access.text_2 }} className="access_text" />
+
       </DistHeal>
       <DecoOuter>
         <DecoInner>
-        <GatsbyImage image={GetImageByName('decoration-4.png')} alt='decor' className='center' />
+          <GatsbyImage image={GetImageByName('decoration-4.png')} alt='decor' className='center' />
         </DecoInner>
       </DecoOuter>
       <DistWrapper>
-      <DistHeal>
-        <SectionHeader
-          title={pageData.join_team.title}
-          image={pageData.join_team.image}
-        />
-        <div dangerouslySetInnerHTML={{ __html: data.join.html }} className="access_text" />
-      </DistHeal>
+        <DistHeal>
+          <SectionHeader
+            title={pageData.join_team.title}
+            image={pageData.join_team.image}
+          />
+          <div dangerouslySetInnerHTML={{ __html: data.join.html }} className="access_text" />
+        </DistHeal>
       </DistWrapper>
       <DecoOuterTop>
         <DecoInnerTop>
-        <GatsbyImage image={GetImageByName('decoration-4.png')} alt='decor' className='center' />
+          <GatsbyImage image={GetImageByName('decoration-4.png')} alt='decor' className='center' />
         </DecoInnerTop>
       </DecoOuterTop>
-      <DistHeal  className="itemHeal">
+      <DistHeal className="itemHeal">
 
-      <SectionHeader
-        title={pageData.support.title}
-        image={pageData.support.image}
-      />
+        <SectionHeader
+          title={pageData.support.title}
+          image={pageData.support.image}
+        />
 
-      <div dangerouslySetInnerHTML={{ __html: data.dataYaml.support.text_1 }} className="access_text" />
+        <div dangerouslySetInnerHTML={{ __html: data.support.html }} className="access_text" />
 
-      <div dangerouslySetInnerHTML={{ __html: data.dataYaml.support.text_2 }} className="access_text" />
-
-    </DistHeal>
-    <DecoOuter>
-        <DecoInner>
-        </DecoInner>
-    </DecoOuter>
+      </DistHeal>
+      <DecoOuter>
+        <DecoInner/>
+      </DecoOuter>
     </>
   )
 }
