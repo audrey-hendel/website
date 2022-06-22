@@ -8,6 +8,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 
 const TerGrid = styled.div`
+  position: relative;
   text-align: left;
   margin: 0 auto;
   display: grid;
@@ -44,7 +45,6 @@ const TerGrid = styled.div`
     letter-spacing: 0.08em;
     color: rgba(51, 51, 51, 0.8);
     @media (min-width: 500px){
-      color: rgba(51, 51, 51, 0.5);
       font-size: 35px;
       line-height: 40px;
     }
@@ -55,7 +55,6 @@ const TerGrid = styled.div`
       font-size: 22px;
       line-height: 25px;
     }
-
   }
   a {
     font-family: 'Damion';
@@ -144,7 +143,6 @@ const TerCard = styled.div`
   justify-content: center;
   align-content: start;
 
-
   img {
     width: 140px;
     margin: 0 auto;
@@ -192,13 +190,16 @@ const TerCard = styled.div`
     padding-right: 20px;
     &::after {
           content: "";
-          border: 3px solid rgba(240, 65, 145, 0.35);
+          background: rgba(240,65,145,0.35);
+          border: 3px solid rgba(240,65,145,0.35);
           border-radius: 50px;
           position: absolute;
           height: 491px;
           left: 50%;
-          transform: translateX (-50%);
-          top: 87%;
+          -webkit-transform: translateX (-50%);
+          -ms-transform: translateX (-50%);
+          transform: translateX(-50%);
+          bottom: 70px;
         }
     }
   }
@@ -313,27 +314,27 @@ const Distance = () => {
 
   return (
     <>
-    <DecoOuterTop>
+      <DecoOuterTop>
         <DecoInnerTop>
         </DecoInnerTop>
-    </DecoOuterTop>
-    <TerGrid>
-      <TerCard>
+      </DecoOuterTop>
+      <TerGrid>
+        <TerCard>
           <StaticImage src='../../images/dog.png' alt="gallery image" />
           <div dangerouslySetInnerHTML={{ __html: data.dataYaml.col1 }} className="AboutText" />
         </TerCard>
         <TerCard>
           <StaticImage src='../../images/horse.png' alt="gallery image" />
           <div dangerouslySetInnerHTML={{ __html: data.dataYaml.col2 }} className="AboutText" />
-      </TerCard>
-    </TerGrid>
-    <Content>
-      <div dangerouslySetInnerHTML={{ __html: data.dataYaml.content }} />
-    </Content>
-    <DecoOuter>
+        </TerCard>
+      </TerGrid>
+      <Content>
+        <div dangerouslySetInnerHTML={{ __html: data.dataYaml.content }} />
+      </Content>
+      <DecoOuter>
         <DecoInner>
         </DecoInner>
-    </DecoOuter>
+      </DecoOuter>
     </>
   )
 }
