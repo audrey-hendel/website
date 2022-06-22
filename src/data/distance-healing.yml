@@ -55,7 +55,7 @@ access:
 join_team:
   title: Join the team
   image: img3.png 
-  text_1: |
+  text_1: !markdown |
     Let's unite compassion, shamanic competences, and digital progress to bring healing, empowering and divination at the international level! I invite You to join my project, join the **LET'S BE HAPPY**
     practitioner team and expand the spatial possibilities of compassion.
   text_2: !markdown |
