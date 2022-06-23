@@ -93,12 +93,26 @@ const DistanceBox = styled.div`
 const DistanceText = styled.div`
   margin: 0 auto;
   max-width: 920px;
+  font-family: 'Sitka';
+  font-weight: 700;
   font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  @media (min-width: 500px){
+    font-size: 22px;
+    line-height: 28px;
+  }
+  p{
+    margin-bottom: 10px;
+    @media (min-width: 500px){
+      margin-bottom: 24px;
+    }
+  }
   .fd1 {
-
+    color: rgba(240, 65, 145, 0.8);
   }
   .fd2 {
-    
+    color: rgba(51, 51, 51, 0.6);
   }
     @media (min-width: 500px){
       padding: 20px;

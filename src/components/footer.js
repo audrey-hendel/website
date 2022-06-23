@@ -30,6 +30,9 @@ bottom: 0;
   p, a {
     color: rgba(51, 51, 51, 0.8);
     font-size: 16px;
+    margin-bottom: 5px;
+    @media (min-width: 500px){
+    }
   }
   img{
     width: 40px;
@@ -44,7 +47,10 @@ const FooterGrid = styled.div`
   margin: 0 auto;
   display: grid;
   @media (min-width: 768px) {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (min-width: 920px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 `
 const Col = styled.div`
@@ -79,6 +85,14 @@ const Footer = () => {
         <Col>
           <h2>Contact Details</h2>
           {dataHome.contact.text.map((t, i) => {
+            return (
+              <p key={'cont' + i}>{t}</p>
+            )
+          })}
+        </Col>
+        <Col>
+          <h2>LET’S BE HAPPY!</h2>
+          {dataHome.footer.map((t, i) => {
             return (
               <p key={'cont' + i}>{t}</p>
             )
