@@ -40,7 +40,6 @@ collections:
         - {name: name, widget: string}
         - {name: title, widget: string}
         - {name: text, widget: markdown}
-        - {name: file, widget: string}
 
       - name: therapies
         widget: object
