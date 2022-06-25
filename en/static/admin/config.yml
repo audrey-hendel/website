@@ -187,11 +187,11 @@ collections:
       - { label: "link",  name: "link",  widget: "string", default: "#" }
       - { label: "order",  name: "order",  widget: "number", default: "9" }
 
-  - label: "Text sections"
-    name: "text"
-    folder: "../content/en/data"
-    create: true
-    fields:
-      - {label: "page", name: "page", widget: "string"}
-      - {label: "section", name: "section", widget: "string"}
-      - {label: "Body", name: "body", widget: "markdown"}
+- label: "Text sections"
+  name: "text"
+  folder: "../content/en/data"
+  create: true
+  fields:
+  - {label: "page", name: "page", widget: "string"}
+  - {label: "section", name: "section", widget: "string"}
+  - {label: "Body", name: "body", widget: "markdown"}
