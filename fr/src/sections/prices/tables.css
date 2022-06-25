@@ -1,0 +1,137 @@
+.price_table {
+  max-width: 1263px;
+  padding: 0 25px 10px;
+  margin: -110px auto 0;
+}
+@media (min-width: 500px) {
+  .price_table {
+    margin: -100px auto 0;
+  }
+}
+@media (min-width: 768px) {
+  .price_table {
+    padding: 0 40px 10px;
+  }
+}
+@media (min-width: 1024px) {
+  .price_table {
+    padding: 0 103px 10px;
+  }
+}
+
+.price_table h2 {
+  font-family: "Damion";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.375;
+  letter-spacing: 0.08em;
+  color: rgba(51, 51, 51, 0.8);
+  border-bottom: 3px solid rgba(240, 65, 145, 0.35);
+}
+@media (min-width: 500px) {
+  .price_table h2{
+    font-size: 28px;
+    line-height: 1.375;
+  }
+}
+@media (min-width: 768px) {
+  .price_table h2{
+    font-size: 40px;
+    line-height: 1.375;
+  }
+}
+.price_table h3 {
+  color: rgba(51, 51, 51, 0.8);
+  font-size: 14px;
+  margin-bottom: 0;
+}
+@media (min-width:500px) {
+  .price_table h3{
+    font-size: 20px;
+  }
+}
+@media (min-width: 768px) {
+  .price_table h3{
+    font-size: 25px;
+    line-height: 1.375;
+
+  }
+}
+
+.price_table tr {
+  margin-bottom: 20px;
+}
+.price_table table {
+  width: 100%;
+  font-size: 12px;
+  color: rgba(51, 51, 51, 0.5);
+  overflow-x: scroll;
+}
+@media (min-width: 500px) {
+  .price_table table{
+    font-size: 18px;
+  }
+}
+@media (min-width: 768px) {
+  .price_table table{
+    font-size: 22px;
+    line-height: 1.375;
+  }
+}
+.price_table em{
+  font-size: 10px;
+  line-height: 12px;
+}
+@media (min-width: 500px) {
+  .price_table em{
+    font-size: 16px;
+  }
+}
+@media (min-width: 768px) {
+  .price_table em{
+    font-size: 22px;
+  }
+}
+.price_table table img {
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-left: -80px;
+  width: 50%;
+}
+@media (min-width: 500px) {
+  .price_table table img {
+    width: auto;
+  }
+}
+
+.price_table table td:nth-child(1) {
+  width: 65%;
+  padding-right: 20px;
+}
+@media (min-width: 452px){
+  .price_table table td:nth-child(1){
+    width: 50%;
+  }
+}
+.price_table table td:nth-child(2) {
+  width: 25%;
+}
+@media (min-width: 500px){
+  .price_table table td:nth-child(2){
+    width: 30%;
+  }
+}
+.price_table table td:nth-child(3) {
+  width: 10%;
+}
+@media (min-width: 500px){
+  .price_table table td:nth-child(2){
+    width: 20%;
+  }
+}
+@media (min-width: 920px) {
+  .price_table {
+    padding: 0 103px 10px;
+  }
+}

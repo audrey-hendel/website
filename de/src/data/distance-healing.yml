@@ -1,0 +1,82 @@
+page: distance-healing
+title: Distance Healing
+access:
+  title: Access to healing
+  subtitle: The team of practitioners 
+  image: img1.png 
+  team: 
+  - name: Audrey Hendel
+    bio: Lorem ipsum dolor
+#  - name: 
+#    bio: 
+#  - name: 
+#    bio: 
+  prices: 
+  -
+    text: SHAMANIC SESSION AND EXCHANGE
+    time: 60 min.
+    price: 50
+  -
+    text: CHILDREN AND OVER 65 YEARS OF AGE
+    time: 60 min.
+    price: 40
+  -
+    text: RAPID INTERVENTION
+    time: 20 min.
+    price: 20
+ 
+  text_1: !markdown |
+    ### How shamanic distance healing works
+  
+    The rapid intervention can be provided differed in time or live.
+  
+    ### DIFFERED ON TIME
+  
+    We drum, record the session on a sound message, you can hear later in a comfortable place.
+  
+    # ZOOM
+  
+    1. Download and Install Zoom
+    2. Enter the LET'S BE HAPPY Shamanic Healing Center by clicking on the ENTRY ZOOM logo on
+    the home page of the site letsbehappy.com
+  
+  text_2: !markdown |
+    3. Wait your turn in the waiting room.
+    4. The practitioner invites you to the Shamanic room.
+    In the chat, you write a **promise of payment** “Yes, I will pay or make a donation” and your contact    details (email or address).
+    5. Enter the shamanic Room. Briefly explain your request. Enjoy the distance shamanic session.
+    6. The session is over, you proceed to the payment by bank transfer or PayPal.
+    Our bank details:
+    
+    Audrey Hendel:
+    Paypal:
+    Wording on payment: LET'S BE HAPPY- Name of the practitioner 
+
+join_team:
+  title: Join the team
+  image: img3.png 
+  text_1: !markdown |
+    Let's unite compassion, shamanic competences, and digital progress to bring healing, empowering and divination at the international level! I invite You to join my project, join the **LET'S BE HAPPY**
+    practitioner team and expand the spatial possibilities of compassion.
+  text_2: !markdown |
+    ### Recruitment criteria
+
+    You are a shamanism practitioner, trained by the Foundation for Shamanic Studies. You have already successfully completed these following waorkshops, all taught by authorized FSS Faculty Members: The FSS “Basic Workshop”, “Shamanic divination”, “Shamanism, Dying, and  Beyond”, “Shamanic Extraction” and “Power Soul Retrieval Training”. Ideally you have completed the three years program or The FSS Two Week Shamanic Healing Intensive.
+ 
+    -  You agree to respect the rules of operation and ethics LET'S BE HAPPY
+    -  You master several languages including English.
+    -  You are available during the day, also in the evening, night and on weekends.
+    -  You show listening, empathy, and composure to manage a critical situation.
+    -  You agree to document (briefly) your sessions and be transparent about your income (if requested).
+
+    ### Application
+
+    **Document to send:** CV, cover letter and list of the FSS successfully completed workshops.
+    **Address:** Mail@letsbehappy.com
+
+    ### Ethics and rules codex
+
+support: 
+  title: Support the project 
+  image: img2.png 
+

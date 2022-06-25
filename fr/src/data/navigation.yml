@@ -1,0 +1,19 @@
+items:
+- label: Wonderful!
+  link: /
+  order: 0
+- label: Testimonials
+  link: /testimonials
+  order: 4
+- label: Prices
+  link: /prices
+  order: 2
+- label: Distance Healing
+  link: /distance-healing
+  order: 3
+- label: Contact
+  link: /contact
+  order: 5
+- label: Therapies
+  link: /therapies
+  order: 1

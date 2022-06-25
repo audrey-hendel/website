@@ -34,6 +34,9 @@ build/Release
 
 # Dependency directories
 node_modules/
+en/node_modules/
+fr/node_modules/
+de/node_modules/
 jspm_packages/
 
 # Typescript v1 declaration files
@@ -55,8 +58,9 @@ typings/
 .env*
 
 # gatsby files
-.cache/
-public
+en/public
+fr/public
+de/public
 
 # Mac files
 .DS_Store
@@ -68,3 +72,7 @@ yarn-error.log
 # Yarn Integrity file
 .yarn-integrity
 .yarn/cache
+en/.cache
+fr/.cache
+de/.cache
+.cache
