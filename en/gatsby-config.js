@@ -27,14 +27,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `Yaml`,
-        path: `../data/en`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `Md`,
-        path: `../data/en`,
+        path: `../content/en/data`,
       },
     },
     {
