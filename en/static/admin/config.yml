@@ -8,8 +8,8 @@ public_folder: /images
 
 collections:
 
-- label: Pages English
-  name: pages-en
+- name: pages-en
+  label: Pages English
   editor:
     preview: true
   files:
@@ -187,8 +187,8 @@ collections:
       - { label: "link",  name: "link",  widget: "string", default: "#" }
       - { label: "order",  name: "order",  widget: "number", default: "9" }
 
-- label: "Text sections English"
-  name: "text-en"
+- name: "text-en"
+  label: "Text sections English"
   folder: "/content/en/data"
   create: true
   fields:
@@ -197,8 +197,8 @@ collections:
   - {label: "Body", name: "body", widget: "markdown"}
 
 ##########################################
-- label: Pages France
-  name: pages-fr
+- name: pages-fr
+  label: Pages France
   editor:
     preview: true
   files:
@@ -359,7 +359,7 @@ collections:
     - name: details
       widget: markdown
 
-- name: sections-en
+- name: sections-fr
   label: sections France
   editor:
     preview: true
@@ -376,8 +376,8 @@ collections:
       - { label: "link",  name: "link",  widget: "string", default: "#" }
       - { label: "order",  name: "order",  widget: "number", default: "9" }
 
-- label: "Text sections France"
-  name: "text-en"
+- name: "text-fr"
+  label: "Text sections France"
   folder: "/content/fr/data"
   create: true
   fields:
@@ -386,8 +386,8 @@ collections:
   - {label: "Body", name: "body", widget: "markdown"}
 ####################################
 
-- label: Pages France
-  name: pages-fr
+- name: pages-de
+  label: Pages Germany
   editor:
     preview: true
   files:
@@ -548,7 +548,7 @@ collections:
     - name: details
       widget: markdown
 
-- name: sections-en
+- name: sections-de
   label: sections Germany
   editor:
     preview: true
@@ -565,8 +565,8 @@ collections:
       - { label: "link",  name: "link",  widget: "string", default: "#" }
       - { label: "order",  name: "order",  widget: "number", default: "9" }
 
-- label: "Text sections Germany"
-  name: "text-en"
+- name: "text-de"
+  label: "Text sections Germany"
   folder: "/content/de/data"
   create: true
   fields:
