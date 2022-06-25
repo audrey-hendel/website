@@ -1,9 +1,9 @@
 backend:
   name: git-gateway
-  branch: master
+  branch: main
   repo: vosaul/AUDREY
 publish_mode: editorial_workflow
-media_folder: /src/images
+media_folder: /images
 public_folder: /images
 
 collections:
@@ -15,7 +15,7 @@ collections:
   files:
   - label: Homepage
     name: homepage
-    file: "/src/data/home.yml"
+    file: "/content/en/data/home.yml"
     fields:
     - name: title
       widget: string
@@ -82,7 +82,7 @@ collections:
  
   - label: Distance Healing
     name: distance-healing
-    file: "/src/data/distance-healing.yml"
+    file: "/content/en/data/distance-healing.yml"
     fields:
     - name: title
       widget: string
@@ -126,7 +126,7 @@ collections:
 
   - label: Prices
     name: prices
-    file: "/src/data/prices.yml"
+    file: "/content/en/data/prices.yml"
     fields:
     - name: title
       widget: string
@@ -134,14 +134,14 @@ collections:
       widget: markdown
   - label: Prices table
     name: prices-table
-    file: /src/data/prices-table.md
+    file: /content/en/data/prices-table.md
     fields:
     - name: body
       widget: markdown
 
   - label: Testimonials
     name: testimonials
-    file: "/src/data/testimonials.yml"
+    file: "/content/en/data/testimonials.yml"
     fields:
     - name: items
       label: testimonials
@@ -155,7 +155,7 @@ collections:
 
   - name: therapies
     label: Therapies
-    file: "/src/data/therapies.yml"
+    file: "/content/en/data/therapies.yml"
     fields:
     - name: title
       widget: string
@@ -177,7 +177,7 @@ collections:
   files:
   - name: "navigation"
     label: "navigation menu"
-    file: "/src/data/navigation.yml"
+    file: "/content/en/data/navigation.yml"
     fields:
     - label: "Navigation items"
       name: "items"
@@ -186,3 +186,12 @@ collections:
       - { label: "label", name: "label", widget: "string" }
       - { label: "link",  name: "link",  widget: "string", default: "#" }
       - { label: "order",  name: "order",  widget: "number", default: "9" }
+
+- label: "Text sections"
+  name: "text"
+  folder: "/content/en/data"
+  create: true
+  fields:
+  - {label: "page", name: "page", widget: "string"}
+  - {label: "section", name: "section", widget: "string"}
+  - {label: "Body", name: "body", widget: "markdown"}
