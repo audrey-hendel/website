@@ -16,7 +16,7 @@ about_section:
     image: audrey.png
     name: Audrey Hendel
     title: PSYCHOLOGICAL&nbsp;COUNSELOR & SHAMANIC HEALER
-    text: >
+    text: !markdown >
       ### PSYCHOLOGICAL&nbsp;COUNSELOR &&nbsp;SHAMANIC HEALER
 
 

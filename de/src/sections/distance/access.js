@@ -53,9 +53,7 @@ const DistHeal = styled.article`
     }
 
   }
-  .logoBlack{
-    margin-bottom: 40px;
-  }
+
   .access_text{
     font-family: 'Sitka';
     font-style: normal;
@@ -288,7 +286,21 @@ i{
   }
 }
 `
-
+const EntryZoom = styled.a`
+  cursor: pointer;
+  display: block;
+  padding: 5px;
+  height: fit-content;
+  width: fit-content;
+  margin-bottom: 40px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  box-shadow: 4px 5px 7px #ddd;
+  &:hover{
+    border: 1px solid #ccc;
+    box-shadow: 4px 5px 7px #d898c8;
+  }
+`
 const Access = () => {
   const data = useStaticQuery(graphql`
   query distData {
@@ -307,6 +319,7 @@ const Access = () => {
         text_1
         text_2
         title
+        zoom
       }
       join_team {
         title
@@ -317,6 +330,7 @@ const Access = () => {
     }
   }
 `)
+
   return (
     <>
       <DecoOuterTop>
@@ -364,12 +378,12 @@ const Access = () => {
             <p /><p /><i>All Tax Include</i>
           </PriceRow>
         </Table>
-
+        
         <div dangerouslySetInnerHTML={{ __html: data.dataYaml.access.text_1 }} className="access_text" />
         <p className='entryZoom'>Entry Zoom</p>
-
-        <GatsbyImage image={GetImageByName('logo-black.png')} alt='decor' className='logoBlack' />
-
+        <EntryZoom href={data.dataYaml.access.zoom} rel="noreferer" target="_blank" title="Click to entry ZOOM">
+          <GatsbyImage image={GetImageByName('logo-black.png')} alt='decor' />
+        </EntryZoom>
         <div dangerouslySetInnerHTML={{ __html: data.dataYaml.access.text_2 }} className="access_text" />
 
       </DistHeal>
