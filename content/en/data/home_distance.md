@@ -1,6 +1,5 @@
 ---
 page: home
-section: distance
 ---
 <span class="fd1">LET’S BE HAPPY </span>
 is expanding! The objective is clear: to use digital means to become the first international shamanic healing center capable of respond to shamanic requests,

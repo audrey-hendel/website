@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { GatsbyImage } from "gatsby-plugin-image"
 import GetImageByName from '~components/getImageByName'
-import pageData from "~data/testimonials.yml"
+import pageData from "~data/music-testimonies.yml"
 import styled from 'styled-components'
 
 const TmGrid = styled.div`
@@ -296,7 +296,7 @@ const DecoOuter = styled.div`
 
   @media (min-width: 1024px) {
     border-radius: 0 0 50px 50px;
-    margin-bottom: -75px;
+    margin-bottom: 100px;
     z-index: 2;
   }
 `
@@ -327,9 +327,9 @@ const DecoInner = styled.div`
 `
 
 const SecondPage = () => (
-  <Layout path="/testimonials">
-    <Seo title="testimonials" />
-    <Title text='Testimonials' />
+  <Layout path="/music-testimonies">
+    <Seo title="music testimonies" />
+    <Title text='Music Testimonies' />
     <DecoOuterTop>
       <DecoInnerTop>
         <GatsbyImage image={GetImageByName('decoration-4.png')} alt='decor' className='center' />

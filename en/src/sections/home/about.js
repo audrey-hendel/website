@@ -397,6 +397,7 @@ const TerCard = styled.div`
         }
       }
 
+
     .decorImage {
       order: -1;
     }

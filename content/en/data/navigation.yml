@@ -1,9 +1,9 @@
 items:
-- label: Wonderful!
+- label: Let´s be happy!
   link: /
   order: 0
-- label: Testimonials
-  link: /testimonials
+- label: Music Testimonies
+  link: /music-testimonies
   order: 4
 - label: Prices
   link: /prices

@@ -53,8 +53,13 @@ const DistHeal = styled.article`
     }
 
   }
-
-  .access_text{
+  .logoBlack{
+    margin-bottom: 40px;
+  }
+  .access_about{
+    margin-bottom: 100px;
+  }
+  .access_text, .access_about{
     font-family: 'Sitka';
     font-style: normal;
     font-weight: 400;
@@ -62,27 +67,93 @@ const DistHeal = styled.article`
     line-height: 18px;
     letter-spacing: 0.03em;
     color: #333333;
-    .pink {
-      color: #F04191;
-    }
-    .featured_text {
-      line-height: 1.2;
-      text-align: center;
-      b {
-        font-size: 2rem;
-        font-weight: 500;
-      }
-      i {
-        font-size: 1.8rem;
-        font-style: normal;
-        font-weight: 500;
-      }
-    }
     @media (min-width: 500px){
       font-size: 22px;
       line-height: 28px;
     }
-
+    .pink {
+      color: #F04191;
+    }
+    .featured_text {
+      line-height: 1.8;
+      text-align: center;
+      color: rgba(51, 51, 51, 0.5);
+      b {
+        font-size: 1.4rem;
+        font-weight: 500;
+        font-weight: 500;
+        @media (min-width: 500px){
+          font-size: 2rem;
+          line-height: 28px;
+        }
+      }
+      i {
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 500;
+        @media (min-width: 500px){
+          font-size: 1.8rem;
+          line-height: 28px;
+        }
+      }
+    }
+    .feature_text{
+      font-family: 'Damion';
+      text-align: center;
+      line-height: 2.5;
+      margin: 40px auto;
+      font-size: 22px;
+      line-height: 32px;
+      color: rgba(51, 51, 51, 0.5);
+      @media (min-width: 500px){
+      margin: 100px auto;
+      font-size: 30px;
+      line-height: 40px;
+    }
+    }
+    .featured_img{
+      display: grid;
+      grid-template-columns: 1.33fr 3fr 3fr;
+      gap: 10px;
+      img{
+        width: 100%;
+        height: auto;
+      }
+      @media (min-width: 500px){
+        margin-top: 40px;
+        gap: 20px;
+      }
+      @media (min-width: 1024px){
+        grid-template-columns: 1.33fr 3fr 3fr;
+        gap: 30px;
+      }
+    }
+    .application_img{
+      display: grid;
+      grid-template-columns: 1fr 2.25fr;
+      grid-template-row: 1fr 1fr;
+      gap: 10px;
+      img{
+        width: 100%;
+        height: auto;
+      }
+      @media (min-width: 500px){
+        margin-top: 40px;
+        gap: 20px;
+      }
+      @media (min-width: 1024px){
+        grid-template-columns: 1fr 2.25fr 1fr 2.25fr;
+      }
+    }
+    .donation_img, .rules_img{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      @media (min-width: 500px){
+        margin-top: 40px;
+        gap: 20px;
+      }
+    }
   }
   img{
     width: 171px;
@@ -105,21 +176,22 @@ const DistWrapper = styled.div`
     margin-bottom: -50px;
   }
   @media (min-width: 1024px){
-    margin-top: 0;
+    margin-top: -130px;
   }
 `
 
 const Table = styled.div`
 max-width: 1150px;
-margin: 0 auto;
+margin: 0px auto;
 justify-content: stretch;
   display: grid;
 `
 const RowTitle = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 
   p {
+    font-family: 'Sitka';
     padding: 20px;
     text-align: center;
     font-size: 10px;
@@ -129,7 +201,7 @@ const RowTitle = styled.div`
     font-size: 20px;
   }
   }
-  p:nth-child(1) {
+  p:nth-child(1), p:nth-child(2), p:nth-child(3) {
       border-right: 3px solid rgba(240, 65, 145, 0.35);
   }
   @media (min-width: 768px){
@@ -138,18 +210,19 @@ const RowTitle = styled.div`
 `
 const Row = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-self: center;
   
   p {
     font-size: 12px;
     padding: 15px;
     text-align: center;
+    font-family: 'Sitka';
     margin: 0;
     border-bottom: 3px solid rgba(240, 65, 145, 0.35);
   }
-  p:nth-child(odd) {
+  p:nth-child(1), p:nth-child(2), p:nth-child(3){
       border-right: 3px solid rgba(240, 65, 145, 0.35);
-      font-family: 'Damion';
       font-style: normal;
       font-weight: 400;
       font-size: 16px;
@@ -157,8 +230,11 @@ const Row = styled.div`
       letter-spacing: 0.08em;
       color: rgba(51, 51, 51, 0.6);
     }
+    p:nth-child(1){
+      font-family: 'Damion';
+    }
   @media (min-width: 768px) {
-    p:nth-child(odd) {
+    p:nth-child(1) {
       font-weight: 400;
       font-size: 40px;
     }
@@ -219,7 +295,7 @@ const DecoOuter = styled.div`
 
   @media (min-width: 1024px) {
     border-radius: 0 0 50px 50px;
-    margin-bottom: -75px;
+    margin-bottom: 80px;
     z-index: 2;
   }
 `
@@ -257,6 +333,8 @@ p {
   margin: 0;
   padding: 8px 5px;
   font-size: 14px;
+  color: rgba(51, 51, 51, 0.5);
+  font-family: 'Sitka';
   @media (min-width: 500px){
     padding: 8px 10px;
     font-size: 18px;
@@ -286,21 +364,21 @@ i{
   }
 }
 `
-const EntryZoom = styled.a`
-  cursor: pointer;
-  display: block;
-  padding: 5px;
-  height: fit-content;
-  width: fit-content;
-  margin-bottom: 40px;
-  border-radius: 8px;
-  border: 1px solid #eee;
-  box-shadow: 4px 5px 7px #ddd;
-  &:hover{
-    border: 1px solid #ccc;
-    box-shadow: 4px 5px 7px #d898c8;
+
+const Decor = styled.div`
+  display: grid;
+  row-gap: 0;
+  padding: 0 10px;
+  column-gap: 10px;
+  grid-template-columns: 1.45fr 1fr 1.3fr;
+  margin-top: -60px;
+  @media (min-width: 768px){
+    column-gap: 20px;
+    padding: 20px;
   }
+  
 `
+
 const Access = () => {
   const data = useStaticQuery(graphql`
   query distData {
@@ -316,10 +394,11 @@ const Access = () => {
     }
     dataYaml(page: {eq: "distance-healing"}) {
       access {
+        text_about
+        text_s
         text_1
         text_2
         title
-        zoom
       }
       join_team {
         title
@@ -331,6 +410,12 @@ const Access = () => {
   }
 `)
 
+const decorSide = GetImageByName("star-decor.png")
+const image_2 = GetImageByName("f2.png")
+const image_3 = GetImageByName("f3.png")
+const image_4 = GetImageByName("f4.png")
+console.log(decorSide)
+
   return (
     <>
       <DecoOuterTop>
@@ -341,21 +426,31 @@ const Access = () => {
           title={pageData.access.title}
           image={pageData.access.image}
         />
-        <h3>{pageData.access.subtitle}</h3>
-
+        <div dangerouslySetInnerHTML={{ __html: data.dataYaml.access.text_about}} className="access_about" />
+        <Decor>
+          <GatsbyImage image={image_2} alt="decor" className="decImg-1" />
+          <GatsbyImage image={image_3} alt="decor" className="decImg-2" />
+          <GatsbyImage image={image_4} alt="decor" className="decImg-3" />
+        </Decor>
+        <div dangerouslySetInnerHTML={{ __html: data.dataYaml.access.text_s}} className="access_about" />
         <Table>
           <RowTitle>
             <p>Name</p>
-            <p>Biography</p>
+            <p>Biography and link to face-to-face practice</p>
+            <p> Distance-healing link</p>
+            <p>Paypal Account </p>
           </RowTitle>
           {pageData.access.team.map((m, i) => {
             return (
               <Row>
                 <p>{m.name}</p>
                 <p>{m.bio}</p>
+                <p>{m.dist_hel}</p>
+                <p>{m.pay}</p>
               </Row>
             )
           })}
+          <h3>{pageData.access.subtitle}</h3>
 
           <h3>Price in euros</h3>
         </Table>
@@ -378,12 +473,11 @@ const Access = () => {
             <p /><p /><i>All Tax Include</i>
           </PriceRow>
         </Table>
-        
         <div dangerouslySetInnerHTML={{ __html: data.dataYaml.access.text_1 }} className="access_text" />
         <p className='entryZoom'>Entry Zoom</p>
-        <EntryZoom href={data.dataYaml.access.zoom} rel="noreferer" target="_blank" title="Click to entry ZOOM">
-          <GatsbyImage image={GetImageByName('logo-black.png')} alt='decor' />
-        </EntryZoom>
+
+        <GatsbyImage image={GetImageByName('logo-black.png')} alt='decor' className='logoBlack' />
+
         <div dangerouslySetInnerHTML={{ __html: data.dataYaml.access.text_2 }} className="access_text" />
 
       </DistHeal>

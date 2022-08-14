@@ -42,12 +42,13 @@ const DecoOuterTop = styled.div`
   width: 95%;
   max-width: 1260px;
   margin: 0 auto;
-  border-radius: 50px 50px 0 0;
+  border-radius: 30px 30px 0 0;
   padding: 2px;
   background: linear-gradient(pink, transparent);
   margin-top: -30px;
 
   @media (min-width: 1024px) {
+    border-radius: 50px 50px 0 0;
     margin-top: -50px;
     z-index: 2;
   }
@@ -57,30 +58,32 @@ const DecoOuter = styled.div`
   width: 95%;
   max-width: 1260px;
   margin: 0 auto;
-  border-radius: 0 0 50px 50px;
+  border-radius: 0 0 30px 30px;
   padding: 2px;
   background: linear-gradient(transparent, pink);
 
   @media (min-width: 1024px) {
-    margin-bottom: -75px;
+    margin-bottom: 80px;
+    border-radius: 0 0 50px 50px;
     z-index: 2;
   }
 `
 const DecoInner = styled.div`
   display: flex;
   padding: 20px;
-  border-radius: 0 0 50px 50px;
+  border-radius: 0 0 30px 30px;
   border: 1px transparent;
   width: 100%;
   height: 100%;
   background: #fff;
-  @media (min-width: 780px){
+  @media (min-width: 1024px){
+    border-radius: 0 0 50px 50px;
     padding: 60px 0;}
 `
 const DecoInnerTop = styled.div`
   display: flex;
   padding: 20px;
-  border-radius: 50px 50px 0 0;
+  border-radius: 30px 30px 0 0;
   border: 1px transparent;
   width: 100%;
   height: 100%;
@@ -88,6 +91,9 @@ const DecoInnerTop = styled.div`
   padding: 40px 0;
   .center {
     margin: 0 auto;
+  }
+  @media (min-width: 1024px) {
+    border-radius: 50px 50px 0 0;
   }
 `
 const ContactPage = () => (

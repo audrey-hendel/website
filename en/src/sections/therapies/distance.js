@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import { StaticImage } from "gatsby-plugin-image"
 import { GatsbyImage } from "gatsby-plugin-image"
 import GetImageByName from '~components/getImageByName'
-import DecorCenter from '~components/decorCenter'
 import { useStaticQuery, graphql } from "gatsby"
 
 
@@ -194,12 +193,12 @@ const TerCard = styled.div`
           border: 3px solid rgba(240,65,145,0.35);
           border-radius: 50px;
           position: absolute;
-          height: 491px;
+          height: 700px;
           left: 50%;
           -webkit-transform: translateX (-50%);
           -ms-transform: translateX (-50%);
           transform: translateX(-50%);
-          bottom: 70px;
+          bottom: 90px;
         }
     }
   }
@@ -266,18 +265,39 @@ const TerCard = styled.div`
 
 
 `
-
 const Content = styled.div`
-    padding: 20px;
     max-width: 1328px;
     margin: 0 auto;
     background: rgba(240, 128, 179, 0.07);
+    border-radius: 0;
+    @media (min-width: 500px){
+      font-size: 22px;
+      margin-bottom: 30px;
+    }
+    @media (min-width: 1350px){
+      border-radius: 30px;
+    }
+  .decor-desc{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    gap: 10px;
+    @media (min-width: 500px){
+      gap: 20px;
+    }
+  }
+
+`
+const ContentSham = styled.div`
+    padding: 20px 20px 10px;
+    margin: 0 auto;
     border-radius: 0;
     font-family: 'Sitka';
     font-style: normal;
     font-size: 14px;
     line-height: 1.27;
-    display: flex;
     align-items: center;
     letter-spacing: 0.03em;
     color: rgba(51, 51, 51, 0.8);
@@ -285,16 +305,56 @@ const Content = styled.div`
     @media (min-width: 500px){
       font-size: 22px;
       margin-bottom: 30px;
-      padding: 50px 25px;
+      padding: 50px 25px 10px;
 
     }
     @media (min-width: 768px){
-      padding: 50px 80px;
+      padding: 50px 80px 20px;
     }
     @media (min-width: 1350px){
       border-radius: 30px;
     }
-    
+    .TextDesc{
+      p{
+      margin-bottom: 10px;
+      @media (min-width: 500px){
+        margin-bottom: 24px;
+      }
+      }
+  }
+`
+const ContentPsycho = styled.div`
+    padding: 0px 20px 20px;
+    margin: 0 auto;
+    border-radius: 0;
+    font-family: 'Sitka';
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.27;
+    align-items: center;
+    letter-spacing: 0.03em;
+    color: rgba(51, 51, 51, 0.8);
+    margin-bottom: 0;
+    @media (min-width: 500px){
+      font-size: 22px;
+      margin-bottom: 30px;
+      padding: 10px 25px 50px;
+
+    }
+    @media (min-width: 768px){
+      padding: 20px 80px 50px;
+    }
+    @media (min-width: 1350px){
+      border-radius: 30px;
+    }
+    .TextDesc{
+      p{
+        margin-bottom: 10px;
+        @media (min-width: 500px){
+          margin-bottom: 24px;
+        }
+    }
+  }
 `
 
 
@@ -307,6 +367,8 @@ const Distance = () => {
       col1
       col2
       content
+      psycho
+      
     }
   }
 `)
@@ -329,7 +391,16 @@ const Distance = () => {
         </TerCard>
       </TerGrid>
       <Content>
-        <div dangerouslySetInnerHTML={{ __html: data.dataYaml.content }} />
+        <ContentSham>
+          <div dangerouslySetInnerHTML={{ __html: data.dataYaml.content }} className="TextDesc"/>
+        </ContentSham>
+        <div className="decor-desc">
+          <img src="/images/p2.png" alt="p2"></img>
+          <img src="/images/p3.png" alt="p3"></img>
+        </div>
+        <ContentPsycho>
+          <div dangerouslySetInnerHTML={{ __html: data.dataYaml.psycho }} className="TextDesc"/>
+        </ContentPsycho>
       </Content>
       <DecoOuter>
         <DecoInner>
