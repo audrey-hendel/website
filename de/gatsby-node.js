@@ -7,7 +7,7 @@ exports.onCreateWebpackConfig = ({ actions }) => {
         "~components": path.resolve(__dirname, "./src/components"),
         "~images": path.resolve("../images"),
         "~sections": path.resolve(__dirname, "./src/sections"),
-        "~data": path.resolve("../content/de/data"),
+        "~data": path.resolve("../content/en/data"),
       }
     }
   });

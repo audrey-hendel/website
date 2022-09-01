@@ -2,13 +2,30 @@ page: distance-healing
 title: Distance Healing
 access:
   title: Access to healing
+  text_about: !markdown | 
+    ### About shamanism
+
+    In traditional indigenous cultures, shamans are regarded as community members who are able to heal and to be in contact with the  piritual world. Shamans lead healing rituals and perform an essential therapeutic and counselling role in case of diseases, disbalanced and challenging situations. They communicate valuable problem-solving and healing strategies to the community.Shamanism is effective, gentle and natural; it can bring knowledge, healing, empowerment and transformation. By providing holistic, systemic, and energetic methods to empower the client, shamanism is an alternative medicine par excellence. By “empower the client” we mean enhance immunity, strength, resistance, self-healing power, vitality, resiliency, inner joy and the ability to act for oneself and others. The effects are somatic, psychological, psychosocial, and energetic. Fully empowered clients typically find that their symptoms have naturally vanished, they feel confident and healthy, or they have learned to reframe their difficulties as an advantageous aspect of their personality and their life.
+
+  text_s: !markdown |   
+    ### The session
+
+    After explaining their issue, wishes or difficulties, the client usually lies down comfortably and
+    closes their eyes while the shamanic practitioner sings and drums. When the drumming/singing is
+    over, the client and the shamanic practitioner have time to exchange. Belief or faith play no role in
+    the healing or its effect. 
+
   subtitle: The team of practitioners 
   image: img1.png 
   team: 
   - name: Audrey Hendel
-    bio: Lorem ipsum dolor
-#  - name: 
-#    bio: 
+    bio:
+    dist_hel: The temple
+    pay: 
+  - name: Olena Sauliak
+    bio: 
+    dist_hel: 
+    pay:
 #  - name: 
 #    bio: 
   prices: 
@@ -28,29 +45,30 @@ access:
   text_1: !markdown |
     ### How shamanic distance healing works
   
-    The rapid intervention can be provided differed in time or live.
+    The rapid intervention can be experienced either at a later time or live.
   
-    ### DIFFERED ON TIME
+    ### AT A LATER TIME
   
-    We drum, record the session on a sound message, you can hear later in a comfortable place.
+    We drum, sing healings songs and record the session. You can listen to it later at a convenient time and place. 
   
     # ZOOM
   
     1. Download and Install Zoom
-    2. Enter the LET'S BE HAPPY Shamanic Healing Center by clicking on the ENTRY ZOOM logo on
-    the home page of the site letsbehappy.com
+    2. Enter the Shamanic Healing Center by clicking on the ENTRY ZOOM logo on the home page of
+    the letsbehappy.com web-site.
   
   text_2: !markdown |
     3. Wait your turn in the waiting room.
     4. The practitioner invites you to the Shamanic room.
-    In the chat, you write a **promise of payment** “Yes, I will pay or make a donation” and your contact    details (email or address).
-    5. Enter the shamanic Room. Briefly explain your request. Enjoy the distance shamanic session.
-    6. The session is over, you proceed to the payment by bank transfer or PayPal.
+    In the chat, you write a **promise of payment** “Yes, I will pay or make a donation” and your
+    contact details (email or address).
+    5. Enter the shamanic room. Briefly explain your request. Enjoy the shamanic session.
+    6. The session is over, you make the payment by bank transfer or PayPal. 
     Our bank details:
     
     Audrey Hendel:
     Paypal:
-    Wording on payment: LET'S BE HAPPY- Name of the practitioner 
+    Wording on payment: LET' S BE HAPPY - Name of the practitioner
 
 join_team:
   title: Join the team

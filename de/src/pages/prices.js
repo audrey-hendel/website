@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "~components/layout"
 import Seo from "~components/seo"
 import Title from "~components/title"
-import Details from "~components/details"
+import Details from "~sections/prices/details"
 import Tables from "~sections/prices/tables"
 import pageData from "~data/prices.yml"
 
