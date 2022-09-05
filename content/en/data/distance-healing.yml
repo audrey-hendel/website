@@ -22,14 +22,14 @@ access:
     the healing or its effect. 
   prices:
     - text: SHAMANIC SESSION AND EXCHANGE
-      time: 60 min.
-      price: 50
+      time: 60-120 min.
+      price: 70
     - text: CHILDREN AND OVER 65 YEARS OF AGE
-      time: 60 min.
-      price: 40
+      time: 60-120 min.
+      price: 62
     - text: RAPID INTERVENTION
-      time: 20 min.
-      price: 20
+      time: 30 min.
+      price: 25
   zoom: https://us06web.zoom.us/j/2016108108?pwd=ZTFnNnNySDlzTDAxUE1SUzFKMGtFZz09
   subtitle: The team of practitioners
   title: "LET’S BE HAPPY is expanding! "
