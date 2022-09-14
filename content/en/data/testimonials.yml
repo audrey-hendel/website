@@ -18,3 +18,8 @@ items:
     name: "Sarah (Germany) "
     image: /images/GIRL-150x150.png
     stars: 5
+  - date: 2022-10-04T10:37:00.745Z
+    response: "Very relaxing, a new experience! A true blessing for the soul! "
+    stars: 5
+    image: /images/man-150x150.png
+    name: Daniel (Germany)
