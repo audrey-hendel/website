@@ -58,3 +58,49 @@ items:
     image: /images/girl2-150x150.png
     stars: 4
     response: "Beautiful! Audrey is very gifted and blessed. "
+  - date: 2022-10-21T11:00:49.457Z
+    name: "Jens (Germany) "
+    stars: 5
+    response: Wow, I have to admit it, it’s very relaxing. I wanted to have some
+      answers to private questions, about my job and my private life. I’m
+      satisfied!  Audrey’s voice is like magic, as if fairies would fly and sing
+      lullabies. I liked the lyre more than the drum, she felt thar quickly, she
+      put the drum down and sang. So I think Audrey can adapt the session to
+      each client and make the session very intense and personal.
+    image: /images/man-150x150.png
+  - date: 2022-10-25T11:01:56.124Z
+    name: Silke (Germany)
+    image: /images/girl4-150x150.png
+    response: All therapy is like going into another universe, where I came back
+      stronger for my daily life. I don’t have to believe, just relax and it’s
+      working. I felt relaxed and better directly after the session.
+    stars: 5
+  - date: 2022-10-29T11:05:42.559Z
+    name: Maryvone (France)
+    image: /images/GIRL-150x150.png
+    stars: 5
+    response: I enjoyed it, it’s relaxing, and I think it’s possible to get well
+      with this kind of alternative medicine. I had beautiful visions of being
+      young, travelling on a boat and I felt free and peaceful during the
+      healing. I don’t understand how it’s works but I think I saw what happened
+      and it was for me like a healing journey to Japan.
+  - date: 2022-11-02T12:06:38.370Z
+    name: "Greta (Germany) "
+    image: /images/girl2-150x150.png
+    stars: 4
+    response: "Audrey gave me the power of my favorite animal, the elephant. I love
+      elephant, it’s make me remember my mother, her wisdom. I had to cry. This
+      session showed me I have to take care more of myself. "
+  - date: 2022-11-06T12:08:30.692Z
+    response: "Thank you very much, Audrey, for the shamanic healing. I enjoyed the
+      session, and it was beneficial. Audrey you are a beautiful person and very
+      kind. I wish you all the best for the future. "
+    name: "Isabelle (France) "
+    image: /images/GIRL-150x150.png
+    stars: 4
+  - date: 2022-11-09T12:09:53.023Z
+    name: "Florent (France) "
+    image: /images/man-150x150.png
+    stars: 5
+    response: "Audrey is an excellent listener with a big heart and a very beautiful
+      voice. Thank you! "
