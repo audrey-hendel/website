@@ -18,18 +18,16 @@ about_section:
     name: Audrey Hendel
     title: PSYCHOLOGICAL COUNSELOR & SHAMANIC HEALER
     text: >-
-      ### PSYCHOLOGICAL COUNSELOR & SHAMANIC HEALER
-
-
-      After studying **philosophy, communication and psychology** at a French university for ten years, I trained and specialized in **psychopathology** and various psychotherapeutic approaches at a professional school for alternative healthcare in Germany. 
+      After studying philosophy, communication and psychology at a French
+      university for ten years, I trained and specialized in psychopathology and
+      various psychotherapeutic approaches at a professional school for
+      alternative healthcare in Germany. 
 
 
       My professional experience in psychiatric hospitals for children and adults gave me a field-bases approach and the desire to propose a complementary therapeutic approach: shamanic methods and psychotherapy. 
 
 
-
       I developed my healing and shamanic divination techniques with the FSSE, The Foundation for Shamanic Studies Europe, a highly professional organization that is very close to my heart. The Foundation for Shamanic Studies is a non-profit organisation dedicated to the preservation, study and teaching of shamanic knowledge for the welfare of the planet and its inhabitants. I follow the vision and ethics of shamanism as taught by the Foundation.
-
 
 
       In addition, Tibetan Buddhism grounds and frames my commitment to spirituality. My therapies are gentle, respectful of your wishes and based on an ethic of universal compassion. 
@@ -79,7 +77,7 @@ distance:
     To achieve this aim, practitioners carefully selected for their skills, their professionalism, and ethics, will joined me. More we will work together; more we will be able to serve others and fulfill our dream!
   three_t:
     - label: Access to healing
-      image: img1.png
+      image: /images/img1-300x300.png
     - label: Join the team
       image: img2.png
     - label: Support the project
