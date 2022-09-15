@@ -10,7 +10,7 @@ items:
     order: 3
   - label: Distance Healing
     link: /distance-healing
-    order: 3
+    order: 2
   - label: Contact
     link: /contact
     order: 6
