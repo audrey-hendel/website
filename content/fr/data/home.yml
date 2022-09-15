@@ -32,11 +32,11 @@ about_section:
 
       Le bouddhisme tibétain encadre mon éthique de travail et ma spiritualité engagée. Vivant en Allemagne où le statut de psychopraticien est reconnu, validé et encadré par le ministère de la Santé, j’exerce en cabinet privé comme « Heilpraktikerin für Psychotherapie ». (Heilpraktiker : praticien de santé)
   therapies:
-    title: Therapies
+    title: "Thérapies "
     items:
-      - title: Shamanic Healing
+      - title: "Soin et séance chamanique "
         image: dog.png
-      - title: Psycho-Shamanic Therapy
+      - title: "Psychothérapie "
         image: horse.png
     cta_label: Read more
     cta_link: /therapies/
@@ -61,23 +61,24 @@ page: home
 decor_gallery: decor_c.png
 distance:
   decor_center: decoration-4.png
-  title: Shamanic distance healing
-  text: >
-    LET’S BE HAPPY is expanding! The objective is clear: to use digital means to
-    become the first international shamanic healing center capable of respond to
-    shamanic requests,
+  title: "Soin chamanique à distance "
+  text: >-
+    LET’S BE HAPPY s’agrandit !
+
+    Je donne déjà des soins chamaniques à distance par visioconférence. L´objectif suivant est plus ambitieux encore : utiliser les moyens numériques pour devenir le premier centre international de soin chamanique capable de prendre en charge les demandes de soin chamanique à distance, \
 
 
-    7 days a week, 24 hours a day 
+    7 jours sur 7       et      24 h sur 24\
 
+    \
 
-    To achieve this aim, practitioners carefully selected for their skills, their professionalism, and ethics, joined me. More we will work together; more we will be able to serve others and fulfill our dream!
+    Nous voulons pouvoir répondre aux demandes urgentes, et cela directement depuis le site internet letsbehappy,com. Pour atteindre cet objectif, des praticiens du chamanisme soigneusement sélectionnés pour leurs compétences et leur éthique de travail se joignent au projet.
   three_t:
-    - label: Access to healing
+    - label: "Bénéficier d'un soin "
       image: img1.png
-    - label: Join the team
+    - label: "Intégrer l'équipe "
       image: img2.png
-    - label: Support the project
+    - label: "Soutenir le projet "
       image: img3.png
   cta_label: Read more
   cta_link: /distance-healing
