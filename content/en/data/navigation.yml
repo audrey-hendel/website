@@ -7,13 +7,16 @@ items:
     order: 4
   - label: Prices
     link: /prices
-    order: 2
+    order: -2
   - label: Distance Healing
     link: /distance-healing
-    order: 3
+    order: 2
   - label: Contact
     link: /contact
-    order: 5
+    order: 2
   - label: Therapies
     link: /therapies
     order: 1
+  - link: "#"
+    order: 5
+    label: "Music "
