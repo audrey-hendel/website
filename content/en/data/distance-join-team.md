@@ -30,7 +30,7 @@ and <i>serve</i> others »
   <img src="images/g3.png" alt="bear" width="auto"/>
 </div>
  
-### Recruitment criteria
+Recruitment criteria
 -  You are a shamanic practitioner, and you would like to act with altruism and compassion and engage yourself in a long-time shamanic healing practice.
 -  You have been trained by the Foundation for Shamanic Studies. You have successfully completed these following workshops, all taught by authorized FSS Faculty Members: the FSS “Basic Workshop”, “Shamanic Divination”, “Shamanism, Dying, and Beyond”, “Shamanic Extraction” and “Power Soul Retrieval Training”. Ideally you have also completed the ThreeYear Program or the Two-Week Shamanic Healing Intensive
 -  You agree to respect the rules of operation, price strategy and ethics.
