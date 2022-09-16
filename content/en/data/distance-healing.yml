@@ -1,102 +1,170 @@
 page: distance-healing
 title: Distance Healing
 access:
-  title: Access to healing
-  text_about: !markdown | 
-    ### About shamanism
+  text_2: >-
+    **The session.** 
 
-    In traditional indigenous cultures, shamans are regarded as community members who are able to heal and to be in contact with the  piritual world. Shamans lead healing rituals and perform an essential therapeutic and counselling role in case of diseases, disbalanced and challenging situations. They communicate valuable problem-solving and healing strategies to the community.Shamanism is effective, gentle and natural; it can bring knowledge, healing, empowerment and transformation. By providing holistic, systemic, and energetic methods to empower the client, shamanism is an alternative medicine par excellence. By “empower the client” we mean enhance immunity, strength, resistance, self-healing power, vitality, resiliency, inner joy and the ability to act for oneself and others. The effects are somatic, psychological, psychosocial, and energetic. Fully empowered clients typically find that their symptoms have naturally vanished, they feel confident and healthy, or they have learned to reframe their difficulties as an advantageous aspect of their personality and their life.
-
-  text_s: !markdown |   
+    After explaining their issue, wishes or difficulties, the client usually lies down comfortably and closes their eyes while the shamanic practitioner sings and drums. When the drumming/singing is over, the client and the shamanic practitioner have time to exchange. Belief or faith play no role in the healing or its effect.
+  text_s: >
     ### The session
 
+
     After explaining their issue, wishes or difficulties, the client usually lies down comfortably and
+
     closes their eyes while the shamanic practitioner sings and drums. When the drumming/singing is
+
     over, the client and the shamanic practitioner have time to exchange. Belief or faith play no role in
+
     the healing or its effect. 
-
-  subtitle: The team of practitioners 
-  image: img1.png 
-  team: 
-  - name: Audrey Hendel
-    bio:
-    dist_hel: The temple
-    pay: 
-  - name: Olena Sauliak
-    bio: 
-    dist_hel: 
-    pay:
-#  - name: 
-#    bio: 
-  prices: 
-  -
-    text: SHAMANIC SESSION AND EXCHANGE
-    time: 60 min.
-    price: 50
-  -
-    text: CHILDREN AND OVER 65 YEARS OF AGE
-    time: 60 min.
-    price: 40
-  -
-    text: RAPID INTERVENTION
-    time: 20 min.
-    price: 20
- 
-  text_1: !markdown |
-    ### How shamanic distance healing works
-  
-    The rapid intervention can be experienced either at a later time or live.
-  
-    ### AT A LATER TIME
-  
-    We drum, sing healings songs and record the session. You can listen to it later at a convenient time and place. 
-  
-    # ZOOM
-  
-    1. Download and Install Zoom
-    2. Enter the Shamanic Healing Center by clicking on the ENTRY ZOOM logo on the home page of
-    the letsbehappy.com web-site.
-    
+  prices:
+    - text: SHAMANIC SESSION AND EXCHANGE
+      time: 60-120 min.
+      price: 70
+    - text: CHILDREN AND OVER 65 YEARS OF AGE
+      time: 60-120 min.
+      price: 60
+    - text: RAPID INTERVENTION
+      time: 30 min.
+      price: 25
   zoom: https://us06web.zoom.us/j/2016108108?pwd=ZTFnNnNySDlzTDAxUE1SUzFKMGtFZz09
-  
-  text_2: !markdown |
-    3. Wait your turn in the waiting room.
-    4. The practitioner invites you to the Shamanic room.
-    In the chat, you write a **promise of payment** “Yes, I will pay or make a donation” and your
-    contact details (email or address).
-    5. Enter the shamanic room. Briefly explain your request. Enjoy the shamanic session.
-    6. The session is over, you make the payment by bank transfer or PayPal. 
-    Our bank details:
-    
-    Audrey Hendel:
-    Paypal:
-    Wording on payment: LET' S BE HAPPY - Name of the practitioner
+  subtitle: The team of practitioners
+  title: "LET’S BE HAPPY is expanding! "
+  image: img1.png
+  text_about: >
+    ### About shamanism
 
+
+    In traditional indigenous cultures, shamans are regarded as community members who are able to heal and to be in contact with the  piritual world. Shamans lead healing rituals and perform an essential therapeutic and counselling role in case of diseases, disbalanced and challenging situations. They communicate valuable problem-solving and healing strategies to the community.Shamanism is effective, gentle and natural; it can bring knowledge, healing, empowerment and transformation. By providing holistic, systemic, and energetic methods to empower the client, shamanism is an alternative medicine par excellence. By “empower the client” we mean enhance immunity, strength, resistance, self-healing power, vitality, resiliency, inner joy and the ability to act for oneself and others. The effects are somatic, psychological, psychosocial, and energetic. Fully empowered clients typically find that their symptoms have naturally vanished, they feel confident and healthy, or they have learned to reframe their difficulties as an advantageous aspect of their personality and their life.
+  team:
+    - name: Audrey Hendel
+      bio: "Audrey Hendel is french, settled in Germany. She studied philosophy,
+        brandstrategy and psychology. She is psychological counselor and
+        shamanic healer. She dedicates herself to her family, to Let'sbehappy to
+        offer psychological and shamanic help, and to shamanic songs. "
+  text_1: >-
+    **About shamanism.** 
+
+
+    In traditional indigenous cultures, shamans are regarded as community members who are able to heal and to be in contact with the spiritual world. Shamans lead healing rituals and perform an essential therapeutic and counselling role in case of diseases, disbalanced and challenging situations. They communicate valuable problem-solving and healing strategies to the community.
+
+
+    Shamanism is effective, gentle and natural; it can bring knowledge, healing, empowerment and transformation. By providing holistic, systemic, and energetic methods to empower the client, shamanism is an alternative medicine par excellence. By “empower the client” we mean enhance immunity, strength, resistance, self-healing power, vitality, resiliency, inner joy and the ability to act for oneself and others. The effects are somatic, psychological, psychosocial, and energetic. Fully empowered clients typically find that their symptoms have naturally vanished, they feel confident and healthy, or they have learned to reframe their difficulties as an advantageous aspect of their personality and their life.
 join_team:
   title: Join the team
-  image: img3.png 
-  text_1: !markdown |
-    Let's unite compassion, shamanic competences, and digital progress to bring healing, empowering and divination at the international level! I invite You to join my project, join the **LET'S BE HAPPY**
-    practitioner team and expand the spatial possibilities of compassion.
-  text_2: !markdown |
+  image: img3.png
+  text_1: >-
+    Let´s mobilize our drums for others. Let’s expand in time and space the
+    possibilities of compassion. 
+
+    Together, when we unite power, kindness, shamanic competences, and digital progress, bringing shamanic work on the international level, 7 days a week & 24 hours a day, is possible! 
+
+
+    With our actions, spirituality, and our friendship with the Spirits we are able to help and empower all over the planet! 
+
+
+    I invite you to join the shamanic team, by becoming an online shamanic practitioner. During the distance healing online session, you are free about your practice and methods. I provide a brand, a website in .com and in different languages, take care about the work planning, the intern communication, the technical aspects, and the recruitment of colleagues. More the team will grow, more we will be able to answer to urgent needs and improve the concept step by step. 
+
+
+    Let’s make it happen, let’s make it real.  
+
+
+
+
+    “Shaman brothers, shaman sisters,
+
+    carry the light of love, 
+
+    ride a drum of compassion 
+
+    and serve others.”
+  text_2: >-
     ### Recruitment criteria
 
-    You are a shamanism practitioner, trained by the Foundation for Shamanic Studies. You have already successfully completed these following waorkshops, all taught by authorized FSS Faculty Members: The FSS “Basic Workshop”, “Shamanic divination”, “Shamanism, Dying, and  Beyond”, “Shamanic Extraction” and “Power Soul Retrieval Training”. Ideally you have completed the three years program or The FSS Two Week Shamanic Healing Intensive.
- 
-    -  You agree to respect the rules of operation and ethics LET'S BE HAPPY
-    -  You master several languages including English.
-    -  You are available during the day, also in the evening, night and on weekends.
-    -  You show listening, empathy, and composure to manage a critical situation.
-    -  You agree to document (briefly) your sessions and be transparent about your income (if requested).
+
+    You are a shamanism practitioner, trained by the Foundation for Shamanic Studies. You have already successfully completed these following workshops, all taught by authorized FSS Faculty Members: The FSS “Basic Workshop”, “Shamanism, Dying, and Beyond”, “Shamanic Extraction” and “Power Soul Retrieval Training”. Ideally you have completed the three years program or The FSS Two Week Shamanic Healing Intensive.
+
+
+    * You agree to respect the rules of operation, price strategy and ethics.
+
+    * You are fluent in several languages including English.
+
+    * You are available during the day, ready to work also in the evening, at night and on weekends.
+
+    * You have the skills of listening, empathy, and composure to manage a critical situation.
+
+    * You agree to document (briefly) your sessions.
+
 
     ### Application
 
+
     **Document to send:** CV, cover letter and list of the FSS successfully completed workshops.
+
     **Address:** Mail@letsbehappy.com
+
 
     ### Ethics and rules codex
 
-support: 
-  title: Support the project 
-  image: img2.png 
 
+    Code of ethics and rules 
+
+    • Do good, always. With kindness, patience, respect, compassion, tenderness, and unconditional love. In serving others, you cultivate joyful effort and self-giving. You act in accordance with the legal framework, human rights and for the good of all beings.
+
+    • I act with awareness and a sense of responsibility towards the clients and his community. 
+
+    • I’m sure that the client consents. Distance healing requires clear and explicit consent from the client. Ideally the person is present, aware, audible, and visible in front of the camera and the internet connection supports live sharing. Parents gives consent if their child is not of speaking age. 
+
+    • Shamanic sessions do not replace classical medicine. I make sure that the patient consults a doctor in addition or contacts emergency services. Shamanic sessions do not hinder or delay the work of the doctors in any way.
+
+    • I have the duty to postpone or refuse a session, in case of clear emergency if the patient is categorically refusing to contact a doctor or the police. 
+
+    • I have the right and the duty to refuse treatment if I feel incompetent for the case or if I’m embarrassed by the request. 
+
+    • I behave with humility, and I do not give my opinion of medical prescriptions. 
+
+    • I do not prescribe diet, fasting or any kind of cure or substance. 
+
+    • I talk as little as possible about my religion or spiritual background. 
+
+    • Shamanic sessions for animals are allowed. Ideally the animal should be present, visible and can hear the shamanic practitioner. 
+
+    • Even in case of a large-scale disaster, such as war, natural catastrophe, pandemic, etc… collective distance healing (for a community, group, region, or other large spatial area) is not allowed. Shamanic assistance should be provided on an individual level only. 
+
+    • I respect the pricing strategy. 
+
+    • I document my sessions and my income. 
+
+    • I do not use the time allocated to the treatment to advertise or for publicity.
+
+    • Let’s be happy is a kind, joyful, spiritual, humanist, pacific and open-minded brand. I’m aware that my behavior, attitude, socio-political and religious engagement, online and in presence communication could harm the brand.
+
+    • I act with responsibility, loyalty and friendship toward the education organization mentioned in the recruitment criteria and with its members.
+support:
+  title: Support the project
+  image: img2.png
+  text_1: >-
+    **Communication and advertising** 
+
+
+
+    Isn't it wonderful and miraculous to be able to help sentient beings in difficulty all over the planet? Digital advances, the use of English as a lingua franca, and shamanic collaboration with helping Spirits able us to act with compassion on an international level. In the face of the challenges that lie ahead, and our uncertain future, it is our responsibility to seize this opportunity to prepare the field and be ready to serve 
+
+
+
+    Share about us and Let’s be happy with the people around you. Help us by talking about shamanism, our long-distance healing concept, our practitioners and about the alliance between power of the soul, joy and health. Shamanism can help in case of somatic, psychic, social difficulties, and emergencies. Shamanism is not only spiritually. Is an efficient but forgotten alternative medicine. Few know what shamanism means. The shamans are underrepresented in media, and popular culture is full of clichés. Few know the effectiveness, wisdom and beauty of shamanism, an ancestral method of knowledge, healing, empowerment, and transformation. 
+
+
+
+    Help us to become visible and let people know we are here, ready to act and ready to help. 
+
+
+
+
+    « It is not enough to be compassionate. You must act. » 
+
+    Dalai Lama
+  text_2: >-
+    **Donation**
+
+
+    To provide an efficient service and to improve it, it is essential to work with fast and advanced digital tools. Similarly, communication represents a significant investment of time and money. Donations allow us to offer affordable rates while continuing to expand.
