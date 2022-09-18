@@ -1,13 +1,18 @@
 page: prices
-title: Prices
-details: !markdown |
-  - **Reduced rates.** I grant reductions and special payment options for clients in greatest need.
-  - **Repayment.** Sessions cannot be reimbursed.
-  - **Support.** Sessions are not covered by the German or any national social security system.
-  - **Payment.** Credit card, bank transfer or PayPal. You will receive an invoice. 
-  - **Cancellation.** In case of cancellation with 48 hours prior notice, half of the sum will be due.
-  - **Cessation.** You can stop therapeutic work at any time without explaining your reasons. 
+title: "Tarifs "
+details: >-
+  * **Tarifs réduits.** J’accorde des réductions et facilités de paiement aux
+  plus démunis.
 
+  * **Remboursement**. Les soins effectués ne peuvent pas être remboursés.
+
+  * **Prise en charge**. Les soins ne sont pas pris en charge par la sécurité sociale.
+
+  * **Paiement**. Carte bancaire, virement ou Paypal. Vous obtiendrez une facture.
+
+  * **Annulation.** En cas d'annulation moins de 48 heures avant la séance, la moitié de la somme reste due.
+
+  * **Cessation**. Vous pouvez mettre fin au travail thérapeutique à tout moment sans justification.
 decor:
   image_1: e1.png
   image_2: e2.png
