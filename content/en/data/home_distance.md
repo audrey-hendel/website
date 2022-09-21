@@ -1,6 +1,6 @@
 ---
 page: home
-section: "Shamanic distance healing "
+section: Shamanic distance healing 2
 ---
 <span class="fd1">LET’S BE HAPPY </span>
 is expanding! I’m already available for shamanic distance healing. The next objective is clear: to use digital means to become the first international shamanic healing center capable of responding to shamanic requests,
