@@ -2,7 +2,7 @@
 page: distance-healing
 section: support
 ---
-### Communication and advertising
+### Communication and advertising 2
 
 Isn't it wonderful and miraculous to be able to help sentient beings in difficulty all over the planet? Digital advances, the use of English as a lingua franca, and shamanic collaboration with helping Spirits able us to act with compassion on an international level. In the face of the challenges that lies ahead, and our uncertain future, it is our responsibility to seize this opportunity to prepare the field and be ready to serve.
 
