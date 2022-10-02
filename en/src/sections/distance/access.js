@@ -6,6 +6,158 @@ import GetImageByName from '~components/getImageByName'
 import pageData from "~data/distance-healing.yml"
 import { useStaticQuery, graphql } from "gatsby"
 
+const Access = () => {
+  const data = useStaticQuery(graphql`
+  query distData {
+    join_team: markdownRemark(
+      frontmatter: {page: {eq: "distance-healing"}, section: {eq: "join_team"}}
+    ) {
+      html
+    }
+    support: markdownRemark(
+      frontmatter: {page: {eq: "distance-healing"}, section: {eq: "support"}}
+    ) {
+      html
+    }
+    access_text_2: markdownRemark(
+      frontmatter: {page: {eq: "distance-healing"}, section: {eq: "access_text_2"}}
+    ) {
+      html
+    }
+        access_text_s: markdownRemark(
+      frontmatter: {page: {eq: "distance-healing"}, section: {eq: "access_text_s"}}
+    ) {
+      html
+    }
+    text_about: markdownRemark(
+      frontmatter: {page: {eq: "distance-healing"}, section: {eq: "text_about"}}
+    ) {
+      html
+    }
+    dataYaml(page: {eq: "distance-healing"}) {
+      access {
+        title
+        zoom
+      }
+      join_team {
+        title
+      }
+      support {
+        title
+      }
+    }
+  }
+`)
+
+const image_2 = GetImageByName("f2.png")
+const image_3 = GetImageByName("f3.png")
+const image_4 = GetImageByName("f4.png")
+
+  return (
+    <>
+      <DecoOuterTop>
+        <DecoInnerTop/>
+      </DecoOuterTop>
+      <DistHeal className="itemHeal" style={{ marginTop: "-50px" }} >
+        <SectionHeader
+          title={pageData.access.title}
+          image={pageData.access.image}
+        />
+        <div dangerouslySetInnerHTML={{ __html: data.text_about.html}} className="access_about" />
+        <Decor>
+          <GatsbyImage image={image_2} alt="decor" className="decImg-1" />
+          <GatsbyImage image={image_3} alt="decor" className="decImg-2" />
+          <GatsbyImage image={image_4} alt="decor" className="decImg-3" />
+        </Decor>
+        <div dangerouslySetInnerHTML={{ __html: data.access_text_s.html}} className="access_about" />
+        <Table>
+          <RowTitle>
+            <p>Name</p>
+            <p>Biography and link to face-to-face practice</p>
+            <p> Distance-healing link</p>
+            <p>Paypal Account </p>
+          </RowTitle>
+          {pageData.access.team.map((m, i) => {
+            return (
+              <Row>
+                <p>{m.name}</p>
+                <p>{m.bio}</p>
+                <p>{m.dist_hel}</p>
+                <p>{m.pay}</p>
+              </Row>
+            )
+          })}
+          <h3>{pageData.access.subtitle}</h3>
+
+          <h3>Price in euros</h3>
+        </Table>
+
+        <Table style={{
+          borderTop: "3px solid #C4C4C4",
+          borderBottom: "3px solid #C4C4C4",
+          padding: "20px 0"
+        }} >
+          {pageData.access.prices.map((r, i) => {
+            return (
+              <PriceRow key={'pr-' + i}>
+                <p>{r.text}</p>
+                <p>{r.time}</p>
+                <p>{r.price}</p>
+              </PriceRow>
+            )
+          })}
+          <PriceRow>
+            <br /><br /><i>All Tax Include</i>
+          </PriceRow>
+        </Table>
+        <div dangerouslySetInnerHTML={{ __html: data.text_about.html }} className="access_text" />
+        <p className='entryZoom'>Entry Zoom</p>
+
+        <EntryZoom href={data.dataYaml.access.zoom} rel="noreferer" target="_blank" title="Click to entry ZOOM">
+          <GatsbyImage image={GetImageByName('logo-black.png')} alt='decor' />
+        </EntryZoom>
+        <div dangerouslySetInnerHTML={{ __html: data.access_text_2 .html}} className="access_text" />
+
+      </DistHeal>
+      <DecoOuter>
+        <DecoInner>
+          <GatsbyImage image={GetImageByName('decoration-4.png')} alt='decor' className='center' />
+        </DecoInner>
+      </DecoOuter>
+      <DistWrapper>
+        <DistHeal>
+          <SectionHeader
+            title={pageData.join_team.title}
+            image={pageData.join_team.image}
+          />
+          <div dangerouslySetInnerHTML={{ __html: data.join_team.html }} className="access_text" />
+        </DistHeal>
+      </DistWrapper>
+      <DecoOuterTop>
+        <DecoInnerTop>
+          <GatsbyImage image={GetImageByName('decoration-4.png')} alt='decor' className='center' />
+        </DecoInnerTop>
+      </DecoOuterTop>
+      <DistHeal className="itemHeal">
+
+        <SectionHeader
+          title={pageData.support.title}
+          image={pageData.support.image}
+        />
+
+        <div dangerouslySetInnerHTML={{ __html: data.support.html }} className="access_text" />
+
+      </DistHeal>
+      <DecoOuter>
+        <DecoInner/>
+      </DecoOuter>
+    </>
+  )
+}
+
+export default Access
+
+
 const DistHeal = styled.article`
   max-width: 1190px;
   margin: 0 auto;
@@ -392,144 +544,3 @@ const EntryZoom = styled.a`
     box-shadow: 4px 5px 7px #d898c8;
   }
 `
-const Access = () => {
-  const data = useStaticQuery(graphql`
-  query distData {
-    join: markdownRemark(
-      frontmatter: {page: {eq: "distance-healing"}, section: {eq: "join_team"}}
-    ) {
-      html
-    }
-    support: markdownRemark(
-      frontmatter: {page: {eq: "distance-healing"}, section: {eq: "support"}}
-    ) {
-      html
-    }
-    dataYaml(page: {eq: "distance-healing"}) {
-      access {
-        text_about
-        text_s
-        text_1
-        text_2
-        title
-        zoom
-      }
-      join_team {
-        title
-      }
-      support {
-        title
-      }
-    }
-  }
-`)
-
-const decorSide = GetImageByName("star-decor.png")
-const image_2 = GetImageByName("f2.png")
-const image_3 = GetImageByName("f3.png")
-const image_4 = GetImageByName("f4.png")
-console.log(decorSide)
-
-  return (
-    <>
-      <DecoOuterTop>
-        <DecoInnerTop/>
-      </DecoOuterTop>
-      <DistHeal className="itemHeal" style={{ marginTop: "-50px" }} >
-        <SectionHeader
-          title={pageData.access.title}
-          image={pageData.access.image}
-        />
-        <div dangerouslySetInnerHTML={{ __html: data.dataYaml.access.text_about}} className="access_about" />
-        <Decor>
-          <GatsbyImage image={image_2} alt="decor" className="decImg-1" />
-          <GatsbyImage image={image_3} alt="decor" className="decImg-2" />
-          <GatsbyImage image={image_4} alt="decor" className="decImg-3" />
-        </Decor>
-        <div dangerouslySetInnerHTML={{ __html: data.dataYaml.access.text_s}} className="access_about" />
-        <Table>
-          <RowTitle>
-            <p>Name</p>
-            <p>Biography and link to face-to-face practice</p>
-            <p> Distance-healing link</p>
-            <p>Paypal Account </p>
-          </RowTitle>
-          {pageData.access.team.map((m, i) => {
-            return (
-              <Row>
-                <p>{m.name}</p>
-                <p>{m.bio}</p>
-                <p>{m.dist_hel}</p>
-                <p>{m.pay}</p>
-              </Row>
-            )
-          })}
-          <h3>{pageData.access.subtitle}</h3>
-
-          <h3>Price in euros</h3>
-        </Table>
-
-        <Table style={{
-          borderTop: "3px solid #C4C4C4",
-          borderBottom: "3px solid #C4C4C4",
-          padding: "20px 0"
-        }} >
-          {pageData.access.prices.map((r, i) => {
-            return (
-              <PriceRow key={'pr-' + i}>
-                <p>{r.text}</p>
-                <p>{r.time}</p>
-                <p>{r.price}</p>
-              </PriceRow>
-            )
-          })}
-          <PriceRow>
-            <p /><p /><i>All Tax Include</i>
-          </PriceRow>
-        </Table>
-        <div dangerouslySetInnerHTML={{ __html: data.dataYaml.access.text_1 }} className="access_text" />
-        <p className='entryZoom'>Entry Zoom</p>
-
-        <EntryZoom href={data.dataYaml.access.zoom} rel="noreferer" target="_blank" title="Click to entry ZOOM">
-          <GatsbyImage image={GetImageByName('logo-black.png')} alt='decor' />
-        </EntryZoom>
-        <div dangerouslySetInnerHTML={{ __html: data.dataYaml.access.text_2 }} className="access_text" />
-
-      </DistHeal>
-      <DecoOuter>
-        <DecoInner>
-          <GatsbyImage image={GetImageByName('decoration-4.png')} alt='decor' className='center' />
-        </DecoInner>
-      </DecoOuter>
-      <DistWrapper>
-        <DistHeal>
-          <SectionHeader
-            title={pageData.join_team.title}
-            image={pageData.join_team.image}
-          />
-          <div dangerouslySetInnerHTML={{ __html: data.join.html }} className="access_text" />
-        </DistHeal>
-      </DistWrapper>
-      <DecoOuterTop>
-        <DecoInnerTop>
-          <GatsbyImage image={GetImageByName('decoration-4.png')} alt='decor' className='center' />
-        </DecoInnerTop>
-      </DecoOuterTop>
-      <DistHeal className="itemHeal">
-
-        <SectionHeader
-          title={pageData.support.title}
-          image={pageData.support.image}
-        />
-
-        <div dangerouslySetInnerHTML={{ __html: data.support.html }} className="access_text" />
-
-      </DistHeal>
-      <DecoOuter>
-        <DecoInner/>
-      </DecoOuter>
-    </>
-  )
-}
-
-export default Access

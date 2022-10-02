@@ -3,6 +3,28 @@ import styled from 'styled-components'
 import { GatsbyImage } from "gatsby-plugin-image"
 import GetImageByName from '~components/getImageByName'
 
+const Details = (prop) => {
+  const [detailsOpen, setDetailsOpen] = useState(false)
+  return (
+    <div>
+    <Centered>
+    <GatsbyImage image={GetImageByName('logo-leaves-circle-150x150.png')} alt='decor' className='center' />
+    </Centered>
+      <Title 
+        detailsOpen={detailsOpen}
+        onClick={() => setDetailsOpen(!detailsOpen)}>
+        {detailsOpen ? '-details' : '+details'}
+      </Title>
+      {detailsOpen ? <DistanceBox open > 
+    <div dangerouslySetInnerHTML={{ __html: prop.details }} className="AboutText" />
+    </DistanceBox> : <DistanceBox> 
+    <div dangerouslySetInnerHTML={{ __html: prop.details }} className="AboutText" />
+    </DistanceBox>}
+    </div>
+  )
+}
+export default Details
+
 const DistanceBox = styled.div`
   .AboutText {
     height: ${props => (props.open ? "500px" : "0")};
@@ -72,24 +94,3 @@ img{
   }
 }
 `
-const Details = (prop) => {
-  const [detailsOpen, setDetailsOpen] = useState(false)
-  return (
-    <div>
-    <Centered>
-    <GatsbyImage image={GetImageByName('logo-leaves-circle-150x150.png')} alt='decor' className='center' />
-    </Centered>
-      <Title 
-        detailsOpen={detailsOpen}
-        onClick={() => setDetailsOpen(!detailsOpen)}>
-        {detailsOpen ? '-details' : '+details'}
-      </Title>
-      {detailsOpen ? <DistanceBox open > 
-    <div dangerouslySetInnerHTML={{ __html: prop.details }} className="AboutText" />
-    </DistanceBox> : <DistanceBox> 
-    <div dangerouslySetInnerHTML={{ __html: prop.details }} className="AboutText" />
-    </DistanceBox>}
-    </div>
-  )
-}
-export default Details

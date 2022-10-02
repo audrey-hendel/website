@@ -5,6 +5,36 @@ import GetImageByName from '~components/getImageByName'
 import DecorCenter from '~components/decorCenter'
 import { useStaticQuery, graphql } from "gatsby"
 
+const Gallery = (props) => {
+  const data = useStaticQuery(graphql`
+  query terGalData {
+    dataYaml(page: {eq: "therapies"}) {
+      gallery_text
+    }
+  }
+`)
+  return (
+    <SlideshowContainer>
+      <DecorCenter image='decoration-4.png' className="center"/>
+      <div dangerouslySetInnerHTML={{ __html: data.dataYaml.gallery_text }} className="center headLines" />
+        {props.gallery.map((sld, i) => {
+          return (
+            <Slide key={"slide-" + i} className="slideBox">
+              {sld.slide.map(pict => {
+                return (
+                  <GatsbyImage image={GetImageByName(pict.image)} alt="gallery image" key={pict.image} 
+                    className="slideItem"
+                  />
+                )
+              })}
+            </Slide>)
+        })}
+    </SlideshowContainer>
+  )
+}
+
+export default Gallery
+
 const SlideshowContainer = styled.section`
   margin-top: 80px;
   text-align: center;
@@ -95,34 +125,3 @@ const Slide = styled.div`
   }
 
 `
-
-const Gallery = (props) => {
-  const data = useStaticQuery(graphql`
-  query terGalData {
-    dataYaml(page: {eq: "therapies"}) {
-      gallery_text
-    }
-  }
-`)
-  return (
-    <SlideshowContainer>
-      <DecorCenter image='decoration-4.png' className="center"/>
-      <div dangerouslySetInnerHTML={{ __html: data.dataYaml.gallery_text }} className="center headLines" />
-
-        {props.gallery.map((sld, i) => {
-          return (
-            <Slide key={"slide-" + i} className="slideBox">
-              {sld.slide.map(pict => {
-                return (
-                  <GatsbyImage image={GetImageByName(pict.image)} alt="gallery image" key={pict.image} 
-                    className="slideItem"
-                  />
-                )
-              })}
-            </Slide>)
-        })}
-    </SlideshowContainer>
-  )
-}
-
-export default Gallery

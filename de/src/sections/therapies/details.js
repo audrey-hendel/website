@@ -4,6 +4,47 @@ import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import GetImageByName from '~components/getImageByName'
 
+const Details = (details, decor) => {
+  const [detailsOpen, setDetailsOpen] = useState(false)
+  const data = useStaticQuery(graphql`
+  query detailsData {
+    dataYaml(page: {eq: "therapies"}) {
+      details
+    }
+  }
+`)
+console.log(details);
+const decorSide = GetImageByName("star-decor.png")
+const image_2 = GetImageByName("d2.png")
+const image_3 = GetImageByName("d3.png")
+
+  return (
+    <>
+    <Centered>
+    <GatsbyImage image={GetImageByName('logo-leaves-circle-150x150.png')} alt='decor' className='center' />
+    </Centered>
+      <Title 
+        detailsOpen={detailsOpen}
+        onClick={() => setDetailsOpen(!detailsOpen)}>
+        {detailsOpen ? '-details' : '+details'}
+      </Title>
+      {detailsOpen ? <DistanceBox open > 
+    <div dangerouslySetInnerHTML={{ __html: details.details }} className="AboutText" />
+    </DistanceBox> : <DistanceBox> 
+    <div dangerouslySetInnerHTML={{ __html: details.details }} className="AboutText" />
+    </DistanceBox>}
+    <Intro>Let´s call the spirits of Happiness!</Intro>
+    <Decor>
+      <GatsbyImage image={decorSide} alt="decor" className="decImg-1" />
+      <GatsbyImage image={image_2} alt="decor" className="decImg-2" />
+      <GatsbyImage image={image_3} alt="decor" className="decImg-3" />
+      <GatsbyImage image={decorSide} alt="decor" className="decImg-4" />
+    </Decor>
+    </>
+  )
+}
+export default Details
+
 const DistanceBox = styled.div`
   display: ${props => (props.open ? "block" : "none")};
   padding: 0 20px;
@@ -167,46 +208,3 @@ const Decor = styled.div`
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 `
-
-const Details = (details, decor) => {
-  const [detailsOpen, setDetailsOpen] = useState(false)
-  const data = useStaticQuery(graphql`
-  query detailsData {
-    dataYaml(page: {eq: "therapies"}) {
-      details
-    }
-  }
-`)
-console.log("left",decor.decor_left, details)
-
-const decorSide = GetImageByName("star-decor.png")
-const image_2 = GetImageByName("d2.png")
-const image_3 = GetImageByName("d3.png")
-console.log(decorSide)
-
-  return (
-    <>
-    <Centered>
-    <GatsbyImage image={GetImageByName('logo-leaves-circle-150x150.png')} alt='decor' className='center' />
-    </Centered>
-      <Title 
-        detailsOpen={detailsOpen}
-        onClick={() => setDetailsOpen(!detailsOpen)}>
-        {detailsOpen ? '-details' : '+details'}
-      </Title>
-      {detailsOpen ? <DistanceBox open > 
-    <div dangerouslySetInnerHTML={{ __html: data.dataYaml.details }} className="AboutText" />
-    </DistanceBox> : <DistanceBox> 
-    <div dangerouslySetInnerHTML={{ __html: data.dataYaml.details }} className="AboutText" />
-    </DistanceBox>}
-    <Intro>Let´s call the spirits of Happiness!</Intro>
-    <Decor>
-      <GatsbyImage image={decorSide} alt="decor" className="decImg-1" />
-      <GatsbyImage image={image_2} alt="decor" className="decImg-2" />
-      <GatsbyImage image={image_3} alt="decor" className="decImg-3" />
-      <GatsbyImage image={decorSide} alt="decor" className="decImg-4" />
-    </Decor>
-    </>
-  )
-}
-export default Details

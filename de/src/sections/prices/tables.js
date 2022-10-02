@@ -3,6 +3,29 @@ import { useStaticQuery, graphql } from "gatsby"
 import styled from 'styled-components'
 import "./tables.css"
 
+const Tables = () => {
+  const data = useStaticQuery(graphql`
+    query pricePageQuery {
+      markdownRemark(frontmatter: {page: {eq: "prices"}}) {
+        html
+      }
+    }
+  `)
+  return (
+    <>
+    <DecoOuterTop>
+        <DecoInnerTop/>
+      </DecoOuterTop>
+  <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} className="price_table" />
+     <DecoOuter style={{marginBottom: `30px`}}>
+        <DecoInner/>
+     </DecoOuter>
+  </>
+  )
+}
+
+export default Tables
+
 const DecoOuterTop = styled.div`
   width: 95%;
   max-width: 1260px;
@@ -55,26 +78,3 @@ const DecoInnerTop = styled.div`
   @media (min-width: 1024px){
     border-radius: 50px 50px 0 0;}
 `
-
-const Tables = () => {
-  const data = useStaticQuery(graphql`
-    query pricePageQuery {
-      markdownRemark(frontmatter: {page: {eq: "prices"}}) {
-        html
-      }
-    }
-  `)
-  return (
-    <>
-    <DecoOuterTop>
-        <DecoInnerTop/>
-      </DecoOuterTop>
-  <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} className="price_table" />
-     <DecoOuter style={{marginBottom: `30px`}}>
-        <DecoInner/>
-     </DecoOuter>
-  </>
-  )
-}
-
-export default Tables

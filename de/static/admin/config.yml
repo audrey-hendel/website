@@ -159,16 +159,6 @@ collections:
     fields:
     - name: title
       widget: string
-    - name: col1
-      widget: markdown
-    - name: col2
-      widget: markdown
-    - name: content
-      widget: markdown
-    - name: gallery_text
-      widget: markdown
-    - name: details
-      widget: markdown
 
 - name: sections-en
   label: sections English

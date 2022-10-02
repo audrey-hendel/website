@@ -1,11 +1,13 @@
 title: LET'S BE HAPPY
-subtitle: psychotherapy & Shamanic healing
-text: Shamanic is a new magic
+subtitle: Psychotherapy & Shamanic Healing
+text: Shamanic is the new magic
 about_section:
   intro: >
-    Wonderful! You’ve chosen joy, power and happiness. And you are taking your health in your two hands. I’m Audrey Hendel, psychological counselor and shamanic healer.
-    And I can accompany you, with compassion, tenderness, and a touch of magic
-    towards happiness! With magic and love, nothing is impossible. 
+    Wonderful! You’ve chosen joy, power and happiness. And you are taking your
+    health in your two hands. I’m Audrey Hendel, psychological counselor and
+    shamanic healer. And I can accompany you, with compassion, tenderness, and a
+    touch of magic towards happiness! With magic and love, nothing is
+    impossible. 
   decor_center: decoration-4.png
   decor_left: 1-22.png
   decor_right: 1-22.png
@@ -14,31 +16,30 @@ about_section:
   about_box:
     image: audrey.png
     name: Audrey Hendel
-    title: PSYCHOLOGICAL&nbsp;COUNSELOR & SHAMANIC HEALER
-    text: >
-      ### PSYCHOLOGICAL&nbsp;COUNSELOR &&nbsp;SHAMANIC HEALER
+    title: PSYCHOLOGICAL COUNSELOR & SHAMANIC HEALER
+    text: >-
+      After studying philosophy, communication and psychology at a French
+      university for ten years, I trained and specialized in psychopathology and
+      various psychotherapeutic approaches at a professional school for
+      alternative healthcare in Germany. 
 
 
-      
-      After studying eight years **Philosophy and Psychology** at the French university, I trained  Psychopathology and various psychotherapeutic approaches in Germany. My professional       experience in psychiatric hospitals for children and adults has given me the field-bases approach  and the desire to propose a complementary therapeutic approach: the combination of  shamanism and psychotherapy. 
+      My professional experience in psychiatric hospitals for children and adults gave me a field-bases approach and the desire to propose a complementary therapeutic approach: shamanic methods and psychotherapy. 
 
-      I developed my healing and shamanic divination techniques with the FSSE, The Foundation for
-      Shamanic Studies Europe, a highly professional organization that is very close to my heart. The
-      Foundation for Shamanic Studies is a non-profit organisation dedicated to the preservation, study
-      and teaching of shamanic knowledge for the welfare of the planet and its inhabitants. I follow the
-      vision and ethics of shamanism as taught by the Foundation.
 
-      In addition, Tibetan Buddhism grounds and frames my commitment to spirituality. My therapies
-      are gentle, respectful of your wishes and based on an ethic of universal compassion.
-      I live in Germany, where the status of healing practitioner (naturopathy) with a specialisation as
-      psychological counselor is recognized, validated by a exam, and supervised by the Ministry of
-      Health. I practice as “Heilpraktikerin für       Psychotherapie"
+      I developed my healing and shamanic divination techniques with the FSSE, The Foundation for Shamanic Studies Europe, a highly professional organization that is very close to my heart. The Foundation for Shamanic Studies is a non-profit organisation dedicated to the preservation, study and teaching of shamanic knowledge for the welfare of the planet and its inhabitants. I follow the vision and ethics of shamanism as taught by the Foundation.
+
+
+      In addition, Tibetan Buddhism grounds and frames my commitment to spirituality. My therapies are gentle, respectful of your wishes and based on an ethic of universal compassion. 
+
+
+      I live in Germany, where the status of healing practitioner (naturopathy) with a specialisation as psychological counselor is recognized, validated by a exam, and supervised by the Ministry of Health. I practice as “Heilpraktikerin für       Psychotherapie"
   therapies:
     title: Therapies
     items:
       - title: Shamanic Healing
         image: dog.png
-      - title: Psycho-Shamanic Therapy
+      - title: Psychotherapy
         image: horse.png
     cta_label: Read more
     cta_link: /therapies/
@@ -64,19 +65,19 @@ decor_gallery: decor_c.png
 distance:
   decor_center: decoration-4.png
   title: Shamanic distance healing
-  text: >
+  text: >-
     LET’S BE HAPPY is expanding! The objective is clear: to use digital means to
-    become the first international shamanic healing center capable of respond to
-    shamanic requests,
+    become the first shamanic healing center capable of respond to shamanic
+    requests,
 
 
     7 days a week, 24 hours a day 
 
 
-    To achieve this aim, practitioners carefully selected for their skills, their professionalism, and ethics, joined me. More we will work together; more we will be able to serve others and fulfill our dream!
+    To achieve this aim, practitioners carefully selected for their skills, their professionalism, and ethics, will joined me. More we will work together; more we will be able to serve others and fulfill our dream!
   three_t:
     - label: Access to healing
-      image: img1.png
+      image: /images/img1-300x300.png
     - label: Join the team
       image: img2.png
     - label: Support the project

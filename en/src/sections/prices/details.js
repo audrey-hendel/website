@@ -1,8 +1,44 @@
 import React from "react"
 import styled from "styled-components"
-import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import GetImageByName from "~components/getImageByName"
+
+const Detail = (p) => {
+  const decorSide = GetImageByName("star-decor.png")
+  const image_1 = GetImageByName("e1.png")
+  const image_2 = GetImageByName("e2.png")
+  const image_3 = GetImageByName("e4.png")
+  const image_4 = GetImageByName("e5.png")
+  return (
+    <>
+      <Centered>
+        <GatsbyImage
+          image={GetImageByName("logo-leaves-circle-150x150.png")}
+          alt="decor"
+          className="center"
+        />
+      </Centered>
+      <Title>+details</Title>
+      <DistanceBox>
+        <div
+          dangerouslySetInnerHTML={{ __html: p.details }}
+          className="AboutText"
+        />
+      </DistanceBox>
+      <Intro>When sunbeams of transformation arise, enjoy the process…</Intro>
+      <Decor>
+        <GatsbyImage image={decorSide} alt="decor" className="decImg-1" />
+        <GatsbyImage image={image_1} alt="decor" className="decImg-2" />
+        <GatsbyImage image={image_2} alt="decor" className="decImg-3" />
+        <GatsbyImage image={image_3} alt="decor" className="decImg-4" />
+        <GatsbyImage image={image_4} alt="decor" className="decImg-5" />
+        <GatsbyImage image={decorSide} alt="decor" className="decImg-6" />
+      </Decor>
+    </>
+  )
+}
+
+export default Detail
 
 const DistanceBox = styled.div`
   padding: 40px 20px;
@@ -171,48 +207,3 @@ const Decor = styled.div`
         padding: 0 50px;
       }
 `
-
-const Detail = () => {
-  const data = useStaticQuery(graphql`
-    query detailData {
-      dataYaml(page: { eq: "prices" }) {
-        details
-      }
-    }
-  `)
-  const decorSide = GetImageByName("star-decor.png")
-  const image_1 = GetImageByName("e1.png")
-  const image_2 = GetImageByName("e2.png")
-  const image_3 = GetImageByName("e4.png")
-  const image_4 = GetImageByName("e5.png")
-
-  return (
-    <>
-      <Centered>
-        <GatsbyImage
-          image={GetImageByName("logo-leaves-circle-150x150.png")}
-          alt="decor"
-          className="center"
-        />
-      </Centered>
-      <Title>+details</Title>
-      <DistanceBox>
-        <div
-          dangerouslySetInnerHTML={{ __html: data.dataYaml.details }}
-          className="AboutText"
-        />
-      </DistanceBox>
-      <Intro>When sunbeams of transformation arise, enjoy the process…</Intro>
-      <Decor>
-        <GatsbyImage image={decorSide} alt="decor" className="decImg-1" />
-        <GatsbyImage image={image_1} alt="decor" className="decImg-2" />
-        <GatsbyImage image={image_2} alt="decor" className="decImg-3" />
-        <GatsbyImage image={image_3} alt="decor" className="decImg-4" />
-        <GatsbyImage image={image_4} alt="decor" className="decImg-5" />
-        <GatsbyImage image={decorSide} alt="decor" className="decImg-6" />
-      </Decor>
-    </>
-  )
-}
-
-export default Detail

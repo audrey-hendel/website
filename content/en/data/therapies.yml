@@ -1,81 +1,12 @@
-details: >-
-  **Clients.** Adults, children, couples, and families, experiencing
-  psychological and/or somatic difficulties.
-
-
-  **Awareness.** Self-reflection, willingness to change, openness and curiosity about psychology and shamanism are recommended for the healing process. Neither faith nor spirituality is required.
-
-
-  **Complementarity.** Shamanic and psycho-shamanic methods harmonize perfectly with medical, psychiatric- and psychotherapeutic approaches. I work in partnership with medical doctors. 
-
-
-  **Responsibility.** Psychotherapy and shamanic healing can bring challenging changes for you and those around you. We will work together to ensure that these changes are smooth and for the benefit of everyone involved. 
-
-
-  **Location.** In my office, at your own home, outdoors in nature, or in a care facility. Travel expenses will be charged. 
-
-
-  **Remote care/Distance healing.** Shamanic healing can also be done by videoconference or by phone. 
-
-
-  **Languages.** I speak French, English and German.
-
-
-  **Documentation.** You can read and get a copy of your patient record.
+title: Therapies
+page: therapies
 decor:
   decor_left: star-decor.png
   decor_right: star-decor.png
   image_2: d2.png
   image_3: d3.png
 decor_text: Let´s call the spirits of Happiness!
-page: therapies
-col1: |-
-  With LET'S BE HAPPY I provide two specifics therapies:
 
-  1. Shamanic Empowering and Healing
-
-  2. Psychotherapy 
-
-  ## Shamanic Healing
-
-  * Shamanic diagnosis
-  * Healing, empowering, prevention of relapses
-  * Rapid shamanic intervention
-  * Meeting power animal and guides
-  * Divination and tarot of Marseille
-  * Shamanic dream interpretation 
-  * Purification and protection (also of places)
-  * Finding places of power in nature
-  * Contacting with spirits of nature
-  * Contact with ancestors
-  * Karma diagnosis and purification
-  * Palliative and psychopomp services
-  * Celebration of symbolic days
-  * Rites of passage (birth, adulthood, big changes in
-    life, new situation, etc.)
-  * Discovery of shamanism and receiving support for your
-    own shamanic practice
-col2: >-
-  ## Psychotherapy
-
-
-  * First session: anamnesis, psychopathological diagnosis
-
-  * Psychotherapeutic interview of the humanist type
-
-  * Biographical work (psychodynamic)
-
-  * Behavioral and coping strategy therapy (new behavior and skill training, fear management)
-
-  * Co-therapy (with children, couples)
-
-  * Integration of powers
-
-  * Support for changes and transformation
-
-  * Prevention of relapses
-
-  * Psychoeducation
 gallery:
   - slide:
       - image: therapy_1.png
@@ -92,54 +23,10 @@ gallery:
       - image: therapy_2.png
       - image: therapy_3.png
       - image: therapy_1.png
-psycho: >
-  **Psycho-Shamanic Therapy**
-    As a trained and certified healing practitioner for psychotherapy, the scope of my therapeutic
-    spectrum allows me to diagnose and treat mental and psychiatric disorders, and to offer support,
-    hope and perspective in cases of organic illness.
-    
-    My approach of mental health is free from rigid
-    psychiatric categorisation and the psychotherapeutic bond is based on authenticity and
-    unconditional positive appreciation. I treat clients with psycho-shamanic, short-term, client-centred and goal-oriented psychotherapy that can be repeated. Concretely, after having fixed a goal
-    for the psychotherapy, the time of the therapy is freely divided in both approaches: psychotherapy
-    and shamanic methods. I switch alternatively my focus on the intrapsychic process of the clients
-    and on the energetic aspects. The integration of ancestral shamanic medicine into person-centred 
-    humanistic interviews and exchanges leads to results that are faster, deeper, holistic, sustainable
-    and in harmony with each client’s personal resources and own power. Together we search for
-    empowerment and transformation of the self, which makes unhealthy and painful symptoms
-    vanish. 
-    
-    In addition, clients learn through the therapy to recognise, embrace and implement newly
-    gained psychological powers in their daily life and to engage actions and play roles in their
-    community. My ongoing purpose is to help my clients lead autonomous and joyful lives without
-    psychotherapy or dependencies. 
-title: Therapies
+
 decor_gallery: decor_c.png
-content: >-
-  **Shamanic Empowering and Healing** (available online too) 
 
-
-
-  As the oldest healing tradition in human history, shamanism has provided support and solutions for at least 40,000 years. Traditionally and all over the planet, we can find healers in contact with the invisible world: spirits of nature, deities, power animals, ancestors, etc. Shamans lead healing and empowering rituals, bring information and solutions, and are experts at change and transformation. They have an essential role in their community, especially in cases of disease and challenging situations.
-
-
-  Increasingly many psychotherapists and healing practitioners, who want to take an integrative, holistic and systemic view of their patients, are training in shamanism and implement it as an alternative and complementary healing art. Furthermore, acknowledged methods as hypnosis, systemic family constellation, art therapy, dance therapy, whose epistemological roots are closed to shamanic healing show their efficiency. During the shamanic session, as I keep a conscious and ongoing connection to the Spirits my approach is shamanic per se.
-
-
-  Shamanism provides an effective, gentle and natural method of knowledge, healing, empowerment and transformation. Its effects are somatic, psychological, psychosocial and energetic. Shamanic healing can awaken and strengthen resistance, self-healing power, vitality and resiliency. Empowered clients naturally feel healthy and immune, energized with self-love, inner joy and optimism; they can freely develop their personality and projects, and actively participate in the community.
-
-
-  My methods of shamanic healing, empowerment and divination includes dances, songs, mantras, musical instruments (shamanic drums, bells, lyre) and tarot of Marseille. The client usually lies down with their eyes closed. I invite the client to open themselves to the healing process, be prepared for change and transformation, and stay focused on their question or issue.
-
-
-
-
-  **Psychotherapy** (available online only in specifics conditions) 
-
-
-
-  As a trained and certified healing practitioner for psychotherapy, the scope of my therapeutic spectrum allows me to diagnose and treat mental and psychiatric disorders, and to offer support, hope and perspective in cases of organic illness. My approach to mental health is free from rigid psychiatric categorisation. The psychotherapeutic bond is based on authenticity and unconditional positive appreciation. I treat clients with short-term, client-centred and goal-oriented psychotherapy that can be repeated. Concretely, after having set a goal for the psychotherapy, the time of the therapy can be freely divided between two approaches: psychotherapy and shamanic methods. The integration of ancestral shamanic medicine into person-centred humanistic interviews and exchanges leads to results that are faster, deeper, holistic, sustainable and in harmony with each client’s personal resources and own power. Together we search for empowerment and transformation of the self, which makes unhealthy and painful symptoms vanish. In addition, clients learn through the therapy to recognise, embrace and implement newly gained psychological powers in their daily life and to engage in actions and play roles in their community. My ongoing purpose is to help my clients lead autonomous and joyful lives without psychotherapy or dependencies.
-gallery_text: |-
+gallery_text: !markdown |-
   In my office you´ll found, like in a temple a cosy and peaceful atmosphere, 
 
   for regeneration, health, and empowering 

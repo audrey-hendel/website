@@ -5,6 +5,44 @@ import GetImageByName from '~components/getImageByName'
 import { Link } from 'gatsby'
 import { useStaticQuery, graphql } from "gatsby"
 
+const Distance = (props) => {
+  const data = useStaticQuery(graphql`
+  query DistQuery {
+    markdownRemark(frontmatter: {page: {eq: "home"}}) {
+      html
+    }
+  }
+`)
+
+  const decorCenter = GetImageByName(props.distance.decor_center)
+
+  return (
+    <>
+      <DistanceBox>
+        <h2>{props.distance.title}</h2>
+        <GatsbyImage image={decorCenter} alt='decor' className='center' />
+        <DistanceText>
+          <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}/>
+        </DistanceText>
+        <CardsGrid>
+          {props.distance.three_t.map((sld, i) => {
+            return (
+              <Card key={"thr" + i} >
+                <GatsbyImage image={GetImageByName(sld.image)} alt="gallery image" />
+                <h3 to={sld.image}>{sld.label}</h3>
+              </Card>)
+          })}
+        </CardsGrid>
+        <Link to={props.distance.cta_link} className="buttonCta">{props.distance.cta_label}</Link>
+
+      </DistanceBox>
+    </>
+  )
+}
+
+export default Distance
+
+
 const DistanceBox = styled.div`
   display: grid;
   gap: 20px;
@@ -138,39 +176,3 @@ const Card = styled.div`
   display: grid;
   justify-content: center;
 `
-const Distance = (props) => {
-  const data = useStaticQuery(graphql`
-  query DistQuery {
-    markdownRemark(frontmatter: {page: {eq: "home"}}) {
-      html
-    }
-  }
-  `)
-
-  const decorCenter = GetImageByName(props.distance.decor_center)
-
-  return (
-    <>
-      <DistanceBox>
-        <h2>{props.distance.title}</h2>
-        <GatsbyImage image={decorCenter} alt='decor' className='center' />
-        <DistanceText>
-          <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}/>
-        </DistanceText>
-        <CardsGrid>
-          {props.distance.three_t.map((sld, i) => {
-            return (
-              <Card key={"thr" + i} >
-                <GatsbyImage image={GetImageByName(sld.image)} alt="gallery image" />
-                <h3 to={sld.image}>{sld.label}</h3>
-              </Card>)
-          })}
-        </CardsGrid>
-        <Link to={props.distance.cta_link} className="buttonCta">{props.distance.cta_label}</Link>
-
-      </DistanceBox>
-    </>
-  )
-}
-
-export default Distance

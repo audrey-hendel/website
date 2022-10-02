@@ -5,22 +5,34 @@ import Seo from "~components/seo"
 import Title from "~components/title"
 import Details from "~sections/prices/details"
 import Tables from "~sections/prices/tables"
-import pageData from "~data/prices.yml"
 
 
 const Prices = ({data}) => {
   return (
   <Layout path="/prices">
     <Seo title="Prices" />
-    <Title text={pageData.title} />
-    <Tables />
-    <Details details={data.dataYaml.details}/>
+    <Title text={data.details.frontmatter.title} />
+    <Tables tables={data.tables.html} />
+    <Details details={data.details.html}/>
   </Layout>)
 }
 export const query = graphql`
   query PricesQuery {
-    dataYaml(page: {eq: "prices"}) {
-      details
+    details: markdownRemark(
+      frontmatter: {page: {eq: "prices"}, section: {eq: "details"}}) 
+    {
+      html
+      frontmatter {
+        title
+      }
+    }
+    tables: markdownRemark(
+      frontmatter: {page: {eq: "prices"}, section: {eq: "tables"}}) 
+    {
+      html
+      frontmatter {
+        title
+      }
     }
   }
 `

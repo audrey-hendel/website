@@ -90,7 +90,7 @@ const Footer = () => {
           })}
         </Col>
         <Col>
-          <h2>LET’S BE HAPPY!</h2>
+          <h2>Let´s be happy!</h2>
           {dataHome.footer.map((t, i) => {
             return (
               <p key={'cont' + i}>{t}</p>

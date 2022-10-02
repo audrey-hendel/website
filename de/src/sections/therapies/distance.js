@@ -1,10 +1,83 @@
 import React from 'react'
 import styled from 'styled-components'
 import { StaticImage } from "gatsby-plugin-image"
-import { GatsbyImage } from "gatsby-plugin-image"
-import GetImageByName from '~components/getImageByName'
 import { useStaticQuery, graphql } from "gatsby"
 
+const Distance = () => {
+  const data = useStaticQuery(graphql`
+  query distanceData {
+    content: allMarkdownRemark(
+      filter: {frontmatter: {page: {eq: "therapies"}, section: {eq: "content"}}}
+    ) {
+      nodes {
+        html
+      }
+    }     
+    details: allMarkdownRemark(
+      filter: {frontmatter: {page: {eq: "therapies"}, section: {eq: "details"}}}
+    ) {
+      nodes {
+        html
+      }
+    }     
+    psycho: allMarkdownRemark(
+      filter: {frontmatter: {page: {eq: "therapies"}, section: {eq: "psycho"}}}
+    ) {
+      nodes {
+        html
+      }
+    }     
+    col1: allMarkdownRemark(
+      filter: {frontmatter: {page: {eq: "therapies"}, section: {eq: "col1"}}}
+    ) {
+      nodes {
+        html
+      }
+    }     
+    col2: allMarkdownRemark(
+      filter: {frontmatter: {page: {eq: "therapies"}, section: {eq: "col2"}}}
+    ) {
+      nodes {
+        html
+      }
+    } 
+  }
+`)
+  return (
+    <>
+      <DecoOuterTop>
+        <DecoInnerTop>
+        </DecoInnerTop>
+      </DecoOuterTop>
+      <TerGrid>
+        <TerCard>
+          <StaticImage src='../../images/dog.png' alt="gallery image" />
+          <div dangerouslySetInnerHTML={{ __html: data.col1.nodes[0].html }} className="AboutText" />
+        </TerCard>
+        <TerCard>
+          <StaticImage src='../../images/horse.png' alt="gallery image" />
+          <div dangerouslySetInnerHTML={{ __html: data.col2.nodes[0].html }} className="AboutText" />
+        </TerCard>
+      </TerGrid>
+      <Content>
+        <ContentSham>
+        <div dangerouslySetInnerHTML={{ __html: data.content.nodes[0].html }} className="TextDesc" />
+        </ContentSham>
+        <div className="decor-desc">
+          <img src="/images/p2.png" alt="p2"></img>
+          <img src="/images/p3.png" alt="p3"></img>
+        </div>
+        <ContentPsycho>
+        <div dangerouslySetInnerHTML={{ __html: data.psycho.nodes[0].html }} className="TextDesc" />
+        </ContentPsycho>
+      </Content>
+      <DecoOuter>
+        <DecoInner>
+        </DecoInner>
+      </DecoOuter>
+    </>
+  )
+}
 
 const TerGrid = styled.div`
   position: relative;
@@ -356,58 +429,5 @@ const ContentPsycho = styled.div`
     }
   }
 `
-
-
-const Distance = () => {
-  const data = useStaticQuery(graphql`
-  query distanceData {
-    dataYaml(page: {eq: "therapies"}) {
-      id
-      title
-      col1
-      col2
-      content
-      psycho
-      
-    }
-  }
-`)
-
-
-  return (
-    <>
-      <DecoOuterTop>
-        <DecoInnerTop>
-        </DecoInnerTop>
-      </DecoOuterTop>
-      <TerGrid>
-        <TerCard>
-          <StaticImage src='../../images/dog.png' alt="gallery image" />
-          <div dangerouslySetInnerHTML={{ __html: data.dataYaml.col1 }} className="AboutText" />
-        </TerCard>
-        <TerCard>
-          <StaticImage src='../../images/horse.png' alt="gallery image" />
-          <div dangerouslySetInnerHTML={{ __html: data.dataYaml.col2 }} className="AboutText" />
-        </TerCard>
-      </TerGrid>
-      <Content>
-        <ContentSham>
-          <div dangerouslySetInnerHTML={{ __html: data.dataYaml.content }} className="TextDesc"/>
-        </ContentSham>
-        <div className="decor-desc">
-          <img src="/images/p2.png" alt="p2"></img>
-          <img src="/images/p3.png" alt="p3"></img>
-        </div>
-        <ContentPsycho>
-          <div dangerouslySetInnerHTML={{ __html: data.dataYaml.psycho }} className="TextDesc"/>
-        </ContentPsycho>
-      </Content>
-      <DecoOuter>
-        <DecoInner>
-        </DecoInner>
-      </DecoOuter>
-    </>
-  )
-}
 
 export default Distance

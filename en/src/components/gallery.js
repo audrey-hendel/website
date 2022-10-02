@@ -5,6 +5,44 @@ import GetImageByName from '~components/getImageByName'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 
+const Gallery = (props) => {
+
+  const decor_gallery = GetImageByName(props.decor_gallery)
+  return (
+    
+    <SlideshowContainer>
+      <DecGallery className="decorTop" > 
+        <GatsbyImage image={decor_gallery} alt='decorGallery' />
+      </DecGallery>
+      <h2>Gallery</h2>
+      { props.gallery_text ? <div dangerouslySetInnerHTML={{ __html: props.gallery_text }} className="center headLines" /> : "" }
+      <Carousel
+             showArrows={false} 
+             showStatus = {false}
+             showThumbs = {false}
+             >
+        {props.gallery.map((sld, i) => {
+          return (
+            <Slide key={"slide-" + i} className="slideBox">
+              {sld.slide.map(pict => {
+                return (
+                  <GatsbyImage image={GetImageByName(pict.image)} alt="gallery image" key={pict.image} 
+                    className="slideItem"
+                  />
+                )
+              })}
+            </Slide>)
+        })}
+      </Carousel>
+      <DecGallery className="decorBottom" > 
+        <GatsbyImage image={decor_gallery} alt='decorGallery' />
+      </DecGallery>
+    </SlideshowContainer>
+  )
+}
+
+export default Gallery
+
 const SlideshowContainer = styled.section`
   text-align: center;
   h2 {
@@ -16,6 +54,22 @@ const SlideshowContainer = styled.section`
     color: rgba(51, 51, 51, 0.5);
     @media (min-width: 500px) {
       font-size: 60px;
+    }
+  }
+  .headLines {
+    margin-top: 30px;
+    padding: 0 20px;
+    p {
+      font-size: 18px;
+      margin-bottom: 0;
+      letter-spacing: -0.01em;
+      @media (min-width: 500px){
+        font-size: 25px;
+        letter-spacing: 0.08em;
+    }
+    }
+    p:nth-child(3) {
+     color: rgba(240, 65, 145, 0.8);
     }
   }
 `
@@ -97,39 +151,3 @@ const Slide = styled.div`
   }
   }
 `
-const Gallery = (props) => {
-
-  const decor_gallery = GetImageByName(props.decor_gallery)
-  return (
-    
-    <SlideshowContainer>
-      <DecGallery className="decorTop" > 
-        <GatsbyImage image={decor_gallery} alt='decorGallery' />
-      </DecGallery>
-      <h2>Gallery</h2>
-      <Carousel
-             showArrows={false} 
-             showStatus = {false}
-             showThumbs = {false}
-             >
-        {props.gallery.map((sld, i) => {
-          return (
-            <Slide key={"slide-" + i} className="slideBox">
-              {sld.slide.map(pict => {
-                return (
-                  <GatsbyImage image={GetImageByName(pict.image)} alt="gallery image" key={pict.image} 
-                    className="slideItem"
-                  />
-                )
-              })}
-            </Slide>)
-        })}
-      </Carousel>
-      <DecGallery className="decorBottom" > 
-        <GatsbyImage image={decor_gallery} alt='decorGallery' />
-      </DecGallery>
-    </SlideshowContainer>
-  )
-}
-
-export default Gallery
