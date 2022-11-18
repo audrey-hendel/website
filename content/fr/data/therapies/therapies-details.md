@@ -2,26 +2,17 @@
 page: therapies
 section: details
 ---
-**Clients.** Adults, children, couples, and families, experiencing
-psychological and/or somatic difficulties.
+  * **Clients**. Adultes, enfants, couples et familles, rencontrant des
+  difficultés psychiques et/ou somatiques.
 
+  * **Complémentarité.** Les soins s’intègrent à merveille avec les approches classiques (médecine organique, psychiatrie et psychothérapie classique)
 
-**Awareness.** Self-reflection, willingness to change, openness and curiosity about psychology and shamanism are recommended for the healing process. Neither faith nor spirituality is required.
+  * **Localisation géographique.** Le soin peut se faire à votre domicile, dans la nature ou dans un établissement de soin.
 
+  * **Soin à distance**. Les séances chamaniques peuvent être effectués à distance par visioconférence ou par téléphone. Contactez-moi, je prendrai le temps d’étudier votre demande.
 
-**Complementarity.** Shamanic and psycho-shamanic methods harmonize perfectly with medical, psychiatric- and psychotherapeutic approaches. I work in partnership with medical doctors. 
+  * **Langues**. Je parle français, anglais et allemand.
 
+  * **Responsabilité.** Comme toute psychothérapie, les séances chamaniques ou psychothérapeutiques peuvent emmener des changements temporaires et durables déstabilisants de prime abord pour vous et/ou votre entourage. Nous travaillerons ensemble à ce que les changements se fassent en douceur et pour le bien de tous.
 
-**Responsibility.** Psychotherapy and shamanic healing can bring challenging changes for you and those around you. We will work together to ensure that these changes are smooth and for the benefit of everyone involved. 
-
-
-**Location.** In my office, at your own home, outdoors in nature, or in a care facility. Travel expenses will be charged. 
-
-
-**Remote care/Distance healing.** Shamanic healing can also be done by videoconference or by phone. 
-
-
-**Languages.** I speak French, English and German.
-
-
-**Documentation.** You can read and get a copy of your patient record.
+  * **Documentation de la thérapie psycho-chamanique.** Vous pouvez lire votre dossier et en obtenir une copie.

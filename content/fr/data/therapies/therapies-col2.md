@@ -2,23 +2,20 @@
 page: therapies
 section: col2
 ---
-## Psychotherapy
+  **Psychothérapie** 
 
 
-* First session: anamnesis, psychopathological diagnosis
+  * Première séance : anamnèse, diagnostic psychopathologique 
 
-* Psychotherapeutic interview of the humanist type
+  * Entretien psychothérapeutique de type humaniste
+    -Travail biographique (psychodynamique)
+    -Thérapie comportementale (ex : adoption de nouveaux comportements, gestion du stress, gestion de la peur…) 
+  * Co-thérapie (couples ou parent-enfant) 
 
-* Biographical work (psychodynamic)
+  * acceptation, intégration et mise en place des ressources personnelles, accompagnement vers la santé et la transformation 
 
-* Behavioral and coping strategy therapy (new behavior and skill training, fear management)
+  * Séance et relaxation chamanique
 
-* Co-therapy (with children, couples)
+  * Prévention des rechutes
 
-* Integration of powers
-
-* Support for changes and transformation
-
-* Prevention of relapses
-
-* Psychoeducation
+  * Psychoéducation
