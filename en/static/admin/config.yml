@@ -178,12 +178,12 @@ collections:
       - { label: "order",  name: "order",  widget: "number", default: "9" }
 
 - name: "text-en"
-  label: "Text sections English"
+  label: "Texts sections English"
   folder: "/content/en/data"
-  create: true
   fields:
   - {label: "page", name: "page", widget: "string"}
   - {label: "section", name: "section", widget: "string"}
+  - label: Decor
   - {label: "Body", name: "body", widget: "markdown"}
 
 ##########################################

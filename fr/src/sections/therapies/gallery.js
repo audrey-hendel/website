@@ -7,16 +7,21 @@ import { useStaticQuery, graphql } from "gatsby"
 
 const Gallery = (props) => {
   const data = useStaticQuery(graphql`
-  query terGalData {
-    dataYaml(page: {eq: "therapies"}) {
-      gallery_text
+  query terGal {
+  terGalData: allMarkdownRemark(
+    filter: {frontmatter: {page: {eq: "therapies"}, section: {eq: "gallery"}}}
+  ) {
+    nodes {
+      html
     }
-  }
+  }  
+}
 `)
+console.log(data.terGalData.nodes);
   return (
     <SlideshowContainer>
       <DecorCenter image='decoration-4.png' className="center"/>
-      <div dangerouslySetInnerHTML={{ __html: data.dataYaml.gallery_text }} className="center headLines" />
+      <div dangerouslySetInnerHTML={{ __html: data.terGalData.nodes[0].html }} className="center headLines" />
         {props.gallery.map((sld, i) => {
           return (
             <Slide key={"slide-" + i} className="slideBox">

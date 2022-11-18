@@ -6,14 +6,7 @@ import GetImageByName from '~components/getImageByName'
 
 const Details = (details, decor) => {
   const [detailsOpen, setDetailsOpen] = useState(false)
-  const data = useStaticQuery(graphql`
-  query detailsData {
-    dataYaml(page: {eq: "therapies"}) {
-      details
-    }
-  }
-`)
-console.log(details);
+
 const decorSide = GetImageByName("star-decor.png")
 const image_2 = GetImageByName("d2.png")
 const image_3 = GetImageByName("d3.png")
@@ -43,6 +36,7 @@ const image_3 = GetImageByName("d3.png")
     </>
   )
 }
+
 export default Details
 
 const DistanceBox = styled.div`
@@ -57,13 +51,16 @@ const DistanceBox = styled.div`
     padding: 40px 25px;
     margin: 70px auto 0;
   }
+
   @media (min-width: 768px) {
     padding: 40px 80px;
     font-size: 22px;
   }
+
   @media (min-width: 1350px) {
     border-radius: 30px;
   }
+
   a {
     font-family: 'Damion';
     font-style: normal;
@@ -74,12 +71,14 @@ const DistanceBox = styled.div`
     color: rgba(51, 51, 51, 0.8);
     text-decoration: none;
   }
+
   p{
     margin-bottom: 10px;
     @media (min-width: 500px){
       margin-bottom: 24px;
     }
   }
+
 `
 const Title = styled.h2`
     cursor: pointer;
@@ -96,6 +95,7 @@ const Title = styled.h2`
       font-size: 25px;
       line-height: 26px;
   }
+
 `
 const Centered = styled.div`
 width: fit-content;
@@ -107,6 +107,7 @@ img{
     width: 50%;
   }
 }
+
 `
 const Intro = styled.p`
   margin: 0;
@@ -128,6 +129,7 @@ const Intro = styled.p`
     font-size: 35px;
     line-height: 31px;
   }
+
 `
 const Decor = styled.div`
   display: grid;
@@ -148,17 +150,21 @@ const Decor = styled.div`
         height: auto;
       }
   }
+
   .decImg-2 {
     grid-row: 2/3;
     grid-column: 1/2;
   }
+
   .decImg-3 {
     grid-row: 2/3;
     grid-column: 2/3;
   }
+
   .decImg-2, .decImg-3{
     border-radius: 16px;
   }
+
   .decImg-4{
     grid-row: 3/4;
     grid-column: 2/3;
@@ -168,16 +174,19 @@ const Decor = styled.div`
     @media (min-width: 1024px){
       grid-column: 4/4;
     }
+
     img{
     width: 100%;
      height: auto;
   }
   }
+
   @media (min-width: 768px) {
     .decImg-1, .decImg-4{
       margin-left: 72px;
     }
   }
+
   @media (min-width: 950px) {
     gap: 20px;
     grid-template-columns: 1.5fr 2fr 2fr 1.5fr;
@@ -186,25 +195,31 @@ const Decor = styled.div`
     .decImg-1 {
     transform: rotate(72deg);
     }
+
     .decImg-2 {
       grid-row: 1/2;
       grid-column: 2/3;
     }
+
     .decImg-3 {
       grid-row: 1/2;
       grid-column: 3/4;
     }
+
     .decImg-4 {
       grid-row: 1/2;
       grid-column: 4/5;
       transform: rotate(-110deg);
     }
+
     .decImg-1, .decImg-4{
       margin-left: 0;
     }
   }
+
   @media (min-width: 1024px) {
     gap: 20px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
+
 `
