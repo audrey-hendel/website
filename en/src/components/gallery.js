@@ -6,8 +6,8 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from 'react-responsive-carousel';
 
 const Gallery = (props) => {
-
   const decor_gallery = GetImageByName(props.decor_gallery)
+  console.log(props);
   return (
     
     <SlideshowContainer>
@@ -56,6 +56,7 @@ const SlideshowContainer = styled.section`
       font-size: 60px;
     }
   }
+
   .headLines {
     margin-top: 30px;
     padding: 0 20px;
@@ -68,10 +69,12 @@ const SlideshowContainer = styled.section`
         letter-spacing: 0.08em;
     }
     }
+
     p:nth-child(3) {
      color: rgba(240, 65, 145, 0.8);
     }
   }
+
 `
 const DecGallery = styled.div`
     margin: 0 auto;
@@ -88,6 +91,7 @@ const DecGallery = styled.div`
       display: block;
     }
   }
+
   &.decorBottom{
     display: none;
     margin: 0 0 0 auto;
@@ -98,6 +102,7 @@ const DecGallery = styled.div`
       transform: rotate(180deg)
     }
   }
+
 `
 const Slide = styled.div`
   width: 95%;
@@ -111,25 +116,31 @@ const Slide = styled.div`
     margin: 60px auto;
     padding-bottom:70px; 
   }
+
   .slideItem {
     border-radius: 16px;
   }
+
   .slideItem:nth-child(1) {
     grid-column: 1/2;
     grid-row: 1/3;
   }
+
   .slideItem:nth-child(2) {
     grid-column: 2/3;
     grid-row: 1/2;
   }
+
   .slideItem:nth-child(3) {
     grid-column: 1/2;
     grid-row: 3/4;
   }
+
   .slideItem:nth-child(4) {
     grid-column: 2/3;
     grid-row: 2/4;
   }
+
   @media (min-width: 1024px) {
     grid-template-columns: 3fr 4fr 3fr;
     gap: 22px;
@@ -137,17 +148,21 @@ const Slide = styled.div`
     grid-column: 1/2;
     grid-row: 2/6;
   }
+
   .slideItem:nth-child(2) {
     grid-column: 2/3;
     grid-row: 1/4;
   }
+
   .slideItem:nth-child(3) {
     grid-column: 2/3;
     grid-row: 4/7;
   }
+
   .slideItem:nth-child(4) {
     grid-column: 3/4;
     grid-row: 2/6;
   }
   }
+
 `

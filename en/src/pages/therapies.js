@@ -8,9 +8,6 @@ import Details from "~sections/therapies/details"
 import Distance from "~sections/therapies/distance"
 import pageData from "~data/therapies.yml"
 
-
-
-
 const Therapies = ({data}) => {
 return (
   <Layout path="/therapies">
@@ -21,11 +18,20 @@ return (
     <Details details={data.details.nodes[0].html} decor={data.dataYaml.decor} />
   </Layout>)
 }
+
 export const query = graphql`
 query TherapiesPageQuery {
   dataYaml(page: {eq: "therapies"}) {
-    details
+    decor {
+      decor_left
+      decor_right
+      image_1
+      image_2
+      image_3
+      image_4
+    }
   }
+
   gallery_text: allMarkdownRemark(
     filter: {frontmatter: {page: {eq: "therapies"}, section: {eq: "gallery"}}}
   ) {
@@ -33,6 +39,7 @@ query TherapiesPageQuery {
       html
     }
   } 
+
   details: allMarkdownRemark(
     filter: {frontmatter: {page: {eq: "therapies"}, section: {eq: "details"}}}
   ) {
@@ -41,5 +48,6 @@ query TherapiesPageQuery {
     }
   } 
 }
+
 `
 export default Therapies
