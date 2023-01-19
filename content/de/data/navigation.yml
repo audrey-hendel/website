@@ -2,19 +2,19 @@ items:
   - label: Let´s be happy!
     link: /
     order: 0
-  - label: Testimonies
+  - label: Kundenmeinungen
     link: /music-testimonies
     order: 4
-  - label: Prices
+  - label: Preise
     link: /prices
     order: 3
-  - label: Distance Healing
+  - label: Fernbehandlungen
     link: /distance-healing
     order: 2
-  - label: Contact
+  - label: Kontakt
     link: /contact
     order: 6
-  - label: Therapies
+  - label: Therapieangebot
     link: /therapies
     order: 1
   - link: "#"
