@@ -7,9 +7,10 @@ const HeroSection = styled.div`
   padding: 0;
   height: 54vw;
   z-index: -1;
+  display: flex;
+  justify-content: center;
   video {
     max-width: 100%;
-    margin: 0 auto;
   }
 `
 const Hero = () => {
