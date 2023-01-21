@@ -8,7 +8,7 @@ items:
   - label: Preise
     link: /prices
     order: 3
-  - label: Fernbehandlungen
+  - label: Online Sitzungen
     link: /distance-healing
     order: 2
   - label: Kontakt
