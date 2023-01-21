@@ -8,7 +8,7 @@ const Navigation = styled.nav`
   display: flex;
   background-color: #f5eff4;
   position: relative;
-  
+
   @media (max-width: 767px) {
     height: fit-content;
     top: 0;
@@ -58,10 +58,10 @@ const NavBox = styled.div`
 `
 
 const Hamburger = styled.div`
-  background-color: #F04191;
+  background-color: #f04191;
   width: 30px;
   height: 3px;
-  transition: all .3s linear;
+  transition: all 0.3s linear;
   align-self: center;
   position: relative;
   transform: ${props => (props.open ? "rotate(-45deg)" : "inherit")};
@@ -70,7 +70,7 @@ const Hamburger = styled.div`
   ::after {
     width: 30px;
     height: 3px;
-    background-color: #F04191;
+    background-color: #f04191;
     content: "";
     position: absolute;
     transition: all 0.3s linear;
@@ -89,11 +89,18 @@ const Hamburger = styled.div`
   }
 `
 const Lang = styled.span`
-display: none;
-@media(min-width: 1024px) {
-  display: inline;
-  align-self: center;
-}
+  display: none;
+  color: #f04191;
+  @media (min-width: 1024px) {
+    display: inline;
+    align-self: center;
+  }
+`
+const LangLink = styled.a`
+  color: #f04191;
+  &:active {
+    font-weight: bold;
+  }
 `
 const Container = styled.div`
   max-width: 1312px;
@@ -105,31 +112,52 @@ const Container = styled.div`
   padding: 24px 32px;
 `
 
-const Navbar = (path) => {
+const languages = [
+  { label: "EN", link: "https://letsbehappy.com", active: false },
+  { label: "DE", link: "https://letsbehappy.de", active: true },
+  { label: "FR", link: "https://letsbehappy.fr", active: false },
+]
+
+const Navbar = path => {
   const [navbarOpen, setNavbarOpen] = useState(false)
 
   return (
     <Navigation>
-    <Container>
-      <Logo />
-      <Toggle
-        navbarOpen={navbarOpen}
-        onClick={() => setNavbarOpen(!navbarOpen)}
-      >
-        {navbarOpen ? <Hamburger open /> : <Hamburger />}
-      </Toggle>
-      {navbarOpen ? (
-        <NavBox>
-          <NavbarLinks p={path} />
-        </NavBox>
-      ) : (
-        <NavBox open>
-          <NavbarLinks p={path} />
-        </NavBox>
-      )}
-      <Lang style={{color: "#F04191"}}>International</Lang>
-    </Container>
-  </Navigation>
+      <Container>
+        <Logo />
+        <Toggle
+          navbarOpen={navbarOpen}
+          onClick={() => setNavbarOpen(!navbarOpen)}
+        >
+          {navbarOpen ? <Hamburger open /> : <Hamburger />}
+        </Toggle>
+        {navbarOpen ? (
+          <NavBox>
+            <NavbarLinks p={path} />
+          </NavBox>
+        ) : (
+          <NavBox open>
+            <NavbarLinks p={path} />
+          </NavBox>
+        )}
+        <Lang>
+          {languages
+            ? languages.map((language, index) => (
+                <>
+                  <LangLink
+                    href={language.link}
+                    rel="noreferrer noopener"
+                    active={language.active}
+                  >
+                    {language.label}
+                  </LangLink>
+                  {index < languages.length - 1 && " / "}
+                </>
+              ))
+            : null}
+        </Lang>
+      </Container>
+    </Navigation>
   )
 }
 

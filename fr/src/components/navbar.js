@@ -95,6 +95,12 @@ display: none;
   align-self: center;
 }
 `
+const LangLink = styled.a`
+  color: #f04191;
+  &:active {
+    font-weight: bold;
+  }
+`
 const Container = styled.div`
   max-width: 1312px;
   display: flex;
@@ -104,6 +110,12 @@ const Container = styled.div`
   width: 100%;
   padding: 24px 32px;
 `
+
+const languages = [
+  { label: "EN", link: "https://letsbehappy.com", active: false },
+  { label: "DE", link: "https://letsbehappy.de", active: false },
+  { label: "FR", link: "https://letsbehappy.fr", active: true },
+]
 
 const Navbar = (path) => {
   const [navbarOpen, setNavbarOpen] = useState(false)
@@ -127,7 +139,22 @@ const Navbar = (path) => {
           <NavbarLinks p={path} />
         </NavBox>
       )}
-      <Lang style={{color: "#F04191"}}>International</Lang>
+      <Lang>
+        {languages
+          ? languages.map((language, index) => (
+              <>
+                <LangLink
+                  href={language.link}
+                  rel="noreferrer noopener"
+                  active={language.active}
+                >
+                  {language.label}
+                </LangLink>
+                {index < languages.length - 1 && " / "}
+              </>
+            ))
+          : null}
+      </Lang>
     </Container>
   </Navigation>
   )
