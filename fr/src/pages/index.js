@@ -146,7 +146,7 @@ const IndexPage = () => (
       <LogoContainer>
         <GatsbyImage image={GetImageByName("girl.png")} alt="Logo" />
       </LogoContainer>
-      <StyledHeadline>Let`s be happy</StyledHeadline>
+      <StyledHeadline>Let´s be happy</StyledHeadline>
       <StyledTitle>Audrey Hendel</StyledTitle>
       <ContactDetail>Konradstraße 7, 08056 Zwickau, Allemagne</ContactDetail>
       <ContactDetail>mail@letbehappy.com</ContactDetail>
